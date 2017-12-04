@@ -58,7 +58,7 @@ public class GoModuleType extends ModuleType<GoModuleBuilder> {
 
   @Nullable
   @Override
-  public Icon getBigIcon() {
+  public Icon getIcon() {
     return GoIcons.MODULE_ICON;
   }
 

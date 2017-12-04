@@ -23,24 +23,31 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.usages.PsiElementUsageGroupBase;
+import com.intellij.usages.Usage;
+import com.intellij.usages.UsageGroup;
+import com.intellij.usages.UsageTarget;
 import com.intellij.usages.impl.FileStructureGroupRuleProvider;
 import com.intellij.usages.rules.PsiElementUsage;
+import com.intellij.usages.rules.SingleParentUsageGroupingRule;
 import com.intellij.usages.rules.UsageGroupingRule;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class GoFileStructureGroupRuleProvider implements FileStructureGroupRuleProvider {
-  public static final UsageGroupingRule USAGE_GROUPING_RULE = usage -> {
-    PsiElement psiElement = usage instanceof PsiElementUsage ? ((PsiElementUsage)usage).getElement() : null;
-    GoNamedElement topmostElement = PsiTreeUtil.getParentOfType(psiElement, GoTypeSpec.class, GoFunctionOrMethodDeclaration.class);
-    if (topmostElement != null) {
-      return new PsiElementUsageGroupBase<>(topmostElement);
-    }
-    return null;
-  };
-
-  @Nullable
-  @Override
   public UsageGroupingRule getUsageGroupingRule(Project project) {
-    return USAGE_GROUPING_RULE;
+    return new GoClassGroupingRule();
+  }
+  private static class GoClassGroupingRule extends SingleParentUsageGroupingRule {
+    @Nullable
+    @Override
+    protected UsageGroup getParentGroupFor(@NotNull Usage usage, @NotNull UsageTarget[] targets) {
+      if (!(usage instanceof PsiElementUsage)) return null;
+      final PsiElement psiElement = ((PsiElementUsage)usage).getElement();
+      GoNamedElement topmostElement = PsiTreeUtil.getParentOfType(psiElement, GoTypeSpec.class, GoFunctionOrMethodDeclaration.class);
+      if (topmostElement != null) {
+        return new PsiElementUsageGroupBase<>(topmostElement);
+      }
+      return null;
+    }
   }
 }

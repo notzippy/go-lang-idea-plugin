@@ -46,6 +46,8 @@ import java.io.IOException;
 import java.util.Collection;
 
 public class GoProjectModelConverterProvider extends ConverterProvider {
+  public static final String PROJECT_JDK_NAME_ATTR = "project-jdk-name"; // ProjectRootManagerImpl.PROJECT_JDK_NAME_ATTR
+  public static final String PROJECT_JDK_TYPE_ATTR = "project-jdk-type"; // ProjectRootManagerImpl.PROJECT_JDK_TYPE_ATTR
   private static final String PROJECT_ROOT_MANAGER = "ProjectRootManager";
 
   protected GoProjectModelConverterProvider() {
@@ -82,11 +84,10 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
       public ConversionProcessor<RunManagerSettings> createRunConfigurationsConverter() {
         return new RunConfigurationsConverter();
       }
-
       @Override
       public boolean isConversionNeeded() {
         Element component = getProjectRootManager(context);
-        return component != null && isGoSdkType(component.getAttributeValue(ProjectRootManagerImpl.PROJECT_JDK_TYPE_ATTR));
+        return component != null && isGoSdkType(component.getAttributeValue(PROJECT_JDK_TYPE_ATTR));
       }
 
       @Override
@@ -148,7 +149,7 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
     @Override
     public boolean isConversionNeeded(@NotNull ProjectSettings settings) {
       Element projectRootManager = getProjectRootManager(settings.getRootElement());
-      return projectRootManager != null && isGoSdkType(projectRootManager.getAttributeValue(ProjectRootManagerImpl.PROJECT_JDK_TYPE_ATTR));
+      return projectRootManager != null && isGoSdkType(projectRootManager.getAttributeValue(PROJECT_JDK_TYPE_ATTR));
     }
 
     @Override
@@ -207,7 +208,7 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
   }
 
   private static void updateSdkType(@NotNull File file, @NotNull Element projectRootManager) throws CannotConvertException {
-    projectRootManager.setAttribute(ProjectRootManagerImpl.PROJECT_JDK_TYPE_ATTR, GoConstants.SDK_TYPE_ID);
+    projectRootManager.setAttribute(PROJECT_JDK_TYPE_ATTR, GoConstants.SDK_TYPE_ID);
     saveFile(file, projectRootManager, "Cannot save sdk type changing");
   }
 
