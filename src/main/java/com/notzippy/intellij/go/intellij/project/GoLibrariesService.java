@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.GoLibrariesState;
+import com.notzippy.intellij.go.goide.GoLibrariesState;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
 import com.intellij.openapi.module.Module;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.appengine.run;
+package com.notzippy.intellij.go.intellij.appengine.run;
 
-import com.goide.runconfig.GoModuleBasedConfiguration;
-import com.goide.runconfig.GoRunConfigurationBase;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.runconfig.GoModuleBasedConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationBase;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.execution.configurations.*;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.openapi.module.Module;

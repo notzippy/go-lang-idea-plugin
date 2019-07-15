@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.sdk.GoSmallIDEsSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSmallIDEsSdkService;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.ModalityState;

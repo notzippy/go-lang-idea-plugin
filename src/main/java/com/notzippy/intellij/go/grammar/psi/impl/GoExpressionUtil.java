@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.openapi.util.Comparing;
 import com.intellij.openapi.util.Trinity;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import com.intellij.navigation.NavigationItem;
 import com.intellij.psi.PsiElement;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.refactor;
+package com.notzippy.intellij.go.intellij.refactor;
 
-import com.goide.GoLanguage;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoTypeUtil;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeUtil;
 import com.intellij.codeInsight.PsiEquivalenceUtil;
 import com.intellij.codeInsight.lookup.LookupElement;
 import com.intellij.codeInsight.lookup.LookupElementBuilder;

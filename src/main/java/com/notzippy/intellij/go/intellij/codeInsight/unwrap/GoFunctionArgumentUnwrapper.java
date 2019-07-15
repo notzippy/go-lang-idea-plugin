@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.unwrap;
+package com.notzippy.intellij.go.intellij.codeInsight.unwrap;
 
-import com.goide.psi.GoArgumentList;
-import com.goide.psi.GoCallExpr;
-import com.goide.psi.GoExpression;
+import com.notzippy.intellij.go.grammar.psi.GoArgumentList;
+import com.notzippy.intellij.go.grammar.psi.GoCallExpr;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
 import com.intellij.psi.PsiElement;
 import com.intellij.util.IncorrectOperationException;
 import com.intellij.util.ObjectUtils;

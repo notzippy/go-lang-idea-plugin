@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.util.IconLoader;

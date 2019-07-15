@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.regexp;
+package com.notzippy.intellij.go.intellij.regexp;
 
 import com.intellij.lang.Language;
 import org.intellij.lang.regexp.RegExpLanguage;

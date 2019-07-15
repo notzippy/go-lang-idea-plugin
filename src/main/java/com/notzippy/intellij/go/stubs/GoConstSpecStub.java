@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs;
+package com.notzippy.intellij.go.stubs;
 
-import com.goide.psi.GoConstSpec;
-import com.goide.psi.GoExpression;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.GoConstSpec;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.stubs.IStubElementType;

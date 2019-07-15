@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,21 +16,21 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.psi.*;
-import com.goide.util.GoStringLiteralEscaper;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.parser.GoStringLiteralEscaper;
 
 public class GoStringLiteralImpl extends GoExpressionImpl implements GoStringLiteral {
 
-  public GoStringLiteralImpl(ASTNode node) {
+  public GoStringLiteralImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -54,20 +55,24 @@ public class GoStringLiteralImpl extends GoExpressionImpl implements GoStringLit
     return findChildByType(STRING);
   }
 
+  @Override
   public boolean isValidHost() {
     return GoPsiImplUtil.isValidHost(this);
   }
 
+  @Override
   @NotNull
-  public GoStringLiteralImpl updateText(String text) {
+  public GoStringLiteralImpl updateText(@NotNull String text) {
     return GoPsiImplUtil.updateText(this, text);
   }
 
+  @Override
   @NotNull
   public GoStringLiteralEscaper createLiteralTextEscaper() {
     return GoPsiImplUtil.createLiteralTextEscaper(this);
   }
 
+  @Override
   @NotNull
   public String getDecodedText() {
     return GoPsiImplUtil.getDecodedText(this);

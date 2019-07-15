@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.go;
+package com.notzippy.intellij.go.intellij.go;
 
-import com.goide.psi.GoNamedElement;
-import com.goide.stubs.index.GoAllPrivateNamesIndex;
-import com.goide.stubs.index.GoAllPublicNamesIndex;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.stubs.index.GoAllPrivateNamesIndex;
+import com.notzippy.intellij.go.stubs.index.GoAllPublicNamesIndex;
 
 public class GoSymbolContributor extends GoGotoContributorBase<GoNamedElement> {
   public GoSymbolContributor() {

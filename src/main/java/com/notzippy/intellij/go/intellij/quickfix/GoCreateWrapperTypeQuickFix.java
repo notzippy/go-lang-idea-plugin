@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.psi.GoType;
-import com.goide.psi.GoTypeDeclaration;
-import com.goide.psi.GoTypeSpec;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.GoType;
+import com.notzippy.intellij.go.grammar.psi.GoTypeDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.codeInsight.CodeInsightUtilCore;
 import com.intellij.codeInsight.template.Template;
 import com.intellij.codeInsight.template.TemplateBuilderImpl;

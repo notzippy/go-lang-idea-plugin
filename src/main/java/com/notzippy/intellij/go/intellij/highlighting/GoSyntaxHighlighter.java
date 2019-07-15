@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting;
+package com.notzippy.intellij.go.intellij.highlighting;
 
-import com.goide.GoParserDefinition;
-import com.goide.GoTypes;
-import com.goide.lexer.GoLexer;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.lexer.GoLexer;
 import com.intellij.lexer.Lexer;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterBase;
@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.goide.highlighting.GoSyntaxHighlightingColors.*;
+import static com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlightingColors.*;
 
 public class GoSyntaxHighlighter extends SyntaxHighlighterBase {
   private static final Map<IElementType, TextAttributesKey> ATTRIBUTES = new HashMap<IElementType, TextAttributesKey>();

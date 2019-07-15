@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.GoFileType;
-import com.goide.project.GoExcludedPathsSettings;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoImportString;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.runconfig.testing.GoTestFinder;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.project.GoExcludedPathsSettings;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoImportString;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.completion.CompletionParameters;
 import com.intellij.codeInsight.completion.CompletionProvider;
 import com.intellij.codeInsight.completion.CompletionResultSet;

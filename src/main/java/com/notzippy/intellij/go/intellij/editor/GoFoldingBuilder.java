@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.GoParserDefinition;
-import com.goide.GoTypes;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
+import com.notzippy.intellij.go.parser.GoTypes;
 import com.intellij.codeInsight.folding.CodeFoldingSettings;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.folding.CustomFoldingBuilder;

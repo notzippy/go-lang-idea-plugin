@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.codeInsight.imports.GoImportPackageQuickFix;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.GoFunctionDeclaration;
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoTypeSpec;
+import com.notzippy.intellij.go.intellij.codeInsight.imports.GoImportPackageQuickFix;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
 import com.intellij.codeInsight.completion.InsertHandler;
 import com.intellij.codeInsight.completion.InsertionContext;
 import com.intellij.codeInsight.lookup.LookupElement;

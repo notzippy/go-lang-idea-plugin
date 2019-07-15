@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.goide.util;
+package com.notzippy.intellij.go.intellij.util;
 
-import com.goide.psi.GoFile;
-import com.goide.psi.GoImportSpec;
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.imports.GoImportReferenceSet;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.imports.GoImportReferenceSet;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtilCore;
 import com.intellij.openapi.project.Project;

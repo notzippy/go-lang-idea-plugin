@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.ui;
+package com.notzippy.intellij.go.intellij.runconfig.testing.ui;
 
-import com.goide.runconfig.GoRunUtil;
-import com.goide.runconfig.testing.GoTestRunConfiguration;
-import com.goide.runconfig.testing.frameworks.gobench.GobenchFramework;
-import com.goide.runconfig.testing.frameworks.gocheck.GocheckFramework;
-import com.goide.runconfig.testing.frameworks.gotest.GotestFramework;
-import com.goide.runconfig.ui.GoCommonSettingsPanel;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gobench.GobenchFramework;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gocheck.GocheckFramework;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest.GotestFramework;
+import com.notzippy.intellij.go.intellij.runconfig.ui.GoCommonSettingsPanel;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;

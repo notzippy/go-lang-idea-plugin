@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
 import com.intellij.openapi.fileTypes.LanguageFileType;
 import com.intellij.openapi.project.Project;

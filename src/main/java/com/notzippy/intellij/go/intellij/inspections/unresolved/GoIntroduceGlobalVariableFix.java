@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;

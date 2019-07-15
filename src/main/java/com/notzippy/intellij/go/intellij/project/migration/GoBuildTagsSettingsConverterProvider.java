@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.project.migration;
+package com.notzippy.intellij.go.intellij.project.migration;
 
-import com.goide.GoConstants;
-import com.goide.project.GoBuildTargetSettings;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.project.GoBuildTargetSettings;
 import com.intellij.conversion.*;
 import com.intellij.ide.impl.convert.JDomConvertingUtil;
 import com.intellij.util.xmlb.XmlSerializer;

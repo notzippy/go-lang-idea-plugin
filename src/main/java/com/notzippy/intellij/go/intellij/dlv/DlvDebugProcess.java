@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
-import com.goide.GoConstants;
-import com.goide.GoFileType;
-import com.goide.dlv.breakpoint.DlvBreakpointProperties;
-import com.goide.dlv.breakpoint.DlvBreakpointType;
-import com.goide.dlv.protocol.DlvRequest;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.dlv.breakpoint.DlvBreakpointProperties;
+import com.notzippy.intellij.go.intellij.dlv.breakpoint.DlvBreakpointType;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvRequest;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.execution.ExecutionResult;
 import com.intellij.execution.ui.ExecutionConsole;
 import com.intellij.icons.AllIcons;
@@ -62,7 +62,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import static com.goide.dlv.protocol.DlvApi.*;
+import static com.notzippy.intellij.go.intellij.dlv.protocol.DlvApi.*;
 import static com.intellij.util.ObjectUtils.assertNotNull;
 import static com.intellij.util.ObjectUtils.tryCast;
 

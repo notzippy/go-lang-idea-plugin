@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.refactor.GoRefactoringUtil;
+import com.notzippy.intellij.go.intellij.refactor.GoRefactoringUtil;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

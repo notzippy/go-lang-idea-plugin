@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
@@ -31,6 +32,6 @@ public interface GoForClause extends GoCompositeElement {
   @NotNull
   List<GoStatement> getStatementList();
 
-  boolean processDeclarations(PsiScopeProcessor processor, ResolveState state, PsiElement lastParent, PsiElement place);
+  boolean processDeclarations(@NotNull PsiScopeProcessor processor, @NotNull ResolveState state, PsiElement lastParent, @NotNull PsiElement place);
 
 }

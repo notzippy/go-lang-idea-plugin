@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,21 +16,21 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.psi.ResolveState;
 
-public class GoExpressionImpl extends GoCompositeElementImpl implements GoExpression {
+public abstract class GoExpressionImpl extends GoCompositeElementImpl implements GoExpression {
 
-  public GoExpressionImpl(ASTNode node) {
+  public GoExpressionImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -42,8 +43,9 @@ public class GoExpressionImpl extends GoCompositeElementImpl implements GoExpres
     else super.accept(visitor);
   }
 
+  @Override
   @Nullable
-  public GoType getGoType(ResolveState context) {
+  public GoType getGoType(@Nullable ResolveState context) {
     return GoPsiImplUtil.getGoType(this, context);
   }
 

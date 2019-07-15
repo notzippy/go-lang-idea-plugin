@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.ui;
+package com.notzippy.intellij.go.intellij.runconfig.ui;
 
-import com.goide.runconfig.GoRunUtil;
-import com.goide.runconfig.file.GoRunFileConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.runconfig.file.GoRunFileConfiguration;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;

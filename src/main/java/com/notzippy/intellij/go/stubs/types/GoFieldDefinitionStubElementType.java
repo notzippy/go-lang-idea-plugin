@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoFieldDefinition;
-import com.goide.psi.impl.GoFieldDefinitionImpl;
-import com.goide.stubs.GoFieldDefinitionStub;
+import com.notzippy.intellij.go.grammar.psi.GoFieldDefinition;
+import com.notzippy.intellij.go.grammar.psi.impl.GoFieldDefinitionImpl;
+import com.notzippy.intellij.go.stubs.GoFieldDefinitionStub;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;
 import com.intellij.psi.stubs.StubOutputStream;

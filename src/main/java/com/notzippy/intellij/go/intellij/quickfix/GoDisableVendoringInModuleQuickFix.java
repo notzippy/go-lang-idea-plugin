@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.project.GoModuleSettings;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.project.GoModuleSettings;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.codeInspection.LocalQuickFixBase;
 import com.intellij.codeInspection.ProblemDescriptor;
 import com.intellij.openapi.module.Module;
@@ -26,8 +26,8 @@ import com.intellij.util.ThreeState;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import static com.goide.project.GoVendoringUtil.isVendoringEnabled;
-import static com.goide.project.GoVendoringUtil.vendoringCanBeDisabled;
+import static com.notzippy.intellij.go.intellij.project.GoVendoringUtil.isVendoringEnabled;
+import static com.notzippy.intellij.go.intellij.project.GoVendoringUtil.vendoringCanBeDisabled;
 
 public class GoDisableVendoringInModuleQuickFix extends LocalQuickFixBase {
   @NotNull private final Module myModule;

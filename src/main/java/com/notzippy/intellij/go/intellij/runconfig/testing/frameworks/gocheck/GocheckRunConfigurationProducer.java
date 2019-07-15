@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gocheck;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gocheck;
 
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.psi.GoMethodDeclaration;
-import com.goide.runconfig.testing.GoTestRunConfigurationProducerBase;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoMethodDeclaration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfigurationProducerBase;
 import org.jetbrains.annotations.NotNull;
 
 public class GocheckRunConfigurationProducer extends GoTestRunConfigurationProducerBase implements Cloneable {

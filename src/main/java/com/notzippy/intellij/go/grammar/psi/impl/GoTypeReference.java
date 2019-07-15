@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.GoConstants;
-import com.goide.GoTypes;
-import com.goide.psi.*;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.*;

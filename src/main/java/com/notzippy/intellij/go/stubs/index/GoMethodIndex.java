@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.index;
+package com.notzippy.intellij.go.stubs.index;
 
-import com.goide.GoFileElementType;
-import com.goide.psi.GoMethodDeclaration;
+import com.notzippy.intellij.go.intellij.GoFileElementType;
+import com.notzippy.intellij.go.grammar.psi.GoMethodDeclaration;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.psi.stubs.StringStubIndexExtension;

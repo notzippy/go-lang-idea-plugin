@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.tree;
+package com.notzippy.intellij.go.intellij.tree;
 
-import com.goide.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
 

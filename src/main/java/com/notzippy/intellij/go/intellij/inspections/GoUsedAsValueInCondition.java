@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoAssignmentStatement;
-import com.goide.psi.GoIfStatement;
-import com.goide.psi.GoShortVarDeclaration;
-import com.goide.psi.GoVisitor;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.GoAssignmentStatement;
+import com.notzippy.intellij.go.grammar.psi.GoIfStatement;
+import com.notzippy.intellij.go.grammar.psi.GoShortVarDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoVisitor;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.LocalQuickFixBase;
 import com.intellij.codeInspection.ProblemDescriptor;

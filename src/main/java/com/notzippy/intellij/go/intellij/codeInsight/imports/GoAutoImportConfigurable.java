@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.project.GoExcludedPathsSettings;
+import com.notzippy.intellij.go.intellij.project.GoExcludedPathsSettings;
 import com.intellij.openapi.application.ApplicationBundle;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;

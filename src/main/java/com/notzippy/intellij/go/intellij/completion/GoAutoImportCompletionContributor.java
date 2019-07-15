@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoTypeReference;
-import com.goide.runconfig.testing.GoTestFinder;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeReference;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.completion.*;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtilCore;
@@ -46,9 +46,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
-import static com.goide.completion.GoCompletionUtil.createPrefixMatcher;
-import static com.goide.psi.impl.GoPsiImplUtil.prevDot;
-import static com.goide.stubs.index.GoAllPublicNamesIndex.ALL_PUBLIC_NAMES;
+import static com.notzippy.intellij.go.intellij.completion.GoCompletionUtil.createPrefixMatcher;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil.prevDot;
+import static com.notzippy.intellij.go.stubs.index.GoAllPublicNamesIndex.ALL_PUBLIC_NAMES;
 import static com.intellij.patterns.PlatformPatterns.psiElement;
 
 public class GoAutoImportCompletionContributor extends CompletionContributor {

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.usages;
+package com.notzippy.intellij.go.intellij.usages;
 
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.codeInsight.highlighting.ReadWriteAccessDetector;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiReference;

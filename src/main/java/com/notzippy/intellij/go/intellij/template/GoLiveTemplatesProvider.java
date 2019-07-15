@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.template;
+package com.notzippy.intellij.go.intellij.template;
 
 import com.intellij.codeInsight.template.impl.DefaultLiveTemplatesProvider;
 import org.jetbrains.annotations.NotNull;

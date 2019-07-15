@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl.manipulator;
+package com.notzippy.intellij.go.grammar.psi.impl.manipulator;
 
-import com.goide.psi.impl.GoStringLiteralImpl;
+import com.notzippy.intellij.go.grammar.psi.impl.GoStringLiteralImpl;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.AbstractElementManipulator;
 import com.intellij.util.IncorrectOperationException;

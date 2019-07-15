@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.usages;
+package com.notzippy.intellij.go.intellij.usages;
 
-import com.goide.GoParserDefinition;
-import com.goide.GoTypes;
-import com.goide.lexer.GoLexer;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.lexer.GoLexer;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.lang.HelpID;
 import com.intellij.lang.cacheBuilder.DefaultWordsScanner;
 import com.intellij.lang.cacheBuilder.WordsScanner;

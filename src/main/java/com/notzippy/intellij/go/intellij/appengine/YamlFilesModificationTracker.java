@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.appengine;
+package com.notzippy.intellij.go.intellij.appengine;
 
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.module.Module;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.stubs;
+package com.notzippy.intellij.go.stubs;
 
 import org.jetbrains.annotations.Nullable;
 

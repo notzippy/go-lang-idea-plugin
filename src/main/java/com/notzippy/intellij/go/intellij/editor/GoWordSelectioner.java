@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.codeInsight.editorActions.wordSelection.AbstractWordSelectioner;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.util.TextRange;

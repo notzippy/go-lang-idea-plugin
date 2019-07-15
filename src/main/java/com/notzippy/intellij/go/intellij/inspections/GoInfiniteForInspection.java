@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.quickfix.GoReplaceWithSelectStatementQuickFix;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.quickfix.GoReplaceWithSelectStatementQuickFix;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;

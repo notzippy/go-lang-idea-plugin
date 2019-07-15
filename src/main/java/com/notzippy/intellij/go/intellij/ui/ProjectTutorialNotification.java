@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.ui;
+package com.notzippy.intellij.go.intellij.ui;
 
-import com.goide.GoConstants;
+import com.notzippy.intellij.go.intellij.GoConstants;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.notification.NotificationListener;
 import com.intellij.notification.NotificationType;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.application;
+package com.notzippy.intellij.go.intellij.runconfig.application;
 
 import com.intellij.execution.process.ProcessHandler;
 import org.jetbrains.annotations.Nullable;

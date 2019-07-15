@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.editor.surround;
+package com.notzippy.intellij.go.intellij.editor.surround;
 
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;

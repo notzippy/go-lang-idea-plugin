@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.sdk;
+package com.notzippy.intellij.go.intellij.sdk;
 
-import com.goide.GoModuleType;
+import com.notzippy.intellij.go.intellij.GoModuleType;
 import com.intellij.ProjectTopics;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ComponentManager;

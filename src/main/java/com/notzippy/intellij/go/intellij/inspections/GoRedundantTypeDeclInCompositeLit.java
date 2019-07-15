@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.quickfix.GoDeleteAmpersandAndTypeInCompositeLitQuickFix;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteAmpersandAndTypeInCompositeLitQuickFix;
 import com.intellij.codeInspection.CleanupLocalInspectionTool;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;

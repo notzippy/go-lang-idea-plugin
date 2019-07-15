@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting.exitpoint;
+package com.notzippy.intellij.go.intellij.highlighting.exitpoint;
 
-import com.goide.GoTypes;
-import com.goide.psi.GoCallExpr;
-import com.goide.psi.GoReferenceExpression;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.GoCallExpr;
+import com.notzippy.intellij.go.grammar.psi.GoReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.codeInsight.highlighting.HighlightUsagesHandlerBase;
 import com.intellij.codeInsight.highlighting.HighlightUsagesHandlerFactoryBase;
 import com.intellij.openapi.editor.Editor;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.formatter.settings;
+package com.notzippy.intellij.go.intellij.formatter.settings;
 
-import com.goide.GoLanguage;
+import com.notzippy.intellij.go.intellij.GoLanguage;
 import com.intellij.application.options.IndentOptionsEditor;
 import com.intellij.application.options.SmartIndentOptionsEditor;
 import com.intellij.lang.Language;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.before;
+package com.notzippy.intellij.go.intellij.runconfig.before;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;

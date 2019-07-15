@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.GoCompositeElement;
-import com.goide.psi.GoFile;
-import com.goide.stubs.TextHolder;
+import com.notzippy.intellij.go.grammar.psi.GoCompositeElement;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.stubs.TextHolder;
 import com.intellij.extapi.psi.StubBasedPsiElementBase;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gotest;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest;
 
-import com.goide.GoConstants;
+import com.notzippy.intellij.go.intellij.GoConstants;
 import com.intellij.execution.testframework.TestConsoleProperties;
 import com.intellij.openapi.util.Key;
 import jetbrains.buildServer.messages.serviceMessages.ServiceMessageVisitor;

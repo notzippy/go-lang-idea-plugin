@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.quickfix.GoDeleteQuickFix;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteQuickFix;
 import com.intellij.codeInspection.*;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;

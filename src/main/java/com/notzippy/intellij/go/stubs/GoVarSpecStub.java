@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.stubs;
+package com.notzippy.intellij.go.stubs;
 
-import com.goide.psi.GoVarSpec;
+import com.notzippy.intellij.go.grammar.psi.GoVarSpec;
 import com.intellij.psi.stubs.IStubElementType;
 import com.intellij.psi.stubs.StubBase;
 import com.intellij.psi.stubs.StubElement;

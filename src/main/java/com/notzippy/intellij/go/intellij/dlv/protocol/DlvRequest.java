@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv.protocol;
+package com.notzippy.intellij.go.intellij.dlv.protocol;
 
 import com.google.gson.stream.JsonWriter;
 import org.jetbrains.annotations.NotNull;
@@ -29,7 +29,7 @@ import java.util.List;
  * Please add your requests as a subclasses, otherwise reflection won't work.
  *
  * @param <T> type of callback
- * @see com.goide.dlv.DlvCommandProcessor#getResultType(String)
+ * @see com.notzippy.intellij.go.intellij.dlv.DlvCommandProcessor#getResultType(String)
  */
 public abstract class DlvRequest<T> extends OutMessage implements Request<T> {
   private static final String PARAMS = "params";

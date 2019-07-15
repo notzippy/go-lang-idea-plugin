@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.actions.file;
+package com.notzippy.intellij.go.intellij.actions.file;
 
-import com.goide.GoIcons;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoPackageClause;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoPackageClause;
 import com.intellij.ide.actions.CreateFileFromTemplateAction;
 import com.intellij.ide.actions.CreateFileFromTemplateDialog;
 import com.intellij.openapi.editor.Editor;

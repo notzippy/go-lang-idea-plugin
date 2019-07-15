@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.*;
-import com.goide.stubs.GoTypeStub;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.stubs.GoTypeStub;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.impl.light.LightElement;

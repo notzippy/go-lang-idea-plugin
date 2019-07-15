@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.tree;
+package com.notzippy.intellij.go.intellij.tree;
 
-import com.goide.GoIcons;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.ide.structureView.*;
 import com.intellij.ide.structureView.impl.common.PsiTreeElementBase;
 import com.intellij.ide.util.ActionShortcutProvider;

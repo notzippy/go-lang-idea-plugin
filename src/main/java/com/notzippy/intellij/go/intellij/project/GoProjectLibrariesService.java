@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.GoConstants;
-import com.goide.GoLibrariesState;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.goide.GoLibrariesState;
 import com.intellij.openapi.components.*;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
@@ -25,8 +25,7 @@ import org.jetbrains.annotations.NotNull;
 @State(
   name = GoConstants.GO_LIBRARIES_SERVICE_NAME,
   storages = {
-    @Storage(id = "default", file = StoragePathMacros.PROJECT_FILE),
-    @Storage(id = "dir", file = StoragePathMacros.PROJECT_CONFIG_DIR + "/" + GoConstants.GO_LIBRARIES_CONFIG_FILE, scheme = StorageScheme.DIRECTORY_BASED)
+    @Storage(value = GoConstants.GO_LIBRARIES_CONFIG_FILE)
   }
 )
 public class GoProjectLibrariesService extends GoLibrariesService<GoLibrariesState> {

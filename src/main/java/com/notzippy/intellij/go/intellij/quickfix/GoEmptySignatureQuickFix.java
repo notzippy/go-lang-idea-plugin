@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.psi.GoFunctionDeclaration;
-import com.goide.psi.GoSignature;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoSignature;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.codeInspection.LocalQuickFixAndIntentionActionOnPsiElement;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;

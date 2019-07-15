@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoReceiver;
-import com.goide.psi.impl.GoReceiverImpl;
-import com.goide.stubs.GoReceiverStub;
+import com.notzippy.intellij.go.grammar.psi.GoReceiver;
+import com.notzippy.intellij.go.grammar.psi.impl.GoReceiverImpl;
+import com.notzippy.intellij.go.stubs.GoReceiverStub;
 import com.intellij.lang.ASTNode;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.stubs.StubElement;

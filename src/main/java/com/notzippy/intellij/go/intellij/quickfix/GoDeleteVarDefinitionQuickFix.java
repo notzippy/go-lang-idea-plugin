@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.psi.GoVarDefinition;
-import com.goide.psi.GoVarSpec;
+import com.notzippy.intellij.go.grammar.psi.GoVarDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoVarSpec;
 import com.intellij.codeInspection.LocalQuickFixBase;
 import com.intellij.codeInspection.ProblemDescriptor;
 import com.intellij.openapi.project.Project;

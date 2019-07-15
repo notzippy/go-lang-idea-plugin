@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.application.options.ModuleAwareProjectConfigurable;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;

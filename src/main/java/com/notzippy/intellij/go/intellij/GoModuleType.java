@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
-import com.goide.sdk.GoSdkType;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkType;
 import com.intellij.ide.util.projectWizard.ModuleWizardStep;
 import com.intellij.ide.util.projectWizard.ProjectJdkForModuleStep;
 import com.intellij.ide.util.projectWizard.WizardContext;
@@ -54,12 +54,6 @@ public class GoModuleType extends ModuleType<GoModuleBuilder> {
   @Override
   public String getDescription() {
     return "Go modules are used for developing <b>Go</b> applications.";
-  }
-
-  @Nullable
-  @Override
-  public Icon getIcon() {
-    return GoIcons.MODULE_ICON;
   }
 
   @Nullable

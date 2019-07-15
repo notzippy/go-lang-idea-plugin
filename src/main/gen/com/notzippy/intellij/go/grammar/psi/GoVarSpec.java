@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +16,13 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.StubBasedPsiElement;
-import com.goide.stubs.GoVarSpecStub;
+import com.notzippy.intellij.go.stubs.GoVarSpecStub;
 import com.intellij.psi.ResolveState;
 import com.intellij.psi.scope.PsiScopeProcessor;
 
@@ -39,9 +40,9 @@ public interface GoVarSpec extends GoCompositeElement, StubBasedPsiElement<GoVar
   @Nullable
   PsiElement getAssign();
 
-  boolean processDeclarations(PsiScopeProcessor processor, ResolveState state, PsiElement lastParent, PsiElement place);
+  boolean processDeclarations(@NotNull PsiScopeProcessor processor, @NotNull ResolveState state, PsiElement lastParent, @NotNull PsiElement place);
 
-  void deleteDefinition(GoVarDefinition definitionToDelete);
+  void deleteDefinition(@NotNull GoVarDefinition definitionToDelete);
 
   @NotNull
   List<GoExpression> getRightExpressionsList();

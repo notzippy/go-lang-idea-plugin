@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,26 +16,26 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.psi.*;
-import com.goide.stubs.GoTypeStub;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.psi.stubs.IStubElementType;
+import com.notzippy.intellij.go.stubs.GoTypeStub;
 
 public class GoInterfaceTypeImpl extends GoTypeImpl implements GoInterfaceType {
 
-  public GoInterfaceTypeImpl(GoTypeStub stub, IStubElementType nodeType) {
-    super(stub, nodeType);
+  public GoInterfaceTypeImpl(@NotNull GoTypeStub stub, @NotNull IStubElementType type) {
+    super(stub, type);
   }
 
-  public GoInterfaceTypeImpl(ASTNode node) {
+  public GoInterfaceTypeImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -71,11 +72,13 @@ public class GoInterfaceTypeImpl extends GoTypeImpl implements GoInterfaceType {
     return notNullChild(findChildByType(INTERFACE));
   }
 
+  @Override
   @NotNull
   public List<GoMethodSpec> getMethods() {
     return GoPsiImplUtil.getMethods(this);
   }
 
+  @Override
   @NotNull
   public List<GoTypeReferenceExpression> getBaseTypesReferences() {
     return GoPsiImplUtil.getBaseTypesReferences(this);

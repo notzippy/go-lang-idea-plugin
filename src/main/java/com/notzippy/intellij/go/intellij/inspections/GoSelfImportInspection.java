@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoFile;
-import com.goide.psi.GoImportSpec;
-import com.goide.quickfix.GoDeleteImportQuickFix;
-import com.goide.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteImportQuickFix;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.psi.PsiDirectory;
 import org.jetbrains.annotations.NotNull;

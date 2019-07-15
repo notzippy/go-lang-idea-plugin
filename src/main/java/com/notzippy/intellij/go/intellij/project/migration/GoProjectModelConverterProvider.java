@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.project.migration;
+package com.notzippy.intellij.go.intellij.project.migration;
 
-import com.goide.GoConstants;
-import com.goide.project.GoApplicationLibrariesService;
-import com.goide.project.GoProjectLibrariesService;
-import com.goide.sdk.GoSdkType;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.project.GoApplicationLibrariesService;
+import com.notzippy.intellij.go.intellij.project.GoProjectLibrariesService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkType;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.conversion.*;
 import com.intellij.ide.impl.convert.JDomConvertingUtil;
 import com.intellij.openapi.application.AccessToken;
@@ -29,7 +29,6 @@ import com.intellij.openapi.projectRoots.ProjectJdkTable;
 import com.intellij.openapi.projectRoots.Sdk;
 import com.intellij.openapi.projectRoots.impl.ProjectJdkImpl;
 import com.intellij.openapi.roots.OrderRootType;
-import com.intellij.openapi.roots.impl.ProjectRootManagerImpl;
 import com.intellij.openapi.util.JDOMUtil;
 import com.intellij.openapi.util.io.FileUtil;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -84,10 +83,13 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
       public ConversionProcessor<RunManagerSettings> createRunConfigurationsConverter() {
         return new RunConfigurationsConverter();
       }
+
       @Override
       public boolean isConversionNeeded() {
         Element component = getProjectRootManager(context);
         return component != null && isGoSdkType(component.getAttributeValue(PROJECT_JDK_TYPE_ATTR));
+
+        // TODO throw new UnsupportedOperationException("not implemented");
       }
 
       @Override
@@ -152,6 +154,7 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
       return projectRootManager != null && isGoSdkType(projectRootManager.getAttributeValue(PROJECT_JDK_TYPE_ATTR));
     }
 
+
     @Override
     public void process(@NotNull ProjectSettings settings) throws CannotConvertException {
       Element projectRootManager = getProjectRootManager(settings.getRootElement());
@@ -210,6 +213,7 @@ public class GoProjectModelConverterProvider extends ConverterProvider {
   private static void updateSdkType(@NotNull File file, @NotNull Element projectRootManager) throws CannotConvertException {
     projectRootManager.setAttribute(PROJECT_JDK_TYPE_ATTR, GoConstants.SDK_TYPE_ID);
     saveFile(file, projectRootManager, "Cannot save sdk type changing");
+
   }
 
   @NotNull

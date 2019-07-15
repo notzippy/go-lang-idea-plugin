@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,27 +16,27 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.stubs.GoTypeSpecStub;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.stubs.GoTypeSpecStub;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.psi.ResolveState;
 import com.intellij.psi.stubs.IStubElementType;
 
 public class GoTypeSpecImpl extends GoNamedElementImpl<GoTypeSpecStub> implements GoTypeSpec {
 
-  public GoTypeSpecImpl(GoTypeSpecStub stub, IStubElementType nodeType) {
-    super(stub, nodeType);
+  public GoTypeSpecImpl(@NotNull GoTypeSpecStub stub, @NotNull IStubElementType type) {
+    super(stub, type);
   }
 
-  public GoTypeSpecImpl(ASTNode node) {
+  public GoTypeSpecImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -54,16 +55,19 @@ public class GoTypeSpecImpl extends GoNamedElementImpl<GoTypeSpecStub> implement
     return notNullChild(GoPsiTreeUtil.getStubChildOfType(this, GoSpecType.class));
   }
 
+  @Override
   @Nullable
-  public GoType getGoTypeInner(ResolveState context) {
+  public GoType getGoTypeInner(@Nullable ResolveState context) {
     return GoPsiImplUtil.getGoTypeInner(this, context);
   }
 
+  @Override
   @NotNull
   public List<GoMethodDeclaration> getMethods() {
     return GoPsiImplUtil.getMethods(this);
   }
 
+  @Override
   public boolean shouldGoDeeper() {
     return GoPsiImplUtil.shouldGoDeeper(this);
   }

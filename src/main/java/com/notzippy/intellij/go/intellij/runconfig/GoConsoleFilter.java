@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.codeInsight.imports.GoGetPackageFix;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.util.GoPathResolveScope;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.codeInsight.imports.GoGetPackageFix;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.util.GoPathResolveScope;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.execution.filters.Filter;
 import com.intellij.execution.filters.HyperlinkInfo;
 import com.intellij.execution.filters.OpenFileHyperlinkInfo;

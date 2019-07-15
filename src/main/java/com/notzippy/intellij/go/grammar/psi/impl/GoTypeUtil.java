@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.GoConstants;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiReference;

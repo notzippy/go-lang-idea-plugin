@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.ResolveState;

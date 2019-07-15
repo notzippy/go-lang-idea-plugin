@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
 import com.intellij.codeInsight.FileModificationService;
 import com.intellij.codeInspection.LocalQuickFixOnPsiElement;
 import com.intellij.ide.DataManager;

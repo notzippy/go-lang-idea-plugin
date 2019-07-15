@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoAnonymousFieldDefinition;
-import com.goide.psi.impl.GoAnonymousFieldDefinitionImpl;
-import com.goide.stubs.GoAnonymousFieldDefinitionStub;
+import com.notzippy.intellij.go.grammar.psi.GoAnonymousFieldDefinition;
+import com.notzippy.intellij.go.grammar.psi.impl.GoAnonymousFieldDefinitionImpl;
+import com.notzippy.intellij.go.stubs.GoAnonymousFieldDefinitionStub;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;
 import com.intellij.psi.stubs.StubOutputStream;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.util.CommonProcessors;

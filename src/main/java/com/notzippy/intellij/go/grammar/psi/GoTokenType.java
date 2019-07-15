@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
-import com.goide.GoLanguage;
+import com.notzippy.intellij.go.intellij.GoLanguage;
 import com.intellij.psi.tree.IElementType;
 import org.jetbrains.annotations.NotNull;
 

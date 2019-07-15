@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gotest;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest;
 
-import com.goide.GoConstants;
-import com.goide.generate.GoGenerateTestActionBase;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoImportSpec;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.runconfig.testing.GoTestFunctionType;
-import com.goide.template.GoLiveTemplateContextType;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.generate.GoGenerateTestActionBase;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFunctionType;
+import com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType;
 import com.intellij.codeInsight.AutoPopupController;
 import com.intellij.codeInsight.CodeInsightActionHandler;
 import com.intellij.codeInsight.template.TemplateContextType;

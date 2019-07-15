@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.refactor;
+package com.notzippy.intellij.go.intellij.refactor;
 
-import com.goide.psi.GoImportSpec;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
 import com.intellij.find.FindManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.psi.PsiElement;

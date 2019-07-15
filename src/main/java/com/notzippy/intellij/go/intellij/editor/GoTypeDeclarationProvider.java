@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoType;
-import com.goide.psi.GoTypeReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoType;
+import com.notzippy.intellij.go.grammar.psi.GoTypeReferenceExpression;
 import com.intellij.codeInsight.navigation.actions.TypeDeclarationProvider;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;

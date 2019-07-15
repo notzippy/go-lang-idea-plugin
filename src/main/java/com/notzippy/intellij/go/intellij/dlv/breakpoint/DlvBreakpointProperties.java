@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv.breakpoint;
+package com.notzippy.intellij.go.intellij.dlv.breakpoint;
 
 import com.intellij.xdebugger.breakpoints.XBreakpointProperties;
 import org.jetbrains.annotations.Nullable;

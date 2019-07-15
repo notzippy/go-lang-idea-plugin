@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.stubs;
+package com.notzippy.intellij.go.stubs;
 
-import com.goide.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.stubs.IStubElementType;
 import com.intellij.psi.stubs.NamedStubBase;

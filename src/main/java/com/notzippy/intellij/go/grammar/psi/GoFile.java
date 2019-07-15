@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
-import com.goide.GoConstants;
-import com.goide.GoFileType;
-import com.goide.GoLanguage;
-import com.goide.GoTypes;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.runconfig.testing.GoTestFinder;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.stubs.GoConstSpecStub;
-import com.goide.stubs.GoFileStub;
-import com.goide.stubs.GoVarSpecStub;
-import com.goide.stubs.types.*;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.stubs.GoConstSpecStub;
+import com.notzippy.intellij.go.stubs.GoFileStub;
+import com.notzippy.intellij.go.stubs.GoVarSpecStub;
+import com.notzippy.intellij.go.stubs.types.*;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.extapi.psi.PsiFileBase;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.module.Module;

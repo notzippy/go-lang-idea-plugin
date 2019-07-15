@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.GoTypes;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.template.GoLiveTemplateContextType;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType;
 import com.intellij.codeInsight.completion.*;
 import com.intellij.codeInsight.lookup.AutoCompletionPolicy;
 import com.intellij.codeInsight.lookup.LookupElement;
@@ -35,9 +35,9 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
 
-import static com.goide.completion.GoCompletionUtil.CONTEXT_KEYWORD_PRIORITY;
-import static com.goide.completion.GoCompletionUtil.KEYWORD_PRIORITY;
-import static com.goide.completion.GoKeywordCompletionProvider.EMPTY_INSERT_HANDLER;
+import static com.notzippy.intellij.go.intellij.completion.GoCompletionUtil.CONTEXT_KEYWORD_PRIORITY;
+import static com.notzippy.intellij.go.intellij.completion.GoCompletionUtil.KEYWORD_PRIORITY;
+import static com.notzippy.intellij.go.intellij.completion.GoKeywordCompletionProvider.EMPTY_INSERT_HANDLER;
 import static com.intellij.patterns.PlatformPatterns.psiElement;
 import static com.intellij.patterns.PlatformPatterns.psiFile;
 import static com.intellij.patterns.StandardPatterns.*;

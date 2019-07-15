@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.dlv.protocol;
+package com.notzippy.intellij.go.intellij.dlv.protocol;
 
-import com.goide.dlv.JsonReaderEx;
+import com.notzippy.intellij.go.intellij.dlv.JsonReaderEx;
 import com.google.gson.stream.JsonToken;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -51,7 +51,7 @@ public interface DlvResponse {
   }
 
   final class CommandResponseImpl implements DlvResponse {
-    @Nullable private DlvResponse.ErrorInfo _error;
+    @Nullable private ErrorInfo _error;
     private int _id = -1;
     @Nullable private JsonReaderEx _result;
 
@@ -87,7 +87,7 @@ public interface DlvResponse {
 
     @Nullable
     @Override
-    public DlvResponse.ErrorInfo error() {
+    public ErrorInfo error() {
       return _error;
     }
 
@@ -103,7 +103,7 @@ public interface DlvResponse {
     }
   }
 
-  final class M5m implements DlvResponse.ErrorInfo {
+  final class M5m implements ErrorInfo {
     private static final int _code = -1;
     @NotNull private final List<String> _data = Collections.emptyList();
     @Nullable private final String _message;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.psi.GoImportString;
+import com.notzippy.intellij.go.grammar.psi.GoImportString;
 import com.intellij.codeInsight.lookup.CharFilter;
 import com.intellij.codeInsight.lookup.Lookup;
 import com.intellij.psi.util.PsiTreeUtil;

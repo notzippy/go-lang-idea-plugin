@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.GoParserDefinition;
-import com.goide.GoTypes;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
+import com.notzippy.intellij.go.parser.GoTypes;
 import com.intellij.lang.BracePair;
 import com.intellij.lang.PairedBraceMatcher;
 import com.intellij.psi.PsiFile;

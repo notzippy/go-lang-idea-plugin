@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.GoBlock;
-import com.goide.psi.GoFieldDefinition;
-import com.goide.psi.GoStatement;
-import com.goide.psi.GoVarDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoBlock;
+import com.notzippy.intellij.go.grammar.psi.GoFieldDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoStatement;
+import com.notzippy.intellij.go.grammar.psi.GoVarDefinition;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.ResolveState;
 import com.intellij.psi.util.PsiTreeUtil;

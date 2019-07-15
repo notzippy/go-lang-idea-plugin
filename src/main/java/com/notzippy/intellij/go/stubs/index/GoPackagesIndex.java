@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.index;
+package com.notzippy.intellij.go.stubs.index;
 
-import com.goide.GoFileElementType;
-import com.goide.psi.GoFile;
+import com.notzippy.intellij.go.intellij.GoFileElementType;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
 import com.intellij.psi.stubs.StringStubIndexExtension;
 import com.intellij.psi.stubs.StubIndexKey;
 import org.jetbrains.annotations.NotNull;

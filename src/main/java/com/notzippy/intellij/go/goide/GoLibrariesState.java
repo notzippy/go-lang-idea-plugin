@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.goide;
 
 import com.intellij.util.containers.ContainerUtil;
 import org.jetbrains.annotations.NotNull;

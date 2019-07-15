@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.refactor;
+package com.notzippy.intellij.go.intellij.refactor;
 
-import com.goide.inspections.GoInspectionUtil;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.intellij.inspections.GoInspectionUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Editor;

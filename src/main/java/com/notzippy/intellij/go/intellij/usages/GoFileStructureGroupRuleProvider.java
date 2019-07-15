@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.usages;
+package com.notzippy.intellij.go.intellij.usages;
 
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoTypeSpec;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.util.PsiTreeUtil;
@@ -34,6 +34,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class GoFileStructureGroupRuleProvider implements FileStructureGroupRuleProvider {
+  public static final SingleParentUsageGroupingRule USAGE_GROUPING_RULE = new GoClassGroupingRule();
   public UsageGroupingRule getUsageGroupingRule(Project project) {
     return new GoClassGroupingRule();
   }

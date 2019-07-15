@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.lexer;
+package com.notzippy.intellij.go.lexer;
 
-import com.goide.GoParserDefinition;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
 import com.intellij.lexer.FlexAdapter;
 import com.intellij.lexer.MergingLexerAdapter;
 import com.intellij.psi.tree.TokenSet;

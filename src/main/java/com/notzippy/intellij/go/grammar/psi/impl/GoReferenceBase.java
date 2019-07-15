@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.*;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtilCore;
 import com.intellij.openapi.util.Comparing;
@@ -34,7 +34,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
-import static com.goide.psi.impl.GoPsiImplUtil.allowed;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil.allowed;
 
 public abstract class GoReferenceBase<T extends GoReferenceExpressionBase> extends PsiPolyVariantReferenceBase<T> {
   public static final Key<List<PsiElement>> IMPORT_USERS = Key.create("IMPORT_USERS");

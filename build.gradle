@@ -1,154 +1,72 @@
-/*
- * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-buildscript {
-  repositories {
-    maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-  }
-  dependencies {
-    classpath "org.jetbrains.intellij.plugins:gradle-intellij-plugin:0.2.0-SNAPSHOT"
-  }
-}
-
 plugins {
-  id "de.undercouch.download" version "3.1.0"
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.9'
+    id "de.undercouch.download" version "3.4.3"
 }
 
 apply plugin: 'de.undercouch.download'
 
-version = "${version}.$buildNumber"
-allprojects {
-  apply plugin: 'java'
-  sourceCompatibility = javaVersion
-  targetCompatibility = javaTargetVersion
-  tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+group 'nz'
+version "${version}.$buildNumber"
 
-  sourceSets {
-    main {
-      java.srcDirs 'src', 'gen'
-      resources.srcDirs 'resources', 'pluginResources'
-    }
-    test {
-      java.srcDir 'tests'
-    }
-  }
+sourceCompatibility = 1.8
 
-  apply plugin: 'org.jetbrains.intellij'
-  intellij {
-    version ideaVersion
-    pluginName 'Go'
-    plugins 'coverage'
-    downloadSources Boolean.valueOf(sources)
-    sameSinceUntilBuild Boolean.valueOf(isEAP)
-    alternativeIdePath localIdePath
-    systemProperty 'dlv.path', customDlvPath
-  }
+repositories {
+    mavenCentral()
 }
 
-publishPlugin {
-  username publishUsername
-  password publishPassword
-  channels publishChannel
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version '2019.1.3'
+}
 patchPluginXml {
-    if (customSinceBuild) {
-        sinceBuild customSinceBuild
-    }
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
 }
 
-apply plugin: 'idea'
-idea {
-  project {
-    jdkName = javaVersion
-    languageLevel = javaVersion
-    vcs = 'Git'
-  }
-  module {
-    generatedSourceDirs += file('gen')
-  }
+allprojects {
+    apply plugin: 'java'
+
+    sourceSets {
+        main {
+            java.srcDirs 'src/main/java', 'src/main/gen'
+            resources.srcDirs 'src/main/resources'
+        }
+        test {
+            java.srcDir 'src/test/java'
+        }
+    }
+    
+    apply plugin: 'org.jetbrains.intellij'
+    intellij {
+        version ideaVersion
+        pluginName 'Go'
+        plugins 'coverage'
+        downloadSources Boolean.valueOf(sources)
+        sameSinceUntilBuild Boolean.valueOf(isEAP)
+        alternativeIdePath localIdePath
+    }
+
 }
 
 repositories { maven { url "http://dl.bintray.com/jetbrains/golang" } }
 dependencies {
-  compile project(':utils'), project(':google-app-engine'), project(':google-app-engine:google-app-engine-yaml'), project(':plan9')
-  runtime "com.jetbrains:delve:$delveVersion@zip"
-}
-
-// delve packing
-project.afterEvaluate {
-  prepareSandbox.doLast {
-    def libraries = "$it.destinationDir/$intellij.pluginName/lib/"
-    def delveFile = fileTree(dir: libraries, include: 'delve*').singleFile
-    copy {
-      from zipTree(delveFile)
-      into libraries
-    }
-    delveFile.delete()
-  }
+    compile project(':google-app-engine'), project(':google-app-engine:google-app-engine-yaml')
 }
 
 test {
-  useJUnit {
-    excludeCategories 'com.goide.categories.Performance'
-  }
-  testLogging {
-    exceptionFormat = 'full'
-  }
-}
 
-task preparePerformanceTestData << {
-  downloadAndUnzip('https://storage.googleapis.com/golang/go1.5.1.src.tar.gz', 'go', 'go')
-  downloadAndUnzip('https://github.com/docker/docker/archive/v1.9.1.tar.gz', 'docker-1.9.1', 'docker')
-}
-
-task performanceTest(type: Test, group: 'Verification', dependsOn: [classes, testClasses, preparePerformanceTestData]) {
-  maxHeapSize = '512m'
-  minHeapSize = '256m'
-
-  useJUnit {
-    includeCategories 'com.goide.categories.Performance'
-    reports.html.destination = "$buildDir/reports/performanceTests"
-  }
-  testLogging {
-    exceptionFormat = 'full'
-  }
-}
-check.dependsOn performanceTest
-
-private void downloadAndUnzip(url, sourceDir, targetDir) {
-  def testDataPath = "$projectDir/testData/performance/"
-  def markerFile = file("$testDataPath/$targetDir/markerFile")
-  def tmpPath = "$testDataPath/tmp/"
-  def tar = file("$tmpPath/${targetDir}.tar.gz")
-  if (!markerFile.exists()) {
-    download {
-      src url
-      dest tar
+    useJUnit {
+        include 'com/notzippy/intellij/go/intellij/**'
+        //include '**intellij/actions/*'
+        excludeCategories 'com.notzippy.intellij.go.intellij.categories.Performance'
     }
-    copy {
-      from tarTree(tar)
-      into tmpPath
+    testLogging {
+        exceptionFormat = 'full'
     }
-    copy {
-      from "$tmpPath/$sourceDir"
-      into "$testDataPath/$targetDir"
-    }
-    markerFile.createNewFile()
-  }
-  delete file(tmpPath)
 }

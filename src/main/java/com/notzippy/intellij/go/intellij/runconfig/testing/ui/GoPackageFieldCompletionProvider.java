@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.ui;
+package com.notzippy.intellij.go.intellij.runconfig.testing.ui;
 
-import com.goide.completion.GoImportPathsCompletionProvider;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.completion.GoImportPathsCompletionProvider;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.completion.CompletionResultSet;
 import com.intellij.openapi.module.Module;
 import com.intellij.psi.search.GlobalSearchScope;

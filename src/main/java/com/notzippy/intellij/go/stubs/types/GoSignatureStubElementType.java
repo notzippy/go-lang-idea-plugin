@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoSignature;
-import com.goide.psi.impl.GoSignatureImpl;
-import com.goide.stubs.GoSignatureStub;
+import com.notzippy.intellij.go.grammar.psi.GoSignature;
+import com.notzippy.intellij.go.grammar.psi.impl.GoSignatureImpl;
+import com.notzippy.intellij.go.stubs.GoSignatureStub;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;
 import com.intellij.psi.stubs.StubOutputStream;

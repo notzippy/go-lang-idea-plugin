@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.GoConstants;
-import com.goide.configuration.GoLibrariesConfigurableProvider;
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.configuration.GoLibrariesConfigurableProvider;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.ProjectTopics;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.notification.Notification;

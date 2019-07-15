@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.sdk;
+package com.notzippy.intellij.go.intellij.sdk;
 
-import com.goide.GoConstants;
-import com.goide.GoIcons;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoIcons;
 import com.intellij.openapi.projectRoots.*;
 import com.intellij.openapi.roots.OrderRootType;
 import com.intellij.openapi.vfs.VirtualFile;

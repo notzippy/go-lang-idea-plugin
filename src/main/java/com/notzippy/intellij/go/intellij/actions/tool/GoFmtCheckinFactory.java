@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.actions.tool;
+package com.notzippy.intellij.go.intellij.actions.tool;
 
-import com.goide.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
 import com.intellij.CommonBundle;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.fileEditor.FileDocumentManager;

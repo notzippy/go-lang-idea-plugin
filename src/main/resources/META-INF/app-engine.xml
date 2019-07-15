@@ -15,18 +15,18 @@
   -->
 
 <idea-plugin version="2">
-  <extensions defaultExtensionNs="ro.redeul.google.go">
-    <appengine.Extension implementation="com.goide.appengine.GoAppEngineExtension"/>
-  </extensions>
-  <extensions defaultExtensionNs="com.intellij">
-    <projectService serviceImplementation="com.goide.appengine.YamlFilesModificationTracker"/>
-    <library.presentationProvider implementation="com.goide.appengine.GoAppEngineLibraryPresentationProvider"/>
-    
-    <!-- run application -->
-    <configurationType implementation="com.goide.appengine.run.GoAppEngineRunConfigurationType"/>
-    
-    <!-- app engine remoteServer.type extension here -->
-  </extensions>
+<!--  <extensions defaultExtensionNs="ro.redeul.google.go">-->
+<!--    <appengine.Extension implementation="com.goide.appengine.GoAppEngineExtension"/>-->
+<!--  </extensions>-->
+<!--  <extensions defaultExtensionNs="com.intellij">-->
+<!--    <projectService serviceImplementation="com.goide.appengine.YamlFilesModificationTracker"/>-->
+<!--    <library.presentationProvider implementation="com.goide.appengine.GoAppEngineLibraryPresentationProvider"/>-->
+<!--    -->
+<!--    &lt;!&ndash; run application &ndash;&gt;-->
+<!--    <configurationType implementation="com.goide.appengine.run.GoAppEngineRunConfigurationType"/>-->
+<!--    -->
+<!--    &lt;!&ndash; app engine remoteServer.type extension here &ndash;&gt;-->
+<!--  </extensions>-->
 
 </idea-plugin>
 

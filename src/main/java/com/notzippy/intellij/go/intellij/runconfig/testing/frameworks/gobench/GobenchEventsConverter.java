@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gobench;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gobench;
 
-import com.goide.GoConstants;
-import com.goide.runconfig.testing.frameworks.gotest.GoTestEventsConverterBaseImpl;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest.GoTestEventsConverterBaseImpl;
 import com.intellij.execution.testframework.TestConsoleProperties;
 import com.intellij.openapi.util.Key;
 import com.intellij.openapi.util.text.StringUtil;

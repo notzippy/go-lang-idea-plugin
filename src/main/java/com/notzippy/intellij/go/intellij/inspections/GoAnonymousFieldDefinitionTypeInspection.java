@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoAnonymousFieldDefinition;
-import com.goide.psi.GoVisitor;
-import com.goide.quickfix.GoCreateWrapperTypeQuickFix;
+import com.notzippy.intellij.go.grammar.psi.GoAnonymousFieldDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoVisitor;
+import com.notzippy.intellij.go.intellij.quickfix.GoCreateWrapperTypeQuickFix;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemsHolder;
 import org.jetbrains.annotations.NotNull;

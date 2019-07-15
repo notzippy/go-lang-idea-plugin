@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoConstDefinition;
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.psi.impl.GoConstDefinitionImpl;
-import com.goide.stubs.GoConstDefinitionStub;
+import com.notzippy.intellij.go.grammar.psi.GoConstDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.impl.GoConstDefinitionImpl;
+import com.notzippy.intellij.go.stubs.GoConstDefinitionStub;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;

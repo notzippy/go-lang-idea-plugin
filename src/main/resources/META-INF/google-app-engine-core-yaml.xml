@@ -15,8 +15,8 @@
   -->
 
 <!-- todo[IDEA 17] It's supposed that GAE-core module will be moved to IDEA source and bundled in IDEA 17 -->
-<idea-plugin version="2">
-  <extensions defaultExtensionNs="com.intellij">
-    <completion.contributor language="yaml" implementationClass="yaml.AppEngineYamlCompletionContributor"/>
-  </extensions>
-</idea-plugin>
+<!--<idea-plugin version="2">-->
+<!--  <extensions defaultExtensionNs="com.intellij">-->
+<!--    <completion.contributor language="yaml" implementationClass="yaml.AppEngineYamlCompletionContributor"/>-->
+<!--  </extensions>-->
+<!--</idea-plugin>-->

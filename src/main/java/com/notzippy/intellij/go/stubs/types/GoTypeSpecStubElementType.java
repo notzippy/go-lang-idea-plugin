@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoTypeSpec;
-import com.goide.psi.impl.GoTypeSpecImpl;
-import com.goide.stubs.GoTypeSpecStub;
-import com.goide.stubs.index.GoTypesIndex;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeSpecImpl;
+import com.notzippy.intellij.go.stubs.GoTypeSpecStub;
+import com.notzippy.intellij.go.stubs.index.GoTypesIndex;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubIndexKey;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.application;
+package com.notzippy.intellij.go.intellij.runconfig.application;
 
-import com.goide.GoConstants;
-import com.goide.GoIcons;
-import com.goide.runconfig.GoConfigurationFactoryBase;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.intellij.runconfig.GoConfigurationFactoryBase;
 import com.intellij.execution.configurations.ConfigurationTypeBase;
 import com.intellij.execution.configurations.RunConfiguration;
 import com.intellij.openapi.extensions.Extensions;

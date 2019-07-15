@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
@@ -36,6 +37,6 @@ public interface GoImportDeclaration extends GoCompositeElement {
   PsiElement getImport();
 
   @NotNull
-  GoImportSpec addImportSpec(String packagePath, String alias);
+  GoImportSpec addImportSpec(@NotNull String packagePath, @Nullable String alias);
 
 }

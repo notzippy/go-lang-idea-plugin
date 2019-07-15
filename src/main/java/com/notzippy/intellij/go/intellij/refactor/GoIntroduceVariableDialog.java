@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.refactor;
+package com.notzippy.intellij.go.intellij.refactor;
 
-import com.goide.GoFileType;
-import com.goide.GoNamesValidator;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.GoNamesValidator;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.refactoring.RefactoringBundle;
 import com.intellij.refactoring.ui.NameSuggestionsField;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.GoIcons;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.*;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.stubs.GoNamedStub;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.stubs.GoNamedStub;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.lang.ASTNode;
 import com.intellij.navigation.ItemPresentation;
 import com.intellij.openapi.module.ModuleUtilCore;

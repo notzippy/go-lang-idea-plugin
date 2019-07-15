@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.project.GoExcludedPathsSettings;
-import com.goide.psi.GoFile;
+import com.notzippy.intellij.go.intellij.project.GoExcludedPathsSettings;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
 import com.intellij.codeInsight.lookup.Lookup;
 import com.intellij.codeInsight.lookup.LookupActionProvider;
 import com.intellij.codeInsight.lookup.LookupElement;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.CommandLineState;
 import com.intellij.execution.configurations.GeneralCommandLine;

@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,20 +16,20 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 
 public class GoVarDeclarationImpl extends GoCompositeElementImpl implements GoVarDeclaration {
 
-  public GoVarDeclarationImpl(ASTNode node) {
+  public GoVarDeclarationImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -65,12 +66,14 @@ public class GoVarDeclarationImpl extends GoCompositeElementImpl implements GoVa
     return notNullChild(findChildByType(VAR));
   }
 
+  @Override
   @NotNull
-  public GoVarSpec addSpec(String name, String type, String value, GoVarSpec specAnchor) {
+  public GoVarSpec addSpec(@NotNull String name, @Nullable String type, @Nullable String value, @Nullable GoVarSpec specAnchor) {
     return GoPsiImplUtil.addSpec(this, name, type, value, specAnchor);
   }
 
-  public void deleteSpec(GoVarSpec specToDelete) {
+  @Override
+  public void deleteSpec(@NotNull GoVarSpec specToDelete) {
     GoPsiImplUtil.deleteSpec(this, specToDelete);
   }
 

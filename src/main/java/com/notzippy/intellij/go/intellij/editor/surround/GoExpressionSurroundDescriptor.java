@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.editor.surround;
+package com.notzippy.intellij.go.intellij.editor.surround;
 
-import com.goide.psi.GoExpression;
-import com.goide.refactor.GoIntroduceVariableBase;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
+import com.notzippy.intellij.go.intellij.refactor.GoIntroduceVariableBase;
 import com.intellij.featureStatistics.FeatureUsageTracker;
-import com.intellij.internal.statistic.UsageTrigger;
+// import com.intellij.internal.statistic.UsageTrigger;
 import com.intellij.lang.surroundWith.SurroundDescriptor;
 import com.intellij.lang.surroundWith.Surrounder;
 import com.intellij.psi.PsiElement;
@@ -45,7 +45,7 @@ public class GoExpressionSurroundDescriptor implements SurroundDescriptor {
   public PsiElement[] getElementsToSurround(PsiFile file, int startOffset, int endOffset) {
     GoExpression expr = GoIntroduceVariableBase.findExpressionInSelection(file, startOffset, endOffset);
     if (expr == null) return PsiElement.EMPTY_ARRAY;
-    UsageTrigger.trigger("go.surroundwith.expression");
+    // TODO UsageTrigger.trigger("go.surroundwith.expression");
     FeatureUsageTracker.getInstance().triggerFeatureUsed("codeassists.surroundwith.expression");
     return new PsiElement[]{expr};
   }

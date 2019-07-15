@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.refactor;
+package com.notzippy.intellij.go.intellij.refactor;
 
-import com.goide.psi.GoExpression;
-import com.goide.psi.GoVarDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
+import com.notzippy.intellij.go.grammar.psi.GoVarDefinition;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;

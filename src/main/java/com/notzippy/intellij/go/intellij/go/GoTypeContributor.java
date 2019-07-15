@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.go;
+package com.notzippy.intellij.go.intellij.go;
 
-import com.goide.psi.GoTypeSpec;
-import com.goide.stubs.index.GoTypesIndex;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
+import com.notzippy.intellij.go.stubs.index.GoTypesIndex;
 
 public class GoTypeContributor extends GoGotoContributorBase<GoTypeSpec> {
   public GoTypeContributor() {

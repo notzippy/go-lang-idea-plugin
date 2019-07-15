@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +16,14 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.parser;
+package com.notzippy.intellij.go.parser;
 
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.PsiBuilder.Marker;
-import static com.goide.GoTypes.*;
-import static com.goide.parser.GoParserUtil.*;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import static com.notzippy.intellij.go.parser.GoParserUtil.*;
 import com.intellij.psi.tree.IElementType;
+import com.intellij.psi.tree.IFileElementType;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.tree.TokenSet;
 import com.intellij.lang.PsiParser;
@@ -39,263 +41,11 @@ public class GoParser implements PsiParser, LightPsiParser {
     boolean r;
     b = adapt_builder_(t, b, this, EXTENDS_SETS_);
     Marker m = enter_section_(b, 0, _COLLAPSE_, null);
-    if (t == ANONYMOUS_FIELD_DEFINITION) {
-      r = AnonymousFieldDefinition(b, 0);
-    }
-    else if (t == ARGUMENT_LIST) {
-      r = ArgumentList(b, 0);
-    }
-    else if (t == ARRAY_OR_SLICE_TYPE) {
-      r = ArrayOrSliceType(b, 0);
-    }
-    else if (t == ASSIGNMENT_STATEMENT) {
-      r = AssignmentStatement(b, 0);
-    }
-    else if (t == BLOCK) {
-      r = Block(b, 0);
-    }
-    else if (t == BREAK_STATEMENT) {
-      r = BreakStatement(b, 0);
-    }
-    else if (t == BUILTIN_ARGUMENT_LIST) {
-      r = BuiltinArgumentList(b, 0);
-    }
-    else if (t == CHANNEL_TYPE) {
-      r = ChannelType(b, 0);
-    }
-    else if (t == COMM_CASE) {
-      r = CommCase(b, 0);
-    }
-    else if (t == COMM_CLAUSE) {
-      r = CommClause(b, 0);
-    }
-    else if (t == CONST_DECLARATION) {
-      r = ConstDeclaration(b, 0);
-    }
-    else if (t == CONST_DEFINITION) {
-      r = ConstDefinition(b, 0);
-    }
-    else if (t == CONST_SPEC) {
-      r = ConstSpec(b, 0);
-    }
-    else if (t == CONTINUE_STATEMENT) {
-      r = ContinueStatement(b, 0);
-    }
-    else if (t == DEFER_STATEMENT) {
-      r = DeferStatement(b, 0);
-    }
-    else if (t == ELEMENT) {
-      r = Element(b, 0);
-    }
-    else if (t == ELSE_STATEMENT) {
-      r = ElseStatement(b, 0);
-    }
-    else if (t == EXPR_CASE_CLAUSE) {
-      r = ExprCaseClause(b, 0);
-    }
-    else if (t == EXPR_SWITCH_STATEMENT) {
-      r = ExprSwitchStatement(b, 0);
-    }
-    else if (t == EXPRESSION) {
-      r = Expression(b, 0, -1);
-    }
-    else if (t == FALLTHROUGH_STATEMENT) {
-      r = FallthroughStatement(b, 0);
-    }
-    else if (t == FIELD_DECLARATION) {
-      r = FieldDeclaration(b, 0);
-    }
-    else if (t == FIELD_DEFINITION) {
-      r = FieldDefinition(b, 0);
-    }
-    else if (t == FIELD_NAME) {
-      r = FieldName(b, 0);
-    }
-    else if (t == FOR_CLAUSE) {
-      r = ForClause(b, 0);
-    }
-    else if (t == FOR_STATEMENT) {
-      r = ForStatement(b, 0);
-    }
-    else if (t == FUNCTION_DECLARATION) {
-      r = FunctionDeclaration(b, 0);
-    }
-    else if (t == FUNCTION_TYPE) {
-      r = FunctionType(b, 0);
-    }
-    else if (t == GO_STATEMENT) {
-      r = GoStatement(b, 0);
-    }
-    else if (t == GOTO_STATEMENT) {
-      r = GotoStatement(b, 0);
-    }
-    else if (t == IF_STATEMENT) {
-      r = IfStatement(b, 0);
-    }
-    else if (t == IMPORT_DECLARATION) {
-      r = ImportDeclaration(b, 0);
-    }
-    else if (t == IMPORT_LIST) {
-      r = ImportList(b, 0);
-    }
-    else if (t == IMPORT_SPEC) {
-      r = ImportSpec(b, 0);
-    }
-    else if (t == IMPORT_STRING) {
-      r = ImportString(b, 0);
-    }
-    else if (t == INC_DEC_STATEMENT) {
-      r = IncDecStatement(b, 0);
-    }
-    else if (t == INTERFACE_TYPE) {
-      r = InterfaceType(b, 0);
-    }
-    else if (t == KEY) {
-      r = Key(b, 0);
-    }
-    else if (t == LABEL_DEFINITION) {
-      r = LabelDefinition(b, 0);
-    }
-    else if (t == LABEL_REF) {
-      r = LabelRef(b, 0);
-    }
-    else if (t == LABELED_STATEMENT) {
-      r = LabeledStatement(b, 0);
-    }
-    else if (t == LEFT_HAND_EXPR_LIST) {
-      r = LeftHandExprList(b, 0);
-    }
-    else if (t == LITERAL_TYPE_EXPR) {
-      r = LiteralTypeExpr(b, 0);
-    }
-    else if (t == LITERAL_VALUE) {
-      r = LiteralValue(b, 0);
-    }
-    else if (t == MAP_TYPE) {
-      r = MapType(b, 0);
-    }
-    else if (t == METHOD_DECLARATION) {
-      r = MethodDeclaration(b, 0);
-    }
-    else if (t == METHOD_SPEC) {
-      r = MethodSpec(b, 0);
-    }
-    else if (t == PACKAGE_CLAUSE) {
-      r = PackageClause(b, 0);
-    }
-    else if (t == PAR_TYPE) {
-      r = ParType(b, 0);
-    }
-    else if (t == PARAM_DEFINITION) {
-      r = ParamDefinition(b, 0);
-    }
-    else if (t == PARAMETER_DECLARATION) {
-      r = ParameterDeclaration(b, 0);
-    }
-    else if (t == PARAMETERS) {
-      r = Parameters(b, 0);
-    }
-    else if (t == POINTER_TYPE) {
-      r = PointerType(b, 0);
-    }
-    else if (t == RANGE_CLAUSE) {
-      r = RangeClause(b, 0);
-    }
-    else if (t == RECEIVER) {
-      r = Receiver(b, 0);
-    }
-    else if (t == RECV_STATEMENT) {
-      r = RecvStatement(b, 0);
-    }
-    else if (t == REFERENCE_EXPRESSION) {
-      r = ReferenceExpression(b, 0);
-    }
-    else if (t == RESULT) {
-      r = Result(b, 0);
-    }
-    else if (t == RETURN_STATEMENT) {
-      r = ReturnStatement(b, 0);
-    }
-    else if (t == SELECT_STATEMENT) {
-      r = SelectStatement(b, 0);
-    }
-    else if (t == SEND_STATEMENT) {
-      r = SendStatement(b, 0);
-    }
-    else if (t == SHORT_VAR_DECLARATION) {
-      r = ShortVarDeclaration(b, 0);
-    }
-    else if (t == SIGNATURE) {
-      r = Signature(b, 0);
-    }
-    else if (t == SIMPLE_STATEMENT) {
-      r = SimpleStatement(b, 0);
-    }
-    else if (t == SPEC_TYPE) {
-      r = SpecType(b, 0);
-    }
-    else if (t == STATEMENT) {
-      r = Statement(b, 0);
-    }
-    else if (t == STRING_LITERAL) {
-      r = StringLiteral(b, 0);
-    }
-    else if (t == STRUCT_TYPE) {
-      r = StructType(b, 0);
-    }
-    else if (t == SWITCH_START) {
-      r = SwitchStart(b, 0);
-    }
-    else if (t == SWITCH_STATEMENT) {
-      r = SwitchStatement(b, 0);
-    }
-    else if (t == TAG) {
-      r = Tag(b, 0);
-    }
-    else if (t == TYPE) {
-      r = Type(b, 0);
-    }
-    else if (t == TYPE_CASE_CLAUSE) {
-      r = TypeCaseClause(b, 0);
-    }
-    else if (t == TYPE_DECLARATION) {
-      r = TypeDeclaration(b, 0);
-    }
-    else if (t == TYPE_GUARD) {
-      r = TypeGuard(b, 0);
-    }
-    else if (t == TYPE_LIST) {
-      r = TypeList(b, 0);
-    }
-    else if (t == TYPE_REFERENCE_EXPRESSION) {
-      r = TypeReferenceExpression(b, 0);
-    }
-    else if (t == TYPE_SPEC) {
-      r = TypeSpec(b, 0);
-    }
-    else if (t == TYPE_SWITCH_GUARD) {
-      r = TypeSwitchGuard(b, 0);
-    }
-    else if (t == TYPE_SWITCH_STATEMENT) {
-      r = TypeSwitchStatement(b, 0);
-    }
-    else if (t == VALUE) {
-      r = Value(b, 0);
-    }
-    else if (t == VAR_DECLARATION) {
-      r = VarDeclaration(b, 0);
-    }
-    else if (t == VAR_DEFINITION) {
-      r = VarDefinition(b, 0);
-    }
-    else if (t == VAR_SPEC) {
-      r = VarSpec(b, 0);
-    }
-    else if (t == ASSIGN_OP) {
-      r = assign_op(b, 0);
+    if (t instanceof IFileElementType) {
+      r = parse_root_(t, b, 0);
     }
     else {
-      r = parse_root_(t, b, 0);
+      r = false;
     }
     exit_section_(b, 0, m, t, r, true, TRUE_CONDITION);
   }
@@ -666,11 +416,11 @@ public class GoParser implements PsiParser, LightPsiParser {
   // chan '<-'? | '<-' chan
   static boolean ChanTypePrefix(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ChanTypePrefix")) return false;
-    if (!nextTokenIs(b, "", SEND_CHANNEL, CHAN)) return false;
+    if (!nextTokenIs(b, "", CHAN, SEND_CHANNEL)) return false;
     boolean r;
     Marker m = enter_section_(b);
     r = ChanTypePrefix_0(b, l + 1);
-    if (!r) r = ChanTypePrefix_1(b, l + 1);
+    if (!r) r = parseTokens(b, 1, SEND_CHANNEL, CHAN);
     exit_section_(b, m, null, r);
     return r;
   }
@@ -694,23 +444,11 @@ public class GoParser implements PsiParser, LightPsiParser {
     return true;
   }
 
-  // '<-' chan
-  private static boolean ChanTypePrefix_1(PsiBuilder b, int l) {
-    if (!recursion_guard_(b, l, "ChanTypePrefix_1")) return false;
-    boolean r, p;
-    Marker m = enter_section_(b, l, _NONE_);
-    r = consumeToken(b, SEND_CHANNEL);
-    p = r; // pin = 1
-    r = r && consumeToken(b, CHAN);
-    exit_section_(b, l, m, r, p, null);
-    return r || p;
-  }
-
   /* ********************************************************** */
   // ChanTypePrefix Type
   public static boolean ChannelType(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ChannelType")) return false;
-    if (!nextTokenIs(b, "<channel type>", SEND_CHANNEL, CHAN)) return false;
+    if (!nextTokenIs(b, "<channel type>", CHAN, SEND_CHANNEL)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _COLLAPSE_, CHANNEL_TYPE, "<channel type>");
     r = ChanTypePrefix(b, l + 1);
@@ -884,11 +622,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( ',' ConstDefinition )*
   private static boolean ConstDefinitionList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ConstDefinitionList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ConstDefinitionList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ConstDefinitionList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -980,11 +717,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi ConstSpec)*
   private static boolean ConstSpecs_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ConstSpecs_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ConstSpecs_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ConstSpecs_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1214,11 +950,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( ',' E? )*
   private static boolean ElementList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ElementList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ElementList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ElementList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1260,10 +995,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   private static boolean ElseStatement_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ElseStatement_1")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = IfStatement(b, l + 1);
     if (!r) r = Block(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -1342,11 +1075,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ExprCaseClause*
   private static boolean ExprSwitchStatement_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ExprSwitchStatement_2")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ExprCaseClause(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ExprSwitchStatement_2", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1367,11 +1099,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (',' (ExpressionOrTypeWithRecover2 | &')'))*
   private static boolean ExpressionArgList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ExpressionArgList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ExpressionArgList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ExpressionArgList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1425,11 +1156,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (',' (ExpressionWithRecover | &')'))*
   private static boolean ExpressionList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ExpressionList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ExpressionList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ExpressionList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1570,10 +1300,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   static boolean ExpressionOrLiteralTypeExpr(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ExpressionOrLiteralTypeExpr")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = Expression(b, l + 1, -1);
     if (!r) r = LiteralTypeExpr(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -1753,11 +1481,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (',' FieldDefinition)*
   private static boolean FieldDefinitionList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "FieldDefinitionList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!FieldDefinitionList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "FieldDefinitionList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1803,11 +1530,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi FieldDeclaration)*
   private static boolean Fields_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Fields_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!Fields_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "Fields_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1849,11 +1575,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // TopLevelDeclaration*
   private static boolean File_3(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "File_3")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!TopLevelDeclaration(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "File_3", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -1911,10 +1636,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   static boolean ForOrRangeClause(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ForOrRangeClause")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = ForClause(b, l + 1);
     if (!r) r = RangeClause(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -2119,11 +1842,10 @@ public class GoParser implements PsiParser, LightPsiParser {
     boolean r;
     Marker m = enter_section_(b);
     r = ImportList_0_0(b, l + 1);
-    int c = current_position_(b);
     while (r) {
+      int c = current_position_(b);
       if (!ImportList_0_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ImportList_0", c)) break;
-      c = current_position_(b);
     }
     exit_section_(b, m, null, r);
     return r;
@@ -2188,11 +1910,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi ImportSpec)*
   private static boolean ImportSpecs_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ImportSpecs_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ImportSpecs_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ImportSpecs_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -2276,10 +1997,9 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, INTERFACE)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _NONE_, INTERFACE_TYPE, null);
-    r = consumeToken(b, INTERFACE);
+    r = consumeTokens(b, 1, INTERFACE, LBRACE);
     p = r; // pin = 1
-    r = r && report_error_(b, consumeToken(b, LBRACE));
-    r = p && report_error_(b, InterfaceType_2(b, l + 1)) && r;
+    r = r && report_error_(b, InterfaceType_2(b, l + 1));
     r = p && consumeToken(b, RBRACE) && r;
     exit_section_(b, l, m, r, p, null);
     return r || p;
@@ -2426,11 +2146,9 @@ public class GoParser implements PsiParser, LightPsiParser {
   static boolean LiteralTypeExprInner(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "LiteralTypeExprInner")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = StructType(b, l + 1);
     if (!r) r = ArrayOrSliceType(b, l + 1);
     if (!r) r = MapType(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -2475,10 +2193,9 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, MAP)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _NONE_, MAP_TYPE, null);
-    r = consumeToken(b, MAP);
+    r = consumeTokens(b, 1, MAP, LBRACK);
     p = r; // pin = 1
-    r = r && report_error_(b, consumeToken(b, LBRACK));
-    r = p && report_error_(b, Type(b, l + 1)) && r;
+    r = r && report_error_(b, Type(b, l + 1));
     r = p && report_error_(b, consumeToken(b, RBRACK)) && r;
     r = p && Type(b, l + 1) && r;
     exit_section_(b, l, m, r, p, null);
@@ -2582,11 +2299,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi MethodSpec)*
   private static boolean MethodSpecs_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "MethodSpecs_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!MethodSpecs_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "MethodSpecs_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -2713,11 +2429,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (',' ParamDefinition)*
   private static boolean ParamDefinitionListNoPin_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ParamDefinitionListNoPin_2")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ParamDefinitionListNoPin_2_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ParamDefinitionListNoPin_2", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -2787,11 +2502,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (',' (ParameterDeclaration | &')'))*
   private static boolean ParameterList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "ParameterList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!ParameterList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "ParameterList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -2901,8 +2615,7 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, DOT)) return false;
     boolean r;
     Marker m = enter_section_(b, l, _LEFT_, REFERENCE_EXPRESSION, null);
-    r = consumeToken(b, DOT);
-    r = r && consumeToken(b, IDENTIFIER);
+    r = consumeTokens(b, 0, DOT, IDENTIFIER);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
@@ -2914,8 +2627,7 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, DOT)) return false;
     boolean r;
     Marker m = enter_section_(b, l, _LEFT_, TYPE_REFERENCE_EXPRESSION, null);
-    r = consumeToken(b, DOT);
-    r = r && consumeToken(b, IDENTIFIER);
+    r = consumeTokens(b, 0, DOT, IDENTIFIER);
     exit_section_(b, l, m, r, false, null);
     return r;
   }
@@ -3113,10 +2825,9 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, SELECT)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _NONE_, SELECT_STATEMENT, null);
-    r = consumeToken(b, SELECT);
+    r = consumeTokens(b, 1, SELECT, LBRACE);
     p = r; // pin = 1
-    r = r && report_error_(b, consumeToken(b, LBRACE));
-    r = p && report_error_(b, SelectStatement_2(b, l + 1)) && r;
+    r = r && report_error_(b, SelectStatement_2(b, l + 1));
     r = p && consumeToken(b, RBRACE) && r;
     exit_section_(b, l, m, r, p, null);
     return r || p;
@@ -3125,11 +2836,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // CommClause*
   private static boolean SelectStatement_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "SelectStatement_2")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!CommClause(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "SelectStatement_2", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -3222,10 +2932,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   private static boolean SimpleStatement_2_1_0(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "SimpleStatement_2_1_0")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = AssignmentStatement(b, l + 1);
     if (!r) r = SendStatement(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -3486,11 +3194,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // StatementWithSemi*
   static boolean Statements(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "Statements")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!StatementWithSemi(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "Statements", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -3515,10 +3222,9 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, STRUCT)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _NONE_, STRUCT_TYPE, null);
-    r = consumeToken(b, STRUCT);
+    r = consumeTokens(b, 1, STRUCT, LBRACE);
     p = r; // pin = 1
-    r = r && report_error_(b, consumeToken(b, LBRACE));
-    r = p && report_error_(b, StructType_2(b, l + 1)) && r;
+    r = r && report_error_(b, StructType_2(b, l + 1));
     r = p && consumeToken(b, RBRACE) && r;
     exit_section_(b, l, m, r, p, null);
     return r || p;
@@ -3561,10 +3267,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   private static boolean SwitchStatement_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "SwitchStatement_1")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = TypeSwitchStatement(b, l + 1);
     if (!r) r = ExprSwitchStatement(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -3589,13 +3293,11 @@ public class GoParser implements PsiParser, LightPsiParser {
   static boolean TopDeclaration(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TopDeclaration")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = ConstDeclaration(b, l + 1);
     if (!r) r = TypeDeclaration(b, l + 1);
     if (!r) r = VarDeclaration(b, l + 1);
     if (!r) r = FunctionDeclaration(b, l + 1);
     if (!r) r = MethodDeclaration(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -3745,10 +3447,8 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!nextTokenIs(b, LPAREN)) return false;
     boolean r, p;
     Marker m = enter_section_(b, l, _NONE_, TYPE_GUARD, null);
-    r = consumeToken(b, LPAREN);
-    r = r && consumeToken(b, TYPE_);
+    r = consumeTokens(b, 2, LPAREN, TYPE_, RPAREN);
     p = r; // pin = 2
-    r = r && consumeToken(b, RPAREN);
     exit_section_(b, l, m, r, p, null);
     return r || p;
   }
@@ -3770,11 +3470,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( ',' Type )*
   private static boolean TypeList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TypeList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!TypeList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "TypeList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -3814,11 +3513,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( ',' Type )*
   private static boolean TypeListNoPin_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TypeListNoPin_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!TypeListNoPin_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "TypeListNoPin_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -3852,7 +3550,6 @@ public class GoParser implements PsiParser, LightPsiParser {
   static boolean TypeLit(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TypeLit")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = ArrayOrSliceType(b, l + 1);
     if (!r) r = StructType(b, l + 1);
     if (!r) r = PointerType(b, l + 1);
@@ -3860,7 +3557,6 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!r) r = InterfaceType(b, l + 1);
     if (!r) r = MapType(b, l + 1);
     if (!r) r = ChannelType(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -3926,11 +3622,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi TypeSpec)*
   private static boolean TypeSpecs_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TypeSpecs_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!TypeSpecs_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "TypeSpecs_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -4058,11 +3753,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( TypeCaseClause )*
   private static boolean TypeSwitchStatement_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "TypeSwitchStatement_2")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!TypeSwitchStatement_2_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "TypeSwitchStatement_2", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -4180,11 +3874,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // ( ',' VarDefinition )*
   private static boolean VarDefinitionList_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "VarDefinitionList_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!VarDefinitionList_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "VarDefinitionList_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -4287,11 +3980,10 @@ public class GoParser implements PsiParser, LightPsiParser {
   // (semi VarSpec)*
   private static boolean VarSpecs_1(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "VarSpecs_1")) return false;
-    int c = current_position_(b);
     while (true) {
+      int c = current_position_(b);
       if (!VarSpecs_1_0(b, l + 1)) break;
       if (!empty_element_parsed_guard_(b, "VarSpecs_1", c)) break;
-      c = current_position_(b);
     }
     return true;
   }
@@ -4536,8 +4228,7 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(b, l, "TypeAssertionExpr_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = consumeTokenSmart(b, DOT);
-    r = r && consumeToken(b, LPAREN);
+    r = consumeTokensSmart(b, 0, DOT, LPAREN);
     r = r && TypeAssertionExpr_0_2(b, l + 1);
     r = r && Type(b, l + 1);
     r = r && consumeToken(b, RPAREN);
@@ -4591,8 +4282,7 @@ public class GoParser implements PsiParser, LightPsiParser {
     if (!recursion_guard_(b, l, "SelectorExpr_0_1_0")) return false;
     boolean r;
     Marker m = enter_section_(b);
-    r = consumeTokenSmart(b, LPAREN);
-    r = r && consumeToken(b, TYPE_);
+    r = consumeTokensSmart(b, 0, LPAREN, TYPE_);
     exit_section_(b, m, null, r);
     return r;
   }
@@ -4615,10 +4305,8 @@ public class GoParser implements PsiParser, LightPsiParser {
   private static boolean IndexOrSliceExpr_0_2(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "IndexOrSliceExpr_0_2")) return false;
     boolean r;
-    Marker m = enter_section_(b);
     r = SliceExprBody(b, l + 1);
     if (!r) r = IndexExprBody(b, l + 1);
-    exit_section_(b, m, null, r);
     return r;
   }
 
@@ -4676,37 +4364,37 @@ public class GoParser implements PsiParser, LightPsiParser {
     return r || p;
   }
 
-  final static Parser E_recover_parser_ = new Parser() {
+  static final Parser E_recover_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return E_recover(b, l + 1);
     }
   };
-  final static Parser Element_parser_ = new Parser() {
+  static final Parser Element_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return Element(b, l + 1);
     }
   };
-  final static Parser ExpressionListRecover_parser_ = new Parser() {
+  static final Parser ExpressionListRecover_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return ExpressionListRecover(b, l + 1);
     }
   };
-  final static Parser ExpressionOrTypeWithRecover_parser_ = new Parser() {
+  static final Parser ExpressionOrTypeWithRecover_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return ExpressionOrTypeWithRecover(b, l + 1);
     }
   };
-  final static Parser StatementRecover_parser_ = new Parser() {
+  static final Parser StatementRecover_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return StatementRecover(b, l + 1);
     }
   };
-  final static Parser Statements_parser_ = new Parser() {
+  static final Parser Statements_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return Statements(b, l + 1);
     }
   };
-  final static Parser TopLevelDeclarationRecover_parser_ = new Parser() {
+  static final Parser TopLevelDeclarationRecover_parser_ = new Parser() {
     public boolean parse(PsiBuilder b, int l) {
       return TopLevelDeclarationRecover(b, l + 1);
     }

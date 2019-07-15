@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
 import com.intellij.openapi.components.*;
 import com.intellij.openapi.project.Project;
@@ -26,50 +26,47 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 @State(
-  name = "GoExcludedPaths",
-  storages = {
-    @Storage(id = "default", file = StoragePathMacros.PROJECT_FILE),
-    @Storage(id = "dir", file = StoragePathMacros.PROJECT_CONFIG_DIR + "/goExcludedPaths.xml", scheme = StorageScheme.DIRECTORY_BASED)
-  }
+        name = "GoExcludedPaths",
+        storages = @Storage(file = StoragePathMacros.CACHE_FILE + "/editor.excluded.xml")
 )
 public class GoExcludedPathsSettings extends SimpleModificationTracker implements PersistentStateComponent<GoExcludedPathsSettings> {
-  private String[] myExcludedPackages = ArrayUtil.EMPTY_STRING_ARRAY;
+    private String[] myExcludedPackages = ArrayUtil.EMPTY_STRING_ARRAY;
 
-  public static GoExcludedPathsSettings getInstance(Project project) {
-    return ServiceManager.getService(project, GoExcludedPathsSettings.class);
-  }
-
-  @Nullable
-  @Override
-  public GoExcludedPathsSettings getState() {
-    return this;
-  }
-
-  @Override
-  public void loadState(GoExcludedPathsSettings state) {
-    XmlSerializerUtil.copyBean(state, this);
-  }
-
-  public String[] getExcludedPackages() {
-    return myExcludedPackages;
-  }
-
-  public void setExcludedPackages(String... excludedPackages) {
-    myExcludedPackages = excludedPackages;
-    incModificationCount();
-  }
-
-  public boolean isExcluded(@Nullable String importPath) {
-    if (importPath == null) {
-      return false;
+    public static GoExcludedPathsSettings getInstance(Project project) {
+        return ServiceManager.getService(project, GoExcludedPathsSettings.class);
     }
-    for (String excludedPath : myExcludedPackages) {
-      if (FileUtil.isAncestor(excludedPath, importPath, false)) return true;
-    }
-    return false;
-  }
 
-  public void excludePath(@NotNull String importPath) {
-    setExcludedPackages(ArrayUtil.append(myExcludedPackages, importPath));
-  }
+    @Nullable
+    @Override
+    public GoExcludedPathsSettings getState() {
+        return this;
+    }
+
+    @Override
+    public void loadState(GoExcludedPathsSettings state) {
+        XmlSerializerUtil.copyBean(state, this);
+    }
+
+    public String[] getExcludedPackages() {
+        return myExcludedPackages;
+    }
+
+    public void setExcludedPackages(String... excludedPackages) {
+        myExcludedPackages = excludedPackages;
+        incModificationCount();
+    }
+
+    public boolean isExcluded(@Nullable String importPath) {
+        if (importPath == null) {
+            return false;
+        }
+        for (String excludedPath : myExcludedPackages) {
+            if (FileUtil.isAncestor(excludedPath, importPath, false)) return true;
+        }
+        return false;
+    }
+
+    public void excludePath(@NotNull String importPath) {
+        setExcludedPackages(ArrayUtil.append(myExcludedPackages, importPath));
+    }
 }

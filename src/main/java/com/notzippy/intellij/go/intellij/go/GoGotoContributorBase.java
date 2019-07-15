@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.go;
+package com.notzippy.intellij.go.intellij.go;
 
-import com.goide.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
 import com.intellij.navigation.ChooseByNameContributorEx;
 import com.intellij.navigation.GotoClassContributor;
 import com.intellij.navigation.NavigationItem;

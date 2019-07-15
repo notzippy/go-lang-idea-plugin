@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing;
+package com.notzippy.intellij.go.intellij.runconfig.testing;
 
 import com.intellij.openapi.util.Key;
 import jetbrains.buildServer.messages.serviceMessages.ServiceMessageVisitor;

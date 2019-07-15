@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoImportSpec;
-import com.goide.psi.impl.GoImportSpecImpl;
-import com.goide.stubs.GoImportSpecStub;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
+import com.notzippy.intellij.go.grammar.psi.impl.GoImportSpecImpl;
+import com.notzippy.intellij.go.stubs.GoImportSpecStub;
 import com.intellij.lang.ASTNode;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.stubs.StubElement;

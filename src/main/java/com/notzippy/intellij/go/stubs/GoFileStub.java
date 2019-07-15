@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.stubs;
+package com.notzippy.intellij.go.stubs;
 
-import com.goide.GoFileElementType;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoPackageClause;
-import com.goide.stubs.types.GoPackageClauseStubElementType;
+import com.notzippy.intellij.go.stubs.types.GoPackageClauseStubElementType;
+import com.notzippy.intellij.go.intellij.GoFileElementType;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoPackageClause;
 import com.intellij.psi.stubs.PsiFileStubImpl;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.tree.IStubFileElementType;

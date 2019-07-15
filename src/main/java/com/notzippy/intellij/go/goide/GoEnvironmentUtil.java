@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.goide;
 
+import com.notzippy.intellij.go.intellij.GoConstants;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.application.PathMacros;
 import com.intellij.openapi.util.SystemInfo;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.GoCompositeElement;
+import com.notzippy.intellij.go.grammar.psi.GoCompositeElement;
 import org.jetbrains.annotations.NotNull;
 
 public class GoCType extends GoLightType<GoCompositeElement> {

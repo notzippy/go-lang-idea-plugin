@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
 import com.intellij.openapi.util.Pair;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.util.containers.ContainerUtil;
@@ -28,8 +28,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import static com.goide.GoConstants.TESTING_PATH;
-import static com.goide.inspections.GoPlaceholderChecker.PrintfArgumentType.*;
+import static com.notzippy.intellij.go.intellij.GoConstants.TESTING_PATH;
+import static com.notzippy.intellij.go.intellij.inspections.GoPlaceholderChecker.PrintfArgumentType.*;
+import static com.notzippy.intellij.go.intellij.inspections.GoPlaceholderChecker.PrintfArgumentType.*;
 
 public class GoPlaceholderChecker {
 

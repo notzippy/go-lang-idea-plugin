@@ -15,353 +15,353 @@
   -->
 
 <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <xi:include href="app-engine.xml" xpointer="xpointer(/idea-plugin/*)"/>
+<!--  <xi:include href="app-engine.xml" xpointer="xpointer(/idea-plugin/*)"/>-->
   <!-- plan9 assembler -->
-  <xi:include href="plan9.xml" xpointer="xpointer(/idea-plugin/*)"/>
+<!--  <xi:include href="plan9.xml" xpointer="xpointer(/idea-plugin/*)"/>-->
   <module-components>
     <component>
-      <implementation-class>com.goide.project.GoModuleLibrariesInitializer</implementation-class>
+      <implementation-class>com.notzippy.intellij.go.intellij.project.GoModuleLibrariesInitializer</implementation-class>
     </component>
   </module-components>
 
   <extensions defaultExtensionNs="com.intellij">
-    <stubIndex implementation="com.goide.stubs.index.GoAllPublicNamesIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoAllPrivateNamesIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoFunctionIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoTypesIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoPackagesIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoMethodIndex"/>
-    <stubIndex implementation="com.goide.stubs.index.GoMethodFingerprintIndex"/>
-    <stubElementTypeHolder class="com.goide.GoTypes"/>
-    <indexPatternBuilder implementation="com.goide.GoIndexPatternBuilder"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoAllPublicNamesIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoAllPrivateNamesIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoFunctionIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoTypesIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoPackagesIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoMethodIndex"/>
+    <stubIndex implementation="com.notzippy.intellij.go.stubs.index.GoMethodFingerprintIndex"/>
+    <stubElementTypeHolder class="com.notzippy.intellij.go.parser.GoTypes"/>
+    <indexPatternBuilder implementation="com.notzippy.intellij.go.intellij.GoIndexPatternBuilder"/>
 
     <internalFileTemplate name="Go Application"/>
     <internalFileTemplate name="Go File"/>
-    <defaultTemplatePropertiesProvider implementation="com.goide.actions.file.GoTemplatePropertiesProvider"/>
-    <createFromTemplateHandler implementation="com.goide.actions.file.GoCreateFromTemplateHandler"/>
+    <defaultTemplatePropertiesProvider implementation="com.notzippy.intellij.go.intellij.actions.file.GoTemplatePropertiesProvider"/>
+    <createFromTemplateHandler implementation="com.notzippy.intellij.go.intellij.actions.file.GoCreateFromTemplateHandler"/>
 
     <!-- project -->
-    <project.converterProvider implementation="com.goide.project.migration.GoProjectModelConverterProvider"/>
-    <project.converterProvider implementation="com.goide.project.migration.GoBuildTagsSettingsConverterProvider"/>
+    <project.converterProvider implementation="com.notzippy.intellij.go.intellij.project.migration.GoProjectModelConverterProvider"/>
+    <project.converterProvider implementation="com.notzippy.intellij.go.intellij.project.migration.GoBuildTagsSettingsConverterProvider"/>
 
-    <applicationService serviceImplementation="com.goide.project.GoApplicationLibrariesService"/>
-    <projectService serviceImplementation="com.goide.project.GoProjectLibrariesService"/>
-    <moduleService serviceImplementation="com.goide.project.GoModuleLibrariesService"/>
-    <projectConfigurable id="go" groupId="language" provider="com.goide.configuration.GoConfigurableProvider"
-                         dynamic="true" bundle="com.goide.GoBundle"/>
+    <applicationService serviceImplementation="com.notzippy.intellij.go.intellij.project.GoApplicationLibrariesService"/>
+    <projectService serviceImplementation="com.notzippy.intellij.go.intellij.project.GoProjectLibrariesService"/>
+    <moduleService serviceImplementation="com.notzippy.intellij.go.intellij.project.GoModuleLibrariesService"/>
+    <projectConfigurable id="go" groupId="language" provider="com.notzippy.intellij.go.intellij.configuration.GoConfigurableProvider"
+                         dynamic="true" bundle="com.notzippy.intellij.go.goide.GoBundle"/>
 
-    <moduleService serviceImplementation="com.goide.project.GoModuleSettings"/>
-    <projectService serviceImplementation="com.goide.project.GoExcludedPathsSettings"/>
-    <applicationService serviceImplementation="com.goide.codeInsight.imports.GoCodeInsightSettings"/>
+    <moduleService serviceImplementation="com.notzippy.intellij.go.intellij.project.GoModuleSettings"/>
+    <projectService serviceImplementation="com.notzippy.intellij.go.intellij.project.GoExcludedPathsSettings"/>
+    <applicationService serviceImplementation="com.notzippy.intellij.go.intellij.codeInsight.imports.GoCodeInsightSettings"/>
 
-    <defaultLiveTemplatesProvider implementation="com.goide.template.GoLiveTemplatesProvider"/>
-    <liveTemplateContext implementation="com.goide.template.GoEverywhereContextType"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$File"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$Block"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$Type"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$Expression"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$Tag"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$TagLiteral"/>
-    <liveTemplateContext implementation="com.goide.template.GoLiveTemplateContextType$Statement"/>
-    <liveTemplateMacro implementation="com.goide.template.GoFieldNameMacro"/>
+    <defaultLiveTemplatesProvider implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplatesProvider"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoEverywhereContextType"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$File"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$Block"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$Type"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$Expression"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$Tag"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$TagLiteral"/>
+    <liveTemplateContext implementation="com.notzippy.intellij.go.intellij.template.GoLiveTemplateContextType$Statement"/>
+    <liveTemplateMacro implementation="com.notzippy.intellij.go.intellij.template.GoFieldNameMacro"/>
 
-    <lang.elementManipulator forClass="com.goide.psi.GoImportString"
-                             implementationClass="com.goide.psi.impl.manipulator.GoImportStringManipulator"/>
+    <lang.elementManipulator forClass="com.notzippy.intellij.go.grammar.psi.GoImportString"
+                             implementationClass="com.notzippy.intellij.go.grammar.psi.impl.manipulator.GoImportStringManipulator"/>
 
     <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
-    <extendWordSelectionHandler implementation="com.goide.editor.GoWordSelectioner"/>
-    <annotator language="go" implementationClass="com.goide.highlighting.GoHighlightingAnnotator"/>
-    <annotator language="go" implementationClass="com.goide.highlighting.GoAnnotator"/>
+    <extendWordSelectionHandler implementation="com.notzippy.intellij.go.intellij.editor.GoWordSelectioner"/>
+    <annotator language="go" implementationClass="com.notzippy.intellij.go.intellij.highlighting.GoHighlightingAnnotator"/>
+    <annotator language="go" implementationClass="com.notzippy.intellij.go.intellij.highlighting.GoAnnotator"/>
 
-    <lang.importOptimizer language="go" implementationClass="com.goide.codeInsight.imports.GoImportOptimizer"/>
-    <referenceImporter implementation="com.goide.psi.impl.imports.GoReferenceImporter"/>
+    <lang.importOptimizer language="go" implementationClass="com.notzippy.intellij.go.intellij.codeInsight.imports.GoImportOptimizer"/>
+<!--    <referenceImporter implementation="com.notzippy.intellij.go.grammar.psi.impl.imports.GoReferenceImporter"/>-->
 
-    <lang.parserDefinition language="go" implementationClass="com.goide.GoParserDefinition"/>
-    <fileTypeFactory implementation="com.goide.GoFileTypeFactory"/>
-    <lang.syntaxHighlighterFactory language="go" implementationClass="com.goide.highlighting.GoSyntaxHighlighterFactory"/>
-    <lang.psiStructureViewFactory language="go" implementationClass="com.goide.tree.GoStructureViewFactory"/>
-    <colorSettingsPage implementation="com.goide.highlighting.GoColorsAndFontsPage"/>
-    <lang.braceMatcher language="go" implementationClass="com.goide.editor.GoBraceMatcher"/>
-    <quoteHandler fileType="Go" className="com.goide.editor.GoQuoteHandler"/>
-    <editorTypedHandler implementationClass="com.goide.editor.GoTypedHandler"/>
-    <lang.commenter language="go" implementationClass="com.goide.GoCommenter"/>
-    <lang.elementManipulator forClass="com.goide.psi.impl.GoStringLiteralImpl"
-                             implementationClass="com.goide.psi.impl.manipulator.GoStringManipulator"/>
+    <lang.parserDefinition language="go" implementationClass="com.notzippy.intellij.go.intellij.GoParserDefinition"/>
+    <fileTypeFactory implementation="com.notzippy.intellij.go.intellij.GoFileTypeFactory"/>
+    <lang.syntaxHighlighterFactory language="go" implementationClass="com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlighterFactory"/>
+    <lang.psiStructureViewFactory language="go" implementationClass="com.notzippy.intellij.go.intellij.tree.GoStructureViewFactory"/>
+    <colorSettingsPage implementation="com.notzippy.intellij.go.intellij.highlighting.GoColorsAndFontsPage"/>
+    <lang.braceMatcher language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.GoBraceMatcher"/>
+    <quoteHandler fileType="Go" className="com.notzippy.intellij.go.intellij.editor.GoQuoteHandler"/>
+    <editorTypedHandler implementationClass="com.notzippy.intellij.go.intellij.editor.GoTypedHandler"/>
+    <lang.commenter language="go" implementationClass="com.notzippy.intellij.go.intellij.GoCommenter"/>
+    <lang.elementManipulator forClass="com.notzippy.intellij.go.grammar.psi.impl.GoStringLiteralImpl"
+                             implementationClass="com.notzippy.intellij.go.grammar.psi.impl.manipulator.GoStringManipulator"/>
 
-    <languageInjector implementation="com.goide.regexp.GoRegexInjector"/>
-    <regExpLanguageHost forClass="com.goide.psi.GoStringLiteral" implementationClass="com.goide.regexp.GoRegexHost"/>
-    <lang.parserDefinition language="GoRegExp" implementationClass="com.goide.regexp.GoRegExpParserDefinition"/>
+    <languageInjector implementation="com.notzippy.intellij.go.intellij.regexp.GoRegexInjector"/>
+    <regExpLanguageHost forClass="com.notzippy.intellij.go.grammar.psi.GoStringLiteral" implementationClass="com.notzippy.intellij.go.intellij.regexp.GoRegexHost"/>
+    <lang.parserDefinition language="GoRegExp" implementationClass="com.notzippy.intellij.go.intellij.regexp.GoRegExpParserDefinition"/>
 
-    <completion.contributor language="go" implementationClass="com.goide.completion.GoCompletionContributor"/>
-    <completion.contributor language="go" implementationClass="com.goide.completion.GoKeywordCompletionContributor"/>
-    <completion.contributor language="go" order="last" implementationClass="com.goide.completion.GoAutoImportCompletionContributor"/>
-    <completion.confidence language="go" order="last" implementationClass="com.goide.completion.GoCompletionConfidence"/>
-    <lookup.charFilter implementation="com.goide.completion.GoCharFilter"/>
-    <lookup.actionProvider implementation="com.goide.codeInsight.imports.GoExcludePathLookupActionProvider"/>
+    <completion.contributor language="go" implementationClass="com.notzippy.intellij.go.intellij.completion.GoCompletionContributor"/>
+    <completion.contributor language="go" implementationClass="com.notzippy.intellij.go.intellij.completion.GoKeywordCompletionContributor"/>
+    <completion.contributor language="go" order="last" implementationClass="com.notzippy.intellij.go.intellij.completion.GoAutoImportCompletionContributor"/>
+    <completion.confidence language="go" order="last" implementationClass="com.notzippy.intellij.go.intellij.completion.GoCompletionConfidence"/>
+    <lookup.charFilter implementation="com.notzippy.intellij.go.intellij.completion.GoCharFilter"/>
+    <lookup.actionProvider implementation="com.notzippy.intellij.go.intellij.codeInsight.imports.GoExcludePathLookupActionProvider"/>
 
-    <lang.refactoringSupport language="go" implementationClass="com.goide.refactor.GoRefactoringSupportProvider"/>
-    <spellchecker.support language="go" implementationClass="com.goide.inspections.GoSpellcheckingStrategy"/>
-    <elementDescriptionProvider implementation="com.goide.refactor.GoDescriptionProvider"/>
-    <lang.namesValidator language="go" implementationClass="com.goide.GoNamesValidator"/>
-    <lang.findUsagesProvider language="go" implementationClass="com.goide.usages.GoFindUsagesProvider"/>
-    <readWriteAccessDetector implementation="com.goide.usages.GoReadWriteAccessDetector" id="go"/>
-    <fileStructureGroupRuleProvider implementation="com.goide.usages.GoFileStructureGroupRuleProvider"/>
-    <lang.documentationProvider language="go" implementationClass="com.goide.GoDocumentationProvider"/>
-    <lang.foldingBuilder language="go" implementationClass="com.goide.editor.GoFoldingBuilder"/>
-    <typeDeclarationProvider implementation="com.goide.editor.GoTypeDeclarationProvider"/>
-    <codeInsight.typeInfo language="go" implementationClass="com.goide.codeInsight.GoExpressionTypeProvider"/>
-    <codeInsight.parameterInfo language="go" implementationClass="com.goide.editor.GoParameterInfoHandler"/>
-    <lang.smartEnterProcessor language="go" implementationClass="com.goide.editor.smart.GoSmartEnterProcessor"/>
-    <highlightUsagesHandlerFactory implementation="com.goide.highlighting.exitpoint.GoHighlightExitPointsHandlerFactory"/>
-    <problemFileHighlightFilter implementation="com.goide.highlighting.GoProblemFileHighlightFilter"/>
-    <codeInsight.lineMarkerProvider language="go" implementationClass="com.goide.editor.marker.GoMethodSeparatorProvider"/>
-    <analyzeStacktraceFilter implementation="com.goide.runconfig.GoConsoleFilter"/>
-    <lang.implementationTextSelectioner language="go" implementationClass="com.goide.editor.GoImplementationTextSelectioner"/>
-    <lang.surroundDescriptor language="go" implementationClass="com.goide.editor.surround.GoExpressionSurroundDescriptor"/>
-    <lang.surroundDescriptor language="go" implementationClass="com.goide.editor.surround.GoStatementsSurroundDescriptor"/>
-    <iconProvider implementation="com.goide.GoIconProvider"/>
-    <codeInsight.lineMarkerProvider language="go" implementationClass="com.goide.marker.GoRecursiveCallMarkerProvider"/>
-    <statementUpDownMover implementation="com.goide.editor.GoStatementMover"/>
+    <lang.refactoringSupport language="go" implementationClass="com.notzippy.intellij.go.intellij.refactor.GoRefactoringSupportProvider"/>
+    <spellchecker.support language="go" implementationClass="com.notzippy.intellij.go.intellij.inspections.GoSpellcheckingStrategy"/>
+    <elementDescriptionProvider implementation="com.notzippy.intellij.go.intellij.refactor.GoDescriptionProvider"/>
+    <lang.namesValidator language="go" implementationClass="com.notzippy.intellij.go.intellij.GoNamesValidator"/>
+    <lang.findUsagesProvider language="go" implementationClass="com.notzippy.intellij.go.intellij.usages.GoFindUsagesProvider"/>
+    <readWriteAccessDetector implementation="com.notzippy.intellij.go.intellij.usages.GoReadWriteAccessDetector" id="go"/>
+    <fileStructureGroupRuleProvider implementation="com.notzippy.intellij.go.intellij.usages.GoFileStructureGroupRuleProvider"/>
+    <lang.documentationProvider language="go" implementationClass="com.notzippy.intellij.go.intellij.GoDocumentationProvider"/>
+    <lang.foldingBuilder language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.GoFoldingBuilder"/>
+    <typeDeclarationProvider implementation="com.notzippy.intellij.go.intellij.editor.GoTypeDeclarationProvider"/>
+    <codeInsight.typeInfo language="go" implementationClass="com.notzippy.intellij.go.intellij.codeInsight.GoExpressionTypeProvider"/>
+    <codeInsight.parameterInfo language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.GoParameterInfoHandler"/>
+    <lang.smartEnterProcessor language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.smart.GoSmartEnterProcessor"/>
+    <highlightUsagesHandlerFactory implementation="com.notzippy.intellij.go.intellij.highlighting.exitpoint.GoHighlightExitPointsHandlerFactory"/>
+    <problemFileHighlightFilter implementation="com.notzippy.intellij.go.intellij.highlighting.GoProblemFileHighlightFilter"/>
+    <codeInsight.lineMarkerProvider language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.marker.GoMethodSeparatorProvider"/>
+    <analyzeStacktraceFilter implementation="com.notzippy.intellij.go.intellij.runconfig.GoConsoleFilter"/>
+    <lang.implementationTextSelectioner language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.GoImplementationTextSelectioner"/>
+    <lang.surroundDescriptor language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.surround.GoExpressionSurroundDescriptor"/>
+    <lang.surroundDescriptor language="go" implementationClass="com.notzippy.intellij.go.intellij.editor.surround.GoStatementsSurroundDescriptor"/>
+    <iconProvider implementation="com.notzippy.intellij.go.intellij.GoIconProvider"/>
+    <codeInsight.lineMarkerProvider language="go" implementationClass="com.notzippy.intellij.go.intellij.marker.GoRecursiveCallMarkerProvider"/>
+    <statementUpDownMover implementation="com.notzippy.intellij.go.intellij.editor.GoStatementMover"/>
 
-    <lang.unwrapDescriptor language="go" implementationClass="com.goide.codeInsight.unwrap.GoUnwrapDescriptor"/>
+    <lang.unwrapDescriptor language="go" implementationClass="com.notzippy.intellij.go.intellij.codeInsight.unwrap.GoUnwrapDescriptor"/>
 
-    <directoryProjectGenerator implementation="com.goide.GoProjectGenerator"/> <!-- for small IDEs-->
+    <directoryProjectGenerator implementation="com.notzippy.intellij.go.intellij.GoProjectGenerator"/> <!-- for small IDEs-->
 
-    <renamePsiElementProcessor implementation="com.goide.refactor.GoRenameImportSpecProcessor"/>
+    <renamePsiElementProcessor implementation="com.notzippy.intellij.go.intellij.refactor.GoRenameImportSpecProcessor"/>
 
     <!--formatter-->
-    <lang.formatter language="go" implementationClass="com.goide.formatter.GoFormattingModelBuilder"/>
-    <codeStyleSettingsProvider implementation="com.goide.formatter.settings.GoCodeStyleSettingsProvider"/>
-    <langCodeStyleSettingsProvider implementation="com.goide.formatter.settings.GoLanguageCodeStyleSettingsProvider"/>
+    <lang.formatter language="go" implementationClass="com.notzippy.intellij.go.intellij.formatter.GoFormattingModelBuilder"/>
+    <codeStyleSettingsProvider implementation="com.notzippy.intellij.go.intellij.formatter.settings.GoCodeStyleSettingsProvider"/>
+    <langCodeStyleSettingsProvider implementation="com.notzippy.intellij.go.intellij.formatter.settings.GoLanguageCodeStyleSettingsProvider"/>
 
-    <renamePsiElementProcessor implementation="com.goide.refactor.GoAnonymousFieldProcessor"/>
+    <renamePsiElementProcessor implementation="com.notzippy.intellij.go.intellij.refactor.GoAnonymousFieldProcessor"/>
 
-    <gotoSymbolContributor implementation="com.goide.go.GoSymbolContributor"/>
-    <gotoClassContributor implementation="com.goide.go.GoTypeContributor"/>
+    <gotoSymbolContributor implementation="com.notzippy.intellij.go.intellij.go.GoSymbolContributor"/>
+    <gotoClassContributor implementation="com.notzippy.intellij.go.intellij.go.GoTypeContributor"/>
 
     <!-- sdk -->
-    <sdkType implementation="com.goide.sdk.GoSdkType"/>
-    <applicationService serviceImplementation="com.goide.sdk.GoEnvironmentGoPathModificationTracker"/>
-    <projectService serviceInterface="com.goide.sdk.GoSdkService" serviceImplementation="com.goide.sdk.GoSmallIDEsSdkService"
+    <sdkType implementation="com.notzippy.intellij.go.intellij.sdk.GoSdkType"/>
+    <applicationService serviceImplementation="com.notzippy.intellij.go.intellij.sdk.GoEnvironmentGoPathModificationTracker"/>
+    <projectService serviceInterface="com.notzippy.intellij.go.intellij.sdk.GoSdkService" serviceImplementation="com.notzippy.intellij.go.intellij.sdk.GoSmallIDEsSdkService"
                     overrides="false"/>
-    <library.presentationProvider implementation="com.goide.sdk.GoSdkLibraryPresentationProvider"/>
-    <editorNotificationProvider implementation="com.goide.inspections.WrongSdkConfigurationNotificationProvider"/>
-    <editorNotificationProvider implementation="com.goide.inspections.GoFileIgnoredByBuildToolNotificationProvider"/>
+    <library.presentationProvider implementation="com.notzippy.intellij.go.intellij.sdk.GoSdkLibraryPresentationProvider"/>
+    <editorNotificationProvider implementation="com.notzippy.intellij.go.intellij.inspections.WrongSdkConfigurationNotificationProvider"/>
+    <editorNotificationProvider implementation="com.notzippy.intellij.go.intellij.inspections.GoFileIgnoredByBuildToolNotificationProvider"/>
 
-    <stepsBeforeRunProvider implementation="com.goide.runconfig.before.GoBeforeRunTaskProvider"/>
+    <stepsBeforeRunProvider implementation="com.notzippy.intellij.go.intellij.runconfig.before.GoBeforeRunTaskProvider"/>
     <!-- run single file -->
-    <configurationType implementation="com.goide.runconfig.file.GoRunFileConfigurationType"/>
-    <runConfigurationProducer implementation="com.goide.runconfig.file.GoRunFileConfigurationProducer"/>
+    <configurationType implementation="com.notzippy.intellij.go.intellij.runconfig.file.GoRunFileConfigurationType"/>
+    <runConfigurationProducer implementation="com.notzippy.intellij.go.intellij.runconfig.file.GoRunFileConfigurationProducer"/>
 
     <!-- run application -->
-    <programRunner implementation="com.goide.runconfig.GoBuildingRunner" order="before goRunner"/>
-    <programRunner id="goRunner" implementation="com.goide.runconfig.GoRunner"/>
-    <runConfigurationProducer implementation="com.goide.runconfig.application.GoApplicationRunConfigurationProducer"/>
-    <configurationType implementation="com.goide.runconfig.application.GoApplicationRunConfigurationType"/>
+    <programRunner implementation="com.notzippy.intellij.go.intellij.runconfig.GoBuildingRunner" order="before goRunner"/>
+    <programRunner id="goRunner" implementation="com.notzippy.intellij.go.intellij.runconfig.GoRunner"/>
+    <runConfigurationProducer implementation="com.notzippy.intellij.go.intellij.runconfig.application.GoApplicationRunConfigurationProducer"/>
+    <configurationType implementation="com.notzippy.intellij.go.intellij.runconfig.application.GoApplicationRunConfigurationType"/>
 
     <!-- test -->
-    <runConfigurationProducer implementation="com.goide.runconfig.testing.frameworks.gotest.GotestRunConfigurationProducer"/>
-    <runConfigurationProducer implementation="com.goide.runconfig.testing.frameworks.gocheck.GocheckRunConfigurationProducer"/>
-    <runConfigurationProducer implementation="com.goide.runconfig.testing.frameworks.gobench.GobenchRunConfigurationProducer"/>
-    <configurationType implementation="com.goide.runconfig.testing.GoTestRunConfigurationType"/>
-    <testFinder implementation="com.goide.runconfig.testing.GoTestFinder"/>
-    <runLineMarkerContributor language="go" implementationClass="com.goide.runconfig.testing.GoTestRunLineMarkerProvider"/>
-    <runLineMarkerContributor language="go" implementationClass="com.goide.runconfig.GoRunLineMarkerProvider"/>
+    <runConfigurationProducer implementation="com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest.GotestRunConfigurationProducer"/>
+    <runConfigurationProducer implementation="com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gocheck.GocheckRunConfigurationProducer"/>
+    <runConfigurationProducer implementation="com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gobench.GobenchRunConfigurationProducer"/>
+    <configurationType implementation="com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfigurationType"/>
+    <testFinder implementation="com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder"/>
+    <runLineMarkerContributor language="go" implementationClass="com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunLineMarkerProvider"/>
+    <runLineMarkerContributor language="go" implementationClass="com.notzippy.intellij.go.intellij.runconfig.GoRunLineMarkerProvider"/>
 
     <!-- debugger -->
-    <xdebugger.breakpointType implementation="com.goide.dlv.breakpoint.DlvBreakpointType"/>
+    <xdebugger.breakpointType implementation="com.notzippy.intellij.go.intellij.dlv.breakpoint.DlvBreakpointType"/>
 
-    <checkinHandlerFactory implementation="com.goide.actions.tool.GoFmtCheckinFactory" order="last"/>
+    <checkinHandlerFactory implementation="com.notzippy.intellij.go.intellij.actions.tool.GoFmtCheckinFactory" order="last"/>
 
-    <lang.inspectionSuppressor language="go" implementationClass="com.goide.inspections.suppression.GoInspectionSuppressor"/>
+    <lang.inspectionSuppressor language="go" implementationClass="com.notzippy.intellij.go.intellij.inspections.suppression.GoInspectionSuppressor"/>
 
     <!-- intentions -->
     <intentionAction>
-      <bundleName>com.goide.GoBundle</bundleName>
+      <bundleName>com.notzippy.intellij.go.goide.GoBundle</bundleName>
       <categoryKey>go.intentions.category</categoryKey>
-      <className>com.goide.intentions.GoAddFunctionBlockIntention</className>
+      <className>com.notzippy.intellij.go.intellij.intentions.GoAddFunctionBlockIntention</className>
     </intentionAction>
     <intentionAction>
-      <bundleName>com.goide.GoBundle</bundleName>
+      <bundleName>com.notzippy.intellij.go.goide.GoBundle</bundleName>
       <categoryKey>go.intentions.category</categoryKey>
-      <className>com.goide.intentions.GoMoveToStructInitializationIntention</className>
+      <className>com.notzippy.intellij.go.intellij.intentions.GoMoveToStructInitializationIntention</className>
     </intentionAction>
     <!-- unused inspections -->
     <localInspection language="go" displayName="Unused import inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoUnusedImportInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoUnusedImportInspection"/>
     <localInspection language="go" displayName="Unused label inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedLabelInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedLabelInspection"/>
     <localInspection language="go" displayName="Unused variable inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedVariableInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedVariableInspection"/>
     <localInspection language="go" displayName="Unused constant inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedConstInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedConstInspection"/>
     <localInspection language="go" displayName="Unused global variable inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedGlobalVariableInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedGlobalVariableInspection"/>
     <localInspection language="go" displayName="Unused exported function inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedExportedFunctionInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedExportedFunctionInspection"/>
     <localInspection language="go" displayName="Unused function inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedFunctionInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedFunctionInspection"/>
     <localInspection language="go" displayName="Unused parameter inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.unresolved.GoUnusedParameterInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnusedParameterInspection"/>
     <localInspection language="go" displayName="Bool condition inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoBoolExpressionsInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoBoolExpressionsInspection"/>
 
     <localInspection language="go" displayName="Empty declaration inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoEmptyDeclarationInspection" cleanupTool="true"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoEmptyDeclarationInspection" cleanupTool="true"/>
     <localInspection language="go" displayName="Redundant second index in slices inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoRedundantSecondIndexInSlicesInspection" cleanupTool="true"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoRedundantSecondIndexInSlicesInspection" cleanupTool="true"/>
     <localInspection language="go" displayName="Redundant blank argument in range inspection" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoRedundantBlankArgInRangeInspection" cleanupTool="true"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoRedundantBlankArgInRangeInspection" cleanupTool="true"/>
     <localInspection language="go" displayName="Redundant type declaration in composite literals" groupPath="Go"
                      groupName="Declaration redundancy" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoRedundantTypeDeclInCompositeLit" cleanupTool="true"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoRedundantTypeDeclInCompositeLit" cleanupTool="true"/>
     <!-- /unused inspections -->
 
     <!-- redeclare inspections -->
     <localInspection language="go" displayName="Duplicate fields and methods inspection" groupPath="Go"
                      groupName="Redeclared symbols" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDuplicateFieldsOrMethodsInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDuplicateFieldsOrMethodsInspection"/>
     <localInspection language="go" displayName="Duplicate functions and methods inspection" groupPath="Go"
                      groupName="Redeclared symbols" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDuplicateFunctionOrMethodInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDuplicateFunctionOrMethodInspection"/>
     <localInspection language="go" displayName="Duplicate argument" groupPath="Go"
                      groupName="Redeclared symbols" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDuplicateArgumentInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDuplicateArgumentInspection"/>
     <localInspection language="go" displayName="Duplicate return argument" groupPath="Go"
                      groupName="Redeclared symbols" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDuplicateReturnArgumentInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDuplicateReturnArgumentInspection"/>
     <localInspection language="go" displayName="Redeclare import as function" groupPath="Go"
                      groupName="Redeclared symbols" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoRedeclareImportAsFunctionInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoRedeclareImportAsFunctionInspection"/>
     <!-- /redeclare inspections -->
 
     <!-- code style issues -->
     <localInspection language="go" displayName="Comment of exported element starts with incorrect name" groupPath="Go"
                      groupName="Code style issues" enabledByDefault="false" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoCommentStartInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoCommentStartInspection"/>
     <localInspection language="go" displayName="Exported element should have its own declaration" groupPath="Go"
                      groupName="Code style issues" enabledByDefault="true" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoExportedOwnDeclarationInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoExportedOwnDeclarationInspection"/>
     <localInspection language="go" displayName="Struct initialization without field names" groupPath="Go"
                      groupName="Code style issues" enabledByDefault="true" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoStructInitializationInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoStructInitializationInspection"/>
     <localInspection language="go" displayName="Receiver has generic name" groupPath="Go"
                      groupName="Code style issues" enabledByDefault="true" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoReceiverNamesInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoReceiverNamesInspection"/>
     <!-- /code style issues -->
 
     <!-- probable bugs -->
     <localInspection language="go" displayName="Reserved word used as name" groupPath="Go"
                      groupName="Probable bugs" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoReservedWordUsedAsNameInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoReservedWordUsedAsNameInspection"/>
     <localInspection language="go" displayName="Imported package name as name identifier" groupPath="Go"
                      groupName="Probable bugs" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoImportUsedAsNameInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoImportUsedAsNameInspection"/>
     <localInspection language="go" displayName="Malformed struct tag" groupPath="Go"
                      groupName="Probable bugs" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoStructTagInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoStructTagInspection"/>
     <localInspection language="go" displayName="Printf/Logf placeholder handler" groupPath="Go"
                      groupName="Probable bugs" enabledByDefault="true" level="WARNING"
-                     implementationClass="com.goide.inspections.GoPlaceholderCountInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoPlaceholderCountInspection"/>
     <!-- /probable bugs -->
 
     <!-- control flow issues -->
     <localInspection language="go" displayName="Missing return at end of function" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoMissingReturnInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoMissingReturnInspection"/>
     <localInspection language="go" displayName="Used as value in condition" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoUsedAsValueInCondition"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoUsedAsValueInCondition"/>
     <localInspection language="go" displayName="Infinite for loop" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoInfiniteForInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoInfiniteForInspection"/>
     <localInspection language="go" displayName="Defer in loop" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoDeferInLoopInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDeferInLoopInspection"/>
     <localInspection language="go" displayName="Range iteration on illegal type" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoRangeIterationOnIllegalTypeInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoRangeIterationOnIllegalTypeInspection"/>
     <localInspection language="go" displayName="Assignment to receiver" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="WEAK WARNING"
-                     implementationClass="com.goide.inspections.GoAssignmentToReceiverInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoAssignmentToReceiverInspection"/>
     <localInspection language="go" displayName="Direct assignment to struct field in map" groupPath="Go"
                      groupName="Control flow issues" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDirectAssignToStructFieldInMapInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDirectAssignToStructFieldInMapInspection"/>
     <!-- /control flow issues -->
 
     <!-- general -->
     <localInspection language="go" displayName="Unresolved reference inspection" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.unresolved.GoUnresolvedReferenceInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoUnresolvedReferenceInspection"/>
     <localInspection language="go" displayName="Assignment to constant" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.unresolved.GoAssignmentToConstantInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.unresolved.GoAssignmentToConstantInspection"/>
     <localInspection language="go" displayName="Assignment nil without explicit type" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoAssignmentNilWithoutExplicitTypeInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoAssignmentNilWithoutExplicitTypeInspection"/>
     <localInspection language="go" displayName="Incorrect variadic parameter" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoFunctionVariadicParameterInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoFunctionVariadicParameterInspection"/>
     <localInspection language="go" displayName="Incorrect variable declaration" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoVarDeclarationInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoVarDeclarationInspection"/>
     <localInspection language="go" displayName="No new variables on left side of :=" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoNoNewVariablesInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoNoNewVariablesInspection"/>
     <localInspection language="go" displayName="Function call inspection" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoFunctionCallInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoFunctionCallInspection"/>
     <localInspection language="go" displayName="Defer/go statements check" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoDeferGoInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoDeferGoInspection"/>
     <localInspection language="go" displayName="Multiple packages in directory declaration" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoMultiplePackagesInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoMultiplePackagesInspection"/>
     <localInspection language="go" displayName="Usage of cgo in tests is not supported" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoCgoInTestInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoCgoInTestInspection"/>
     <localInspection language="go" displayName="Wrong test declaration" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoTestSignaturesInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoTestSignaturesInspection"/>
     <localInspection language="go" displayName="Self import" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoSelfImportInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoSelfImportInspection"/>
     <localInspection language="go" displayName="Invalid package import" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoInvalidPackageImportInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoInvalidPackageImportInspection"/>
     <localInspection language="go" displayName="Embedded interface pointer" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoEmbeddedInterfacePointerInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoEmbeddedInterfacePointerInspection"/>
     <localInspection language="go" displayName="Need trailing comma before newline in composite literal" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoAddTrailingCommaInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoAddTrailingCommaInspection"/>
     <localInspection language="go" displayName="Underscore used as value" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoUnderscoreUsedAsValueInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoUnderscoreUsedAsValueInspection"/>
     <localInspection language="go" displayName="Invalid strings and runes" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoInvalidStringOrCharInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoInvalidStringOrCharInspection"/>
     <localInspection language="go" displayName="Invalid anonymous field definition type " groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoAnonymousFieldDefinitionTypeInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoAnonymousFieldDefinitionTypeInspection"/>
     <localInspection language="go" displayName="Mixed named and unnamed parameters" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoMixedNamedUnnamedParametersInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoMixedNamedUnnamedParametersInspection"/>
     <localInspection language="go" displayName="Mismatched types: byte and string" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
-                     implementationClass="com.goide.inspections.GoStringAndByteTypeMismatchInspection"/>
+                     implementationClass="com.notzippy.intellij.go.intellij.inspections.GoStringAndByteTypeMismatchInspection"/>
     <!-- /general -->
 
     <!-- color schemes -->
@@ -369,29 +369,29 @@
     <!-- /color schemes -->
   </extensions>
   <actions>
-    <action id="Go.NewGoFile" class="com.goide.actions.file.GoCreateFileAction"
+    <action id="Go.NewGoFile" class="com.notzippy.intellij.go.intellij.actions.file.GoCreateFileAction"
             text="Go File" description="Create new Go file">
       <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
     </action>
-    <group id="GoTestGenerateGroup" class="com.goide.generate.GoGenerateTestMethodActionGroup">
+    <group id="GoTestGenerateGroup" class="com.notzippy.intellij.go.intellij.generate.GoGenerateTestMethodActionGroup">
       <add-to-group group-id="GenerateGroup" anchor="first"/>
     </group>
     <group id="GoTools" text="Go Tools" description="Go External Tools" icon="/icons/go.png" popup="true">
-      <action id="GoFmtFileAction" class="com.goide.actions.tool.GoFmtFileAction" text="Go fmt file"
+      <action id="GoFmtFileAction" class="com.notzippy.intellij.go.intellij.actions.tool.GoFmtFileAction" text="Go fmt file"
               description="Format selected file with go fmt util">
         <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt F"/>
       </action>
-      <action id="GoFmtProjectAction" class="com.goide.actions.tool.GoFmtProjectAction" text="Go fmt project"
+      <action id="GoFmtProjectAction" class="com.notzippy.intellij.go.intellij.actions.tool.GoFmtProjectAction" text="Go fmt project"
               description="Format project with go fmt util">
         <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt P"/>
       </action>
-      <action id="GoImportsFileAction" class="com.goide.actions.tool.GoImportsFileAction" text="Goimports file"
+      <action id="GoImportsFileAction" class="com.notzippy.intellij.go.intellij.actions.tool.GoImportsFileAction" text="Goimports file"
               description="Optimizes imports for selected file with goimports util">
       </action>
-      <action id="GoTypeFileAction" class="com.goide.actions.tool.GoTypeFileAction" text="Gotype directory"
+      <action id="GoTypeFileAction" class="com.notzippy.intellij.go.intellij.actions.tool.GoTypeFileAction" text="Gotype directory"
               description="Analyze types for current directory with gotype util">
       </action>
-      <action id="GoVetFileAction" class="com.goide.actions.tool.GoVetFileAction" text="Go vet file"
+      <action id="GoVetFileAction" class="com.notzippy.intellij.go.intellij.actions.tool.GoVetFileAction" text="Go vet file"
               description="Lint selected file or directory with go vet tool">
       </action>
       <add-to-group group-id="CodeMenu" anchor="last"/>
@@ -402,7 +402,7 @@
 
   <application-components>
     <component>
-      <implementation-class>com.goide.ui.ProjectTutorialNotification</implementation-class>
+      <implementation-class>com.notzippy.intellij.go.intellij.ui.ProjectTutorialNotification</implementation-class>
     </component>
   </application-components>
 
@@ -411,9 +411,9 @@
   <!-- START plugin.xml of future GAE module -->
   <!-- todo[IDEA 17] It's supposed that GAE-core module will be moved to IDEA source and bundled in IDEA 17 -->
   <!--<id>com.intellij.appengine</id>-->
-  <depends optional="true" config-file="google-app-engine-core-yaml.xml">org.jetbrains.plugins.yaml</depends>
-  <extensionPoints>
-    <extensionPoint name="appengine.Extension" interface="com.intellij.appengine.AppEngineExtension"/>
-  </extensionPoints>
+<!--  <depends optional="true" config-file="google-app-engine-core-yaml.xml">org.jetbrains.plugins.yaml</depends>-->
+<!--  <extensionPoints>-->
+<!--    <extensionPoint name="appengine.Extension" interface="com.intellij.appengine.AppEngineExtension"/>-->
+<!--  </extensionPoints>-->
   <!-- END plugin.xml of future GAE module -->
 </idea-plugin>

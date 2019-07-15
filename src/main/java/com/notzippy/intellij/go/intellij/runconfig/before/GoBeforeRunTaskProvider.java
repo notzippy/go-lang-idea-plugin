@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.before;
+package com.notzippy.intellij.go.intellij.runconfig.before;
 
-import com.goide.GoIcons;
-import com.goide.runconfig.GoRunConfigurationBase;
-import com.goide.sdk.GoSdkService;
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationBase;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.execution.BeforeRunTaskProvider;
 import com.intellij.execution.configurations.RunConfiguration;
 import com.intellij.execution.process.ProcessAdapter;

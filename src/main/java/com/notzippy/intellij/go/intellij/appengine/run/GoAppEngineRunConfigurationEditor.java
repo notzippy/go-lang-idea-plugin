@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.appengine.run;
+package com.notzippy.intellij.go.intellij.appengine.run;
 
-import com.goide.appengine.YamlFilesModificationTracker;
-import com.goide.runconfig.GoRunUtil;
-import com.goide.runconfig.ui.GoCommonSettingsPanel;
+import com.notzippy.intellij.go.intellij.appengine.YamlFilesModificationTracker;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.runconfig.ui.GoCommonSettingsPanel;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;

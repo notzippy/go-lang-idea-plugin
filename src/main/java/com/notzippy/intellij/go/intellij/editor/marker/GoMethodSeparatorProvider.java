@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.editor.marker;
+package com.notzippy.intellij.go.intellij.editor.marker;
 
-import com.goide.psi.GoFile;
-import com.goide.psi.GoTopLevelDeclaration;
+import com.intellij.codeInsight.daemon.LineMarkerProviderDescriptor;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoTopLevelDeclaration;
 import com.intellij.codeInsight.daemon.DaemonCodeAnalyzerSettings;
 import com.intellij.codeInsight.daemon.LineMarkerInfo;
 import com.intellij.codeInsight.daemon.LineMarkerProvider;
@@ -31,11 +32,39 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
 import java.util.List;
-
-public class GoMethodSeparatorProvider implements LineMarkerProvider {
+//public class GoMethodSeparatorProvider  implements LineMarkerProvider {
+//  public LineMarkerInfo getLineMarkerInfo(@NotNull PsiElement element) {
+//    if (element instanceof GoTopLevelDeclaration && o.getParent() instanceof GoFile) {
+//      return LineMarkersPass.createMethodSeparatorLineMarker(findAnchorElement((GoTopLevelDeclaration)o), myColorsManager);
+//    }
+//  }
+//  @NotNull
+//  private static PsiElement findAnchorElement(@NotNull GoTopLevelDeclaration o) {
+//    PsiElement result = o;
+//    PsiElement p = o;
+//    while ((p = p.getPrevSibling()) != null) {
+//      if (p instanceof PsiComment) {
+//        result = p;
+//      }
+//      else if (p instanceof PsiWhiteSpace) {
+//        if (p.getText().contains("\n\n")) return result;
+//      }
+//      else {
+//        break;
+//      }
+//    }
+//    return result;
+//  }
+//
+//}
+// https://github.com/17712484466/intellij-community/blob/master/java/java-impl/src/com/intellij/codeInsight/daemon/impl/JavaLineMarkerProvider.java
+public class GoMethodSeparatorProvider  implements LineMarkerProvider {
   private final DaemonCodeAnalyzerSettings myDaemonSettings;
   private final EditorColorsManager myColorsManager;
 
+  public GoMethodSeparatorProvider() {
+    this(null,null);
+  }
   public GoMethodSeparatorProvider(DaemonCodeAnalyzerSettings daemonSettings, EditorColorsManager colorsManager) {
     myDaemonSettings = daemonSettings;
     myColorsManager = colorsManager;
@@ -44,7 +73,7 @@ public class GoMethodSeparatorProvider implements LineMarkerProvider {
   @Nullable
   @Override
   public LineMarkerInfo getLineMarkerInfo(@NotNull PsiElement o) {
-    if (myDaemonSettings.SHOW_METHOD_SEPARATORS && o instanceof GoTopLevelDeclaration && o.getParent() instanceof GoFile) {
+    if (myDaemonSettings!=null && myDaemonSettings.SHOW_METHOD_SEPARATORS && o instanceof GoTopLevelDeclaration && o.getParent() instanceof GoFile) {
       return LineMarkersPass.createMethodSeparatorLineMarker(findAnchorElement((GoTopLevelDeclaration)o), myColorsManager);
     }
     return null;

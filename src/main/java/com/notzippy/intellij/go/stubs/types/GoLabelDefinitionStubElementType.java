@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoLabelDefinition;
-import com.goide.psi.impl.GoLabelDefinitionImpl;
-import com.goide.stubs.GoLabelDefinitionStub;
+import com.notzippy.intellij.go.grammar.psi.GoLabelDefinition;
+import com.notzippy.intellij.go.grammar.psi.impl.GoLabelDefinitionImpl;
+import com.notzippy.intellij.go.stubs.GoLabelDefinitionStub;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;

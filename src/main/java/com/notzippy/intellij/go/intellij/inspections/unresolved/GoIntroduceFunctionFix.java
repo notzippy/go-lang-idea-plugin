@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.GoConstants;
-import com.goide.GoDocumentationProvider;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoTypeUtil;
-import com.goide.refactor.GoRefactoringUtil;
-import com.goide.util.GoPathScopeHelper;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoDocumentationProvider;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeUtil;
+import com.notzippy.intellij.go.intellij.refactor.GoRefactoringUtil;
+import com.notzippy.intellij.go.intellij.util.GoPathScopeHelper;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.intention.HighPriorityAction;
 import com.intellij.codeInsight.template.Template;
 import com.intellij.codeInsight.template.TemplateManager;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gotest;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest;
 
-import com.goide.runconfig.testing.GoTestEventsConverterBase;
-import com.goide.runconfig.testing.GoTestLocator;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestEventsConverterBase;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestLocator;
 import com.intellij.execution.process.ProcessOutputTypes;
 import com.intellij.execution.testframework.TestConsoleProperties;
 import com.intellij.execution.testframework.sm.ServiceMessageBuilder;

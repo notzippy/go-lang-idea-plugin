@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
 import com.intellij.ui.BrowserHyperlinkListener;
 import com.intellij.ui.ColorUtil;

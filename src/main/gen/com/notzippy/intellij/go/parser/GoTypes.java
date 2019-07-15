@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,15 +16,15 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide;
+package com.notzippy.intellij.go.parser;
 
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.PsiElement;
 import com.intellij.lang.ASTNode;
-import com.goide.psi.GoCompositeElementType;
-import com.goide.stubs.GoElementTypeFactory;
-import com.goide.psi.GoTokenType;
-import com.goide.psi.impl.*;
+import com.notzippy.intellij.go.grammar.psi.GoCompositeElementType;
+import com.notzippy.intellij.go.stubs.GoElementTypeFactory;
+import com.notzippy.intellij.go.grammar.psi.GoTokenType;
+import com.notzippy.intellij.go.grammar.psi.impl.*;
 
 public interface GoTypes {
 
@@ -216,7 +217,7 @@ public interface GoTypes {
   class Factory {
     public static PsiElement createElement(ASTNode node) {
       IElementType type = node.getElementType();
-       if (type == ADD_EXPR) {
+      if (type == ADD_EXPR) {
         return new GoAddExprImpl(node);
       }
       else if (type == AND_EXPR) {
@@ -290,9 +291,6 @@ public interface GoTypes {
       }
       else if (type == ELSE_STATEMENT) {
         return new GoElseStatementImpl(node);
-      }
-      else if (type == EXPRESSION) {
-        return new GoExpressionImpl(node);
       }
       else if (type == EXPR_CASE_CLAUSE) {
         return new GoExprCaseClauseImpl(node);

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting;
+package com.notzippy.intellij.go.intellij.highlighting;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoReferenceBase;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoReferenceBase;
 import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
 import com.intellij.openapi.application.ApplicationManager;
@@ -34,7 +34,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.goide.highlighting.GoSyntaxHighlightingColors.*;
+import static com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlightingColors.*;
 
 public class GoHighlightingAnnotator implements Annotator {
   private static void highlightRefIfNeeded(@NotNull GoReferenceExpressionBase o,

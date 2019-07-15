@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
 import com.intellij.codeInsight.template.impl.editorActions.TypedActionHandlerBase;
 import com.intellij.openapi.actionSystem.DataContext;

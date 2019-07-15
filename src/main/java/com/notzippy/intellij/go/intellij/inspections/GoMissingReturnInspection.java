@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.highlighting.exitpoint.GoBreakStatementExitPointHandler;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.highlighting.exitpoint.GoBreakStatementExitPointHandler;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.codeInsight.template.Template;
 import com.intellij.codeInsight.template.TemplateManager;
 import com.intellij.codeInsight.template.impl.TemplateSettings;

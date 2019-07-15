@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package com.goide.appengine;
-
-import com.goide.sdk.GoSdkService;
-import com.intellij.appengine.AppEngineExtension;
-import com.intellij.openapi.module.Module;
-import com.intellij.openapi.module.ModuleUtilCore;
-import com.intellij.psi.PsiElement;
-import org.jetbrains.annotations.Nullable;
-
-public class GoAppEngineExtension extends AppEngineExtension {
-  @Override
-  public boolean isAppEngineEnabled(@Nullable PsiElement context) {
-    if (context != null) {
-      // it's important to ask module on file, otherwise module won't be found for elements in libraries files [zolotov]
-      Module module = ModuleUtilCore.findModuleForPsiElement(context.getContainingFile());
-      if (GoSdkService.getInstance(context.getProject()).isAppEngineSdk(module)) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
+package com.notzippy.intellij.go.intellij.appengine;
+// TODO figure out
+//import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+//import com.intellij.appengine.AppEngineExtension;
+//import com.intellij.openapi.module.Module;
+//import com.intellij.openapi.module.ModuleUtilCore;
+//import com.intellij.psi.PsiElement;
+//import org.jetbrains.annotations.Nullable;
+//
+//public class GoAppEngineExtension extends AppEngineExtension {
+//  @Override
+//  public boolean isAppEngineEnabled(@Nullable PsiElement context) {
+//    if (context != null) {
+//      // it's important to ask module on file, otherwise module won't be found for elements in libraries files [zolotov]
+//      Module module = ModuleUtilCore.findModuleForPsiElement(context.getContainingFile());
+//      if (GoSdkService.getInstance(context.getProject()).isAppEngineSdk(module)) {
+//        return true;
+//      }
+//    }
+//    return false;
+//  }
+//}

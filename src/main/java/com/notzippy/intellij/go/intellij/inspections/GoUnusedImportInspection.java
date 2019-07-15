@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.codeInsight.imports.GoImportOptimizer;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoImportSpec;
-import com.goide.psi.GoRecursiveVisitor;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.quickfix.GoRenameQuickFix;
+import com.notzippy.intellij.go.intellij.codeInsight.imports.GoImportOptimizer;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoImportSpec;
+import com.notzippy.intellij.go.grammar.psi.GoRecursiveVisitor;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.intellij.quickfix.GoRenameQuickFix;
 import com.intellij.codeInspection.*;
 import com.intellij.find.FindManager;
 import com.intellij.openapi.application.ApplicationManager;

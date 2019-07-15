@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.unwrap;
+package com.notzippy.intellij.go.intellij.codeInsight.unwrap;
 
 import com.intellij.codeInsight.unwrap.UnwrapDescriptorBase;
 import com.intellij.codeInsight.unwrap.Unwrapper;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.application;
+package com.notzippy.intellij.go.intellij.runconfig.application;
 
-import com.goide.runconfig.GoModuleBasedConfiguration;
-import com.goide.runconfig.GoRunConfigurationWithMain;
-import com.goide.runconfig.GoRunUtil;
-import com.goide.runconfig.ui.GoApplicationConfigurationEditorForm;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.runconfig.GoModuleBasedConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationWithMain;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.runconfig.ui.GoApplicationConfigurationEditorForm;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.execution.configurations.*;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.openapi.module.Module;

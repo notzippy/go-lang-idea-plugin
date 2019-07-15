@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.util.ThreeState;

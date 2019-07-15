@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.template;
+package com.notzippy.intellij.go.intellij.template;
 
-import com.goide.GoConstants;
-import com.goide.GoTypes;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.parser.GoTypes;
 import com.intellij.codeInsight.template.EverywhereContextType;
 import com.intellij.psi.PsiComment;
 import com.intellij.psi.PsiElement;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gotest;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest;
 
-import com.goide.psi.GoFunctionDeclaration;
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.runconfig.testing.*;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.*;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.testframework.TestConsoleProperties;
 import com.intellij.execution.testframework.sm.runner.OutputToGeneralTestEventsConverter;

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
-import com.goide.psi.GoFile;
-import com.goide.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
 import com.intellij.ide.IconProvider;
 import com.intellij.openapi.project.DumbAware;
 import com.intellij.openapi.util.Iconable;

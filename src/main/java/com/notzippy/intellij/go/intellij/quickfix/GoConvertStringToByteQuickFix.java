@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.psi.GoConditionalExpr;
-import com.goide.psi.GoStringLiteral;
+import com.notzippy.intellij.go.grammar.psi.GoConditionalExpr;
+import com.notzippy.intellij.go.grammar.psi.GoStringLiteral;
 import com.intellij.codeInspection.LocalQuickFixBase;
 import com.intellij.codeInspection.ProblemDescriptor;
 import com.intellij.openapi.project.Project;
@@ -28,8 +28,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 
-import static com.goide.psi.impl.GoElementFactory.createExpression;
-import static com.goide.psi.impl.GoPsiImplUtil.isSingleCharLiteral;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory.createExpression;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil.isSingleCharLiteral;
 import static java.lang.String.format;
 
 public class GoConvertStringToByteQuickFix extends LocalQuickFixBase {

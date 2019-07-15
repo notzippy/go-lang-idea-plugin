@@ -14,19 +14,19 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.GoConstants;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.runconfig.testing.GoTestFunctionType;
-import com.goide.runconfig.testing.frameworks.gotest.GotestGenerateAction;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.stubs.index.GoFunctionIndex;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.stubs.index.GoMethodIndex;
-import com.goide.stubs.types.GoMethodDeclarationStubElementType;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFunctionType;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest.GotestGenerateAction;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.stubs.index.GoFunctionIndex;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.stubs.index.GoMethodIndex;
+import com.notzippy.intellij.go.stubs.types.GoMethodDeclarationStubElementType;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.completion.*;
 import com.intellij.codeInsight.completion.impl.CamelHumpMatcher;
 import com.intellij.codeInsight.lookup.LookupElement;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting;
+package com.notzippy.intellij.go.intellij.highlighting;
 
-import com.goide.GoFileType;
+import com.notzippy.intellij.go.intellij.GoFileType;
 import com.intellij.openapi.editor.colors.TextAttributesKey;
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.openapi.options.colors.AttributesDescriptor;
@@ -28,7 +28,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.swing.*;
 import java.util.Map;
 
-import static com.goide.highlighting.GoSyntaxHighlightingColors.*;
+import static com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlightingColors.*;
 
 public class GoColorsAndFontsPage implements ColorSettingsPage {
   private static final AttributesDescriptor[] DESCRIPTORS = new AttributesDescriptor[]{

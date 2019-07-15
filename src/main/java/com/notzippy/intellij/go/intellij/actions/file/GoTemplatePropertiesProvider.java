@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.actions.file;
+package com.notzippy.intellij.go.intellij.actions.file;
 
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.ide.fileTemplates.DefaultTemplatePropertiesProvider;
 import com.intellij.ide.fileTemplates.FileTemplate;
 import com.intellij.psi.PsiDirectory;

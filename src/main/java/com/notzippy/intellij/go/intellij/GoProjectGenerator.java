@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
 import com.intellij.facet.ui.ValidationResult;
 import com.intellij.openapi.module.Module;

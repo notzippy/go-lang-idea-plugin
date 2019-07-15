@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.GoFileType;
-import com.goide.GoLanguage;
-import com.goide.configuration.GoLibrariesConfigurableProvider;
-import com.goide.project.GoLibrariesService;
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.intellij.configuration.GoLibrariesConfigurableProvider;
+import com.notzippy.intellij.go.intellij.project.GoLibrariesService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.ProjectTopics;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.fileEditor.FileEditor;

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
 import com.intellij.execution.actions.ConfigurationContext;
 import com.intellij.execution.actions.RunConfigurationProducer;
 import com.intellij.execution.configurations.ConfigurationType;

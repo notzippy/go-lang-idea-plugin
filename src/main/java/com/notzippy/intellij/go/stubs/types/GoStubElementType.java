@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.GoLanguage;
-import com.goide.psi.GoBlock;
-import com.goide.psi.GoCompositeElement;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.grammar.psi.GoBlock;
+import com.notzippy.intellij.go.grammar.psi.GoCompositeElement;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.stubs.IStubElementType;
 import com.intellij.psi.stubs.IndexSink;

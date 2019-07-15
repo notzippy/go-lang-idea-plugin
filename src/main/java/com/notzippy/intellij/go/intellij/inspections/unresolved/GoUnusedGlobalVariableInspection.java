@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.psi.GoVarDeclaration;
-import com.goide.psi.GoVarDefinition;
-import com.goide.quickfix.GoDeleteVarDefinitionQuickFix;
+import com.notzippy.intellij.go.grammar.psi.GoVarDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoVarDefinition;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteVarDefinitionQuickFix;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
 import org.jetbrains.annotations.NotNull;

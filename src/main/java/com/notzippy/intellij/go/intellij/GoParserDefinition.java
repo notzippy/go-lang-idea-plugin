@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
-import com.goide.lexer.GoLexer;
-import com.goide.parser.GoParser;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoTokenType;
+import com.notzippy.intellij.go.lexer.GoLexer;
+import com.notzippy.intellij.go.parser.GoParser;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoTokenType;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.ParserDefinition;
 import com.intellij.lang.PsiParser;
@@ -33,7 +33,7 @@ import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
 import org.jetbrains.annotations.NotNull;
 
-import static com.goide.GoTypes.*;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
 
 public class GoParserDefinition implements ParserDefinition {
   public static final IElementType LINE_COMMENT = new GoTokenType("GO_LINE_COMMENT");

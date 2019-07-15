@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoMethodSpec;
-import com.goide.psi.impl.GoMethodSpecImpl;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.stubs.GoMethodSpecStub;
-import com.goide.stubs.index.GoMethodFingerprintIndex;
+import com.notzippy.intellij.go.grammar.psi.GoMethodSpec;
+import com.notzippy.intellij.go.grammar.psi.impl.GoMethodSpecImpl;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.stubs.GoMethodSpecStub;
+import com.notzippy.intellij.go.stubs.index.GoMethodFingerprintIndex;
 import com.intellij.psi.stubs.IndexSink;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;

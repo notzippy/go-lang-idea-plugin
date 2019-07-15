@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
-import com.goide.dlv.protocol.DlvApi;
-import com.goide.dlv.protocol.DlvRequest;
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoTopLevelDeclaration;
-import com.goide.psi.GoTypeSpec;
-import com.goide.stubs.index.GoTypesIndex;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvApi;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvRequest;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoTopLevelDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
+import com.notzippy.intellij.go.stubs.index.GoTypesIndex;
 import com.intellij.icons.AllIcons;
 import com.intellij.lang.ASTNode;
 import com.intellij.openapi.application.ApplicationManager;

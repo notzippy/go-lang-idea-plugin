@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.vfs.CharsetToolkit;
@@ -23,11 +23,12 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.json.JsonObjectDecoder;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.concurrency.Promise;
+import org.jetbrains.concurrency.*;
 import org.jetbrains.debugger.*;
 import org.jetbrains.io.ChannelBufferToString;
 import org.jetbrains.io.SimpleChannelInboundHandlerAdapter;
 import org.jetbrains.jsonProtocol.Request;
+
 
 import java.io.IOException;
 
@@ -99,7 +100,7 @@ public class DlvVm extends VmBase {
       @NotNull
       @Override
       public Promise<Void> continueVm(@NotNull StepAction stepAction, int stepCount) {
-        return Promise.DONE;
+        return Promises.resolvedPromise();
       }
 
       @NotNull
@@ -111,8 +112,9 @@ public class DlvVm extends VmBase {
       @NotNull
       @Override
       protected Promise<?> doSuspend() {
-        return Promise.DONE;
+        return Promises.resolvedPromise();
       }
     };
   }
+
 }

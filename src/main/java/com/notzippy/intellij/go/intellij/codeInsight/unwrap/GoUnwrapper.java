@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.unwrap;
+package com.notzippy.intellij.go.intellij.codeInsight.unwrap;
 
-import com.goide.psi.GoBlock;
-import com.goide.psi.GoStatement;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.GoBlock;
+import com.notzippy.intellij.go.grammar.psi.GoStatement;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.codeInsight.unwrap.AbstractUnwrapper;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiWhiteSpace;
@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public abstract class GoUnwrapper extends AbstractUnwrapper<GoUnwrapper.Context> {
-  protected GoUnwrapper(String description) {
+  public GoUnwrapper(String description) {
     super(description);
   }
 
@@ -36,7 +36,7 @@ public abstract class GoUnwrapper extends AbstractUnwrapper<GoUnwrapper.Context>
     return new Context();
   }
 
-  protected static class Context extends AbstractUnwrapper.AbstractContext {
+  protected static class Context extends AbstractContext {
     public void extractNewLine(PsiElement from) {
       PsiElement newLine = GoElementFactory.createNewLine(from.getProject());
       if (myIsEffective) {

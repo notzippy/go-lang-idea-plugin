@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
-import com.goide.dlv.protocol.DlvApi;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvApi;
 import com.intellij.util.containers.ContainerUtil;
 import com.intellij.xdebugger.frame.XExecutionStack;
 import com.intellij.xdebugger.frame.XStackFrame;

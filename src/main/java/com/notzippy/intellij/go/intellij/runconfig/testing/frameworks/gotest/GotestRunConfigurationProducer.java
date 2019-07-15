@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gotest;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest;
 
-import com.goide.runconfig.testing.GoTestRunConfigurationProducerBase;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfigurationProducerBase;
 
 public class GotestRunConfigurationProducer extends GoTestRunConfigurationProducerBase implements Cloneable {
   public GotestRunConfigurationProducer() {

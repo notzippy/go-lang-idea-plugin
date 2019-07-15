@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiComment;
 import com.intellij.psi.tree.IElementType;

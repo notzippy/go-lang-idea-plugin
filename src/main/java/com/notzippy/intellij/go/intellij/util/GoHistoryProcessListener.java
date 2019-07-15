@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.util;
+package com.notzippy.intellij.go.intellij.util;
 
 import com.intellij.execution.process.ProcessAdapter;
 import com.intellij.execution.process.ProcessEvent;

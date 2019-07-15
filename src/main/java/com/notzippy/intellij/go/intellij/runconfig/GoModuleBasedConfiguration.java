@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
 import com.intellij.execution.configurations.RunConfigurationModule;
 import com.intellij.openapi.project.Project;

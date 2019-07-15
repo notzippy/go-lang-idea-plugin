@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.suppression;
+package com.notzippy.intellij.go.intellij.inspections.suppression;
 
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.codeInsight.daemon.impl.actions.AbstractBatchSuppressByNoInspectionCommentFix;
 import com.intellij.codeInspection.InspectionSuppressor;
 import com.intellij.codeInspection.SuppressQuickFix;

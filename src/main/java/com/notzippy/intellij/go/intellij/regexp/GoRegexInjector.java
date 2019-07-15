@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.regexp;
+package com.notzippy.intellij.go.intellij.regexp;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.psi.*;
 import com.intellij.util.ObjectUtils;
 import com.intellij.util.containers.ContainerUtil;

@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.index;
+package com.notzippy.intellij.go.stubs.index;
 
-import com.goide.runconfig.testing.GoTestFinder;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.project.Project;
@@ -33,6 +32,7 @@ import com.intellij.psi.util.CachedValueProvider;
 import com.intellij.psi.util.CachedValuesManager;
 import com.intellij.util.indexing.FileBasedIndex;
 import com.intellij.util.indexing.IdFilter;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -53,7 +53,6 @@ public class GoIdFilter extends IdFilter {
   public boolean containsFileId(int id) {
     return id >= 0 && myIdSet.get(id);
   }
-
   public static IdFilter getProductionFilter(@NotNull Project project) {
     return createIdFilter(project, PRODUCTION_FILTER, file -> !file.isDirectory() && !GoTestFinder.isTestFile(file));
   }

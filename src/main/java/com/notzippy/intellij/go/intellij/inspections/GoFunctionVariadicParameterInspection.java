@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.quickfix.GoDeleteQuickFix;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteQuickFix;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import static com.goide.GoTypes.TRIPLE_DOT;
+import static com.notzippy.intellij.go.parser.GoTypes.TRIPLE_DOT;
 
 public class GoFunctionVariadicParameterInspection extends GoInspectionBase {
   private static final GoDeleteQuickFix DELETE_QUICK_FIX = new GoDeleteQuickFix("Delete ...", TRIPLE_DOT);

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.*;
-import com.goide.psi.impl.*;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.*;
 import com.intellij.codeInsight.completion.CompletionParameters;
 import com.intellij.codeInsight.completion.CompletionProvider;
 import com.intellij.codeInsight.completion.CompletionResultSet;
@@ -36,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Set;
 
-import static com.goide.completion.GoCompletionUtil.createPrefixMatcher;
+import static com.notzippy.intellij.go.intellij.completion.GoCompletionUtil.createPrefixMatcher;
 
 public class GoReferenceCompletionProvider extends CompletionProvider<CompletionParameters> {
   @Override

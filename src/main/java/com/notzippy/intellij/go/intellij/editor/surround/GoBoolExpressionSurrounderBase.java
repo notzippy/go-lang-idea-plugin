@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.editor.surround;
+package com.notzippy.intellij.go.intellij.editor.surround;
 
-import com.goide.psi.GoExpression;
-import com.goide.psi.GoIfStatement;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.psi.impl.GoTypeUtil;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
+import com.notzippy.intellij.go.grammar.psi.GoIfStatement;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeUtil;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;

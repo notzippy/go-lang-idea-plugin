@@ -1,0 +1,47 @@
+<idea-plugin  version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <id>nz.golang-plugin</id>
+    <name>Go Lang</name>
+    <vendor email="iam@notzippy.com" url="http://www.notzippy.com">Notzippy</vendor>
+
+    <description><![CDATA[
+    The free and open Go Lang plugin.<br>
+    <em>Ported from https://github.com/go-lang-plugin-org/go-lang-idea-plugin </em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends optional="true" config-file="java-deps.xml">com.intellij.modules.java</depends>
+    <depends optional="true" config-file="coverage.xml">com.intellij.modules.coverage</depends>
+    <xi:include href="gogland.xml" xpointer="xpointer(/idea-plugin/*)">
+        <xi:fallback>
+            <xi:include href="/META-INF/gogland.xml" xpointer="xpointer(/idea-plugin/*)">
+                <xi:fallback></xi:fallback>
+            </xi:include>
+        </xi:fallback>
+    </xi:include>
+
+<!--    <module-components>-->
+<!--        <component>-->
+<!--            <implementation-class>com.notzippy.intellij.go.intellij.project.GoModuleLibrariesInitializer</implementation-class>-->
+<!--        </component>-->
+<!--    </module-components>-->
+
+<!--    <extensions defaultExtensionNs="com.intellij">-->
+<!--        <fileTypeFactory implementation="com.notzippy.intellij.go.intellij.GoFileTypeFactory"/>-->
+<!--        <lang.parserDefinition language="go" implementationClass="com.notzippy.intellij.go.intellij.GoParserDefinition"/>-->
+<!--        <lang.syntaxHighlighterFactory language="go"-->
+<!--                                       implementationClass="com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlighterFactory"/>-->
+
+<!--    </extensions>-->
+    <actions>
+        <group id="nz.golang-plugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="nz.golang-plugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        </group>
+
+    </actions>
+</idea-plugin>

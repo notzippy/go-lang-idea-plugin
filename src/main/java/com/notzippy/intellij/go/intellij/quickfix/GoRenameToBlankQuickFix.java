@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.inspections.GoNoNewVariablesInspection;
-import com.goide.psi.GoNamedElement;
-import com.goide.psi.GoVarDefinition;
-import com.goide.psi.GoVarSpec;
+import com.notzippy.intellij.go.intellij.inspections.GoNoNewVariablesInspection;
+import com.notzippy.intellij.go.grammar.psi.GoNamedElement;
+import com.notzippy.intellij.go.grammar.psi.GoVarDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoVarSpec;
 import com.intellij.codeInspection.LocalQuickFixOnPsiElement;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;

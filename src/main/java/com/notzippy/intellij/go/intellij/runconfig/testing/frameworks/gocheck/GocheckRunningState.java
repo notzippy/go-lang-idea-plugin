@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gocheck;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gocheck;
 
-import com.goide.psi.GoFile;
-import com.goide.psi.GoMethodDeclaration;
-import com.goide.runconfig.testing.GoTestRunConfiguration;
-import com.goide.runconfig.testing.GoTestRunningState;
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoMethodDeclaration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunningState;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.openapi.module.Module;

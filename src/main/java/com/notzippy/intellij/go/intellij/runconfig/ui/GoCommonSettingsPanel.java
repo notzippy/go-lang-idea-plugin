@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.ui;
+package com.notzippy.intellij.go.intellij.runconfig.ui;
 
-import com.goide.runconfig.GoRunConfigurationBase;
-import com.goide.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationBase;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
 import com.intellij.application.options.ModulesComboBox;
 import com.intellij.execution.configuration.EnvironmentVariablesTextFieldWithBrowseButton;
 import com.intellij.openapi.module.Module;

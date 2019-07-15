@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -28,20 +28,28 @@ import org.jetbrains.io.NettyKt;
 import java.net.InetSocketAddress;
 
 public class DlvRemoteVmConnection extends RemoteVmConnection {
-  @NotNull
-  @Override
-  public Bootstrap createBootstrap(@NotNull InetSocketAddress address, @NotNull AsyncPromise<Vm> vmResult) {
-    return NettyKt.oioClientBootstrap().handler(new ChannelInitializer() {
-      @Override
-      protected void initChannel(@NotNull Channel channel) throws Exception {
-        vmResult.setResult(new DlvVm(getDebugEventListener(), channel));
-      }
-    });
-  }
+
+//  @NotNull
+//  @Override
+//  public Bootstrap createBootstrap(@NotNull InetSocketAddress address, @NotNull AsyncPromise<Vm> vmResult) {
+//    return NettyKt.oioClientBootstrap().handler(new ChannelInitializer() {
+//      @Override
+//      protected void initChannel(@NotNull Channel channel) throws Exception {
+//        vmResult.setResult(new DlvVm(getDebugEventListener(), channel));
+//      }
+//    });
+//  }
 
   @NotNull
   @Override
   protected String connectedAddressToPresentation(@NotNull InetSocketAddress address, @NotNull Vm vm) {
     return address.toString();
+  }
+
+  // TODO Fix
+  @NotNull
+  @Override
+  public Bootstrap createBootstrap(@NotNull InetSocketAddress inetSocketAddress, @NotNull AsyncPromise asyncPromise) {
+    return null;
   }
 }

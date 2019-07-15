@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,14 +16,14 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiLanguageInjectionHost;
-import com.goide.psi.impl.GoStringLiteralImpl;
-import com.goide.util.GoStringLiteralEscaper;
+import com.notzippy.intellij.go.grammar.psi.impl.GoStringLiteralImpl;
+import com.notzippy.intellij.go.parser.GoStringLiteralEscaper;
 
 public interface GoStringLiteral extends GoExpression, PsiLanguageInjectionHost {
 
@@ -35,7 +36,7 @@ public interface GoStringLiteral extends GoExpression, PsiLanguageInjectionHost 
   boolean isValidHost();
 
   @NotNull
-  GoStringLiteralImpl updateText(String text);
+  GoStringLiteralImpl updateText(@NotNull String text);
 
   @NotNull
   GoStringLiteralEscaper createLiteralTextEscaper();

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.GoConstants;
-import com.goide.GoLibrariesState;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.goide.GoLibrariesState;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
 import com.intellij.openapi.components.StoragePathMacros;

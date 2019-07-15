@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.completion;
+package com.notzippy.intellij.go.intellij.completion;
 
-import com.goide.GoIcons;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.stubs.GoFieldDefinitionStub;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.stubs.GoFieldDefinitionStub;
 import com.intellij.codeInsight.AutoPopupController;
 import com.intellij.codeInsight.completion.InsertHandler;
 import com.intellij.codeInsight.completion.InsertionContext;

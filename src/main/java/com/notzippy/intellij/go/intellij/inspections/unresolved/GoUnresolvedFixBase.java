@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.psi.GoReferenceExpressionBase;
-import com.goide.refactor.GoRefactoringUtil;
+import com.notzippy.intellij.go.grammar.psi.GoReferenceExpressionBase;
+import com.notzippy.intellij.go.intellij.refactor.GoRefactoringUtil;
 import com.intellij.codeInsight.template.Template;
 import com.intellij.codeInsight.template.TemplateManager;
 import com.intellij.codeInsight.template.impl.TemplateSettings;

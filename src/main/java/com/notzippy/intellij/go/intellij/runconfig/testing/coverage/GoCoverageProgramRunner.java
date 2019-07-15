@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.coverage;
+package com.notzippy.intellij.go.intellij.runconfig.testing.coverage;
 
-import com.goide.runconfig.testing.GoTestRunConfiguration;
-import com.goide.runconfig.testing.GoTestRunningState;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunningState;
 import com.intellij.coverage.CoverageExecutor;
 import com.intellij.coverage.CoverageHelper;
 import com.intellij.coverage.CoverageRunnerData;

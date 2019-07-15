@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl.imports;
+package com.notzippy.intellij.go.grammar.psi.impl.imports;
 
-import com.goide.codeInsight.imports.GoGetPackageFix;
-import com.goide.completion.GoCompletionUtil;
-import com.goide.quickfix.GoDeleteImportQuickFix;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.codeInsight.imports.GoGetPackageFix;
+import com.notzippy.intellij.go.intellij.completion.GoCompletionUtil;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteImportQuickFix;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.codeInsight.completion.CompletionUtil;
 import com.intellij.codeInsight.daemon.quickFix.CreateFileFix;
 import com.intellij.codeInspection.LocalQuickFix;

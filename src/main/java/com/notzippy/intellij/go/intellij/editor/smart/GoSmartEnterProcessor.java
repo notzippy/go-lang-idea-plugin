@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.editor.smart;
+package com.notzippy.intellij.go.intellij.editor.smart;
 
-import com.goide.inspections.GoDeferGoInspection;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.intellij.inspections.GoDeferGoInspection;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.lang.SmartEnterProcessorWithFixers;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;

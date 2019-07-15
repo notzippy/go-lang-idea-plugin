@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.GoConstants;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoPackageClause;
-import com.goide.quickfix.GoMultiplePackagesQuickFix;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoPackageClause;
+import com.notzippy.intellij.go.intellij.quickfix.GoMultiplePackagesQuickFix;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.codeInspection.LocalQuickFix;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.ide.scratch.ScratchFileType;

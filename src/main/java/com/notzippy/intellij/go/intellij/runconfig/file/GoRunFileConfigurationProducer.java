@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.file;
+package com.notzippy.intellij.go.intellij.runconfig.file;
 
-import com.goide.runconfig.GoRunConfigurationProducerBase;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationProducerBase;
 import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,21 +1,21 @@
 {
-  parserClass='com.goide.parser.GoParser'
+  parserClass='com.notzippy.intellij.go.parser.GoParser'
   classHeader='copyrightHeader.java'
 
-  implements='com.goide.psi.GoCompositeElement'
-  extends='com.goide.psi.impl.GoCompositeElementImpl'
+  implements='com.notzippy.intellij.go.grammar.psi.GoCompositeElement'
+  extends='com.notzippy.intellij.go.grammar.psi.impl.GoCompositeElementImpl'
   
-  elementTypeHolderClass='com.goide.GoTypes'
-  elementTypeClass='com.goide.psi.GoCompositeElementType'
-  tokenTypeClass='com.goide.psi.GoTokenType'
-  psiTreeUtilClass='com.goide.psi.GoPsiTreeUtil'
+  elementTypeHolderClass='com.notzippy.intellij.go.parser.GoTypes'
+  elementTypeClass='com.notzippy.intellij.go.grammar.psi.GoCompositeElementType'
+  tokenTypeClass='com.notzippy.intellij.go.grammar.psi.GoTokenType'
+  psiTreeUtilClass='com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil'
   
   psiClassPrefix='Go'
   psiImplClassSuffix='Impl'
-  psiPackage='com.goide.psi'
-  psiImplPackage='com.goide.psi.impl'
-  psiImplUtilClass="com.goide.psi.impl.GoPsiImplUtil"
-  parserUtilClass="com.goide.parser.GoParserUtil"
+  psiPackage='com.notzippy.intellij.go.grammar.psi'
+  psiImplPackage='com.notzippy.intellij.go.grammar.psi.impl'
+  psiImplUtilClass="com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil"
+  parserUtilClass="com.notzippy.intellij.go.parser.GoParserUtil"
 
   tokens=[
     LBRACE               =  '{'
@@ -73,16 +73,16 @@
   extends("(Or|And|Add|Conversion|Mul|Selector|Conditional)Expr")=BinaryExpr
   extends(".*(Expr|Literal|Lit|OperandName)")=Expression
 
-  implements("(Type|Import)Spec|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver")="com.goide.psi.GoNamedElement"
-  implements("FunctionLit")="com.goide.psi.GoSignatureOwner"
-  implements("MethodSpec")="com.goide.psi.GoNamedSignatureOwner"
-  implements("(Function|Method)Declaration")="com.goide.psi.GoFunctionOrMethodDeclaration"
-  implements("(Const|Type|Var)Declaration")="com.goide.psi.GoTopLevelDeclaration"
-  implements(".*ReferenceExpression|FieldName")="com.goide.psi.GoReferenceExpressionBase"
-  extends("(Function|Method)Declaration")="com.goide.psi.impl.GoFunctionOrMethodDeclarationImpl<?>"
-  extends("(Type|Import|Method)Spec|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver")="com.goide.psi.impl.GoNamedElementImpl<?>"
-  extends("PackageClause|Parameters|Signature|ParameterDeclaration|Result|Type|(Const|Var|Import)Spec")="com.goide.psi.impl.GoStubbedElementImpl<?>"
-  elementTypeFactory("PackageClause|(Function|Method|Parameter)Declaration|(Type|Import|Method|Const|Var)Spec|RangeClause|RecvStatement|ShortVarDeclaration|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver|Parameters|Signature|Result|.*Type|TypeList.*")='com.goide.stubs.GoElementTypeFactory.stubFactory'
+  implements("(Type|Import)Spec|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver")="com.notzippy.intellij.go.grammar.psi.GoNamedElement"
+  implements("FunctionLit")="com.notzippy.intellij.go.grammar.psi.GoSignatureOwner"
+  implements("MethodSpec")="com.notzippy.intellij.go.grammar.psi.GoNamedSignatureOwner"
+  implements("(Function|Method)Declaration")="com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration"
+  implements("(Const|Type|Var)Declaration")="com.notzippy.intellij.go.grammar.psi.GoTopLevelDeclaration"
+  implements(".*ReferenceExpression|FieldName")="com.notzippy.intellij.go.grammar.psi.GoReferenceExpressionBase"
+  extends("(Function|Method)Declaration")="com.notzippy.intellij.go.grammar.psi.impl.GoFunctionOrMethodDeclarationImpl<?>"
+  extends("(Type|Import|Method)Spec|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver")="com.notzippy.intellij.go.grammar.psi.impl.GoNamedElementImpl<?>"
+  extends("PackageClause|Parameters|Signature|ParameterDeclaration|Result|Type|(Const|Var|Import)Spec")="com.notzippy.intellij.go.grammar.psi.impl.GoStubbedElementImpl<?>"
+  elementTypeFactory("PackageClause|(Function|Method|Parameter)Declaration|(Type|Import|Method|Const|Var)Spec|RangeClause|RecvStatement|ShortVarDeclaration|(Var|Const|Param|(Anonymous)?Field|Label)Definition|Receiver|Parameters|Signature|Result|.*Type|TypeList.*")='com.notzippy.intellij.go.stubs.GoElementTypeFactory.stubFactory'
   pin(".*Statement")=1
   extends(".*Statement")=Statement
   extends(".*Type|TypeList")=Type
@@ -98,7 +98,7 @@ ImportList ::= (ImportDeclaration semi)+|<<emptyImportList>> {
 }
 private semi ::= '<NL>' | ';' | <<eof>>
 
-PackageClause ::= package identifier {pin=1 methods=[getName] stubClass="com.goide.stubs.GoPackageClauseStub"}
+PackageClause ::= package identifier {pin=1 methods=[getName] stubClass="com.notzippy.intellij.go.stubs.GoPackageClauseStub"}
 
 ImportDeclaration ::= import ( ImportSpec | '(' ImportSpecs? ')' ) {
   pin(".*")=1
@@ -106,12 +106,12 @@ ImportDeclaration ::= import ( ImportSpec | '(' ImportSpecs? ')' ) {
 }
 private ImportSpecs ::= ImportSpec (semi ImportSpec)* semi? {pin=1}
 ImportSpec ::= [ '.' | identifier ] ImportString {
-  stubClass="com.goide.stubs.GoImportSpecStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoImportSpecStub"
   methods=[getAlias getLocalPackageName shouldGoDeeper isForSideEffects isDot getPath getName isCImport]
 }
 ImportString ::= StringLiteral {methods=[getReferences resolve getPath getPathTextRange]}
 
-Type ::= TypeName | TypeLit | ParType {stubClass="com.goide.stubs.GoTypeStub" methods=[getUnderlyingType shouldGoDeeper]}
+Type ::= TypeName | TypeLit | ParType {stubClass="com.notzippy.intellij.go.stubs.GoTypeStub" methods=[getUnderlyingType shouldGoDeeper]}
 ParType ::= '(' Type ')' {methods=[getActualType]}
 private TypeName ::= TypeReferenceExpression QualifiedTypeReferenceExpression?
 TypeReferenceExpression ::= identifier { methods=[getReference getQualifier resolve resolveType] }
@@ -134,37 +134,37 @@ FieldDeclaration ::= (FieldDefinitionList Type | AnonymousFieldDefinition) Tag?
 Tag ::= StringLiteral
 private FieldDefinitionList ::= FieldDefinition (',' FieldDefinition)*
 FieldDefinition ::= identifier {
-  stubClass="com.goide.stubs.GoFieldDefinitionStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoFieldDefinitionStub"
 }
 
 AnonymousFieldDefinition ::= Type {
-  stubClass="com.goide.stubs.GoAnonymousFieldDefinitionStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoAnonymousFieldDefinitionStub"
   methods=[getIdentifier getName getTypeReferenceExpression getGoTypeInner]
 }
 
 PointerType ::= '*' Type {pin=1}
 
-FunctionType ::= func Signature {pin=1 implements="com.goide.psi.GoSignatureOwner"}
+FunctionType ::= func Signature {pin=1 implements="com.notzippy.intellij.go.grammar.psi.GoSignatureOwner"}
 Signature ::= Parameters Result? {
   pin=1
-  stubClass="com.goide.stubs.GoSignatureStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoSignatureStub"
 }
 Result ::= '(' TypeListNoPin ')' | Type | Parameters { // todo: reorder and pin (
-  stubClass="com.goide.stubs.GoResultStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoResultStub"
   methods=[isVoid]
 }
 Parameters ::= '(' [ (ParameterList ','?| TypeListNoPin) ] ')' {
   pin=1
-  stubClass="com.goide.stubs.GoParametersStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoParametersStub"
 }
 private ParameterList ::= ParameterDeclaration (',' (ParameterDeclaration | &')'))* {pin(".*")=1}
 ParameterDeclaration ::= ParamDefinitionListNoPin? '...'? Type | Type { // todo: use left rule
-  stubClass="com.goide.stubs.GoParameterDeclarationStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoParameterDeclarationStub"
   methods = [isVariadic]
 }
 private ParamDefinitionListNoPin ::= ParamDefinition &(!('.' | ')')) (',' ParamDefinition)* // todo
 ParamDefinition ::= identifier {
-  stubClass="com.goide.stubs.GoParamDefinitionStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoParamDefinitionStub"
   methods = [isVariadic]
 }
 
@@ -174,7 +174,7 @@ InterfaceType ::= interface '{' MethodSpecs? '}' {
 }
 private MethodSpecs ::= MethodSpec (semi MethodSpec)* semi? {pin=1}
 MethodSpec ::= TypeName &(!'(') | identifier Signature {
-  stubClass="com.goide.stubs.GoMethodSpecStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoMethodSpecStub"
   methods=[getGoTypeInner getName]
 }
 
@@ -233,12 +233,12 @@ ConstDeclaration ::= const ( ConstSpec | '(' ConstSpecs? ')' ) {pin(".*")=1 meth
 private ConstSpecs ::= ConstSpec (semi ConstSpec)* semi? {pin=1}
 ConstSpec ::= ConstDefinitionList [ ('=' ExpressionList | Type '=' ExpressionList) ] {
   pin(".*")=1 
-  stubClass="com.goide.stubs.GoConstSpecStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoConstSpecStub"
   methods=[deleteDefinition]
 }
 private ConstDefinitionList ::= ConstDefinition ( ',' ConstDefinition )*
 ConstDefinition ::= identifier {
-  stubClass="com.goide.stubs.GoConstDefinitionStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoConstDefinitionStub"
   methods=[getGoTypeInner getValue]
 }
 
@@ -256,38 +256,38 @@ TypeDeclaration ::= 'type' ( TypeSpec | '(' TypeSpecs? ')' ) {pin(".*")=1}
 private TypeSpecs ::= TypeSpec (semi TypeSpec)* semi? {pin=1}
 TypeSpec ::= SpecType {
   methods=[getGoTypeInner getMethods shouldGoDeeper identifier="SpecType/identifier"]
-  stubClass="com.goide.stubs.GoTypeSpecStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoTypeSpecStub"
 }
-SpecType ::= identifier Type {pin=1 stubClass="com.goide.stubs.GoTypeStub" extends="com.goide.psi.impl.GoTypeImpl" implements=Type}
+SpecType ::= identifier Type {pin=1 stubClass="com.notzippy.intellij.go.stubs.GoTypeStub" extends="com.notzippy.intellij.go.grammar.psi.impl.GoTypeImpl" implements=Type}
 
 VarDeclaration ::= var ( VarSpec | '(' VarSpecs? ')' ) {pin(".*")=1 methods=[addSpec deleteSpec]}
 private VarSpecs ::= VarSpec (semi VarSpec)* semi? {pin=1}
 VarSpec ::= VarDefinitionList ( Type [ '=' ExpressionList ] | '=' ExpressionList ) {
   pin(".*")=1
   methods=[processDeclarations deleteDefinition getRightExpressionsList]
-  stubClass="com.goide.stubs.GoVarSpecStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoVarSpecStub"
 }
 private VarDefinitionList ::= VarDefinition ( ',' VarDefinition )*
 VarDefinition ::= identifier {
   methods=[getGoTypeInner getReference getValue]
-  stubClass="com.goide.stubs.GoVarDefinitionStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoVarDefinitionStub"
 }
 
 ShortVarDeclaration ::= VarDefinitionList ':=' ExpressionList {pin=2 extends=VarSpec}
 
 FunctionDeclaration ::= func identifier Signature BlockWithConsume? {
   pin=2
-  stubClass="com.goide.stubs.GoFunctionDeclarationStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoFunctionDeclarationStub"
 }
 MethodDeclaration ::= func Receiver identifier Signature BlockWithConsume? {
   pin=1
-  stubClass="com.goide.stubs.GoMethodDeclarationStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoMethodDeclarationStub"
   methods=[getReceiverType]
 }
 Receiver ::= '(' (identifier ReceiverTail | ReceiverTail) ')' {
   methods=[getGoTypeInner]
   pin=1
-  stubClass="com.goide.stubs.GoReceiverStub"
+  stubClass="com.notzippy.intellij.go.stubs.GoReceiverStub"
 }
 private ReceiverTail ::= Type ','?
 
@@ -336,7 +336,7 @@ Expression ::=
   | UnaryExpr
   | ConversionExpr
   | MaxGroup
-  | ParenthesesExpr {methods=[getGoType] implements="com.goide.psi.GoTypeOwner"}
+  | ParenthesesExpr {methods=[getGoType] implements="com.notzippy.intellij.go.grammar.psi.GoTypeOwner"}
 
 fake BinaryExpr ::= Expression+ {
   methods=[left="Expression[0]" right="Expression[1]" getOperator]
@@ -386,7 +386,7 @@ private ConversionStart ::= '*' | '<-' | '[' | chan | func | interface | map | s
 
 LabeledStatement ::= LabelDefinition ':' Statement? {pin=2}
 LabelDefinition ::= identifier {
-  stubClass="com.goide.stubs.GoLabelDefinitionStub" // todo: remove when you'll have some spare time 
+  stubClass="com.notzippy.intellij.go.stubs.GoLabelDefinitionStub" // todo: remove when you'll have some spare time
 }
 left SendStatement ::= '<-' Expression {pin=1 methods=[getSendExpression]}
 left AssignmentStatement ::= assign_op ExpressionList {pin=1}
@@ -401,12 +401,12 @@ left ExprSwitchStatement ::= Condition '{' ExprCaseClause* '}' {pin=2 extends=Sw
 private Condition ::= <<enterMode "BLOCK?">> SimpleStatementOpt Expression? <<exitModeSafe "BLOCK?">>
 private SimpleStatementOpt ::= [SimpleStatement ';'?] // todo: remove ?
 
-ExprCaseClause ::= !'}' ExprSwitchCase ':' Statements? {pin=1 implements="com.goide.psi.GoCaseClause"}
+ExprCaseClause ::= !'}' ExprSwitchCase ':' Statements? {pin=1 implements="com.notzippy.intellij.go.grammar.psi.GoCaseClause"}
 private ExprSwitchCase ::= case ExpressionList | default {pin(".*")=1} 
 left TypeSwitchStatement ::= (TypeSwitchGuard | SimpleStatement ';'? TypeSwitchGuard) '{' ( TypeCaseClause )* '}' {pin=1 extends=SwitchStatement}
 TypeSwitchGuard ::= [ VarDefinition ':=' ] Expression '.' TypeGuard
 TypeGuard ::= '(' 'type' ')' {pin=2}
-TypeCaseClause ::= !'}' TypeSwitchCase ':' Statements? {pin=1 implements="com.goide.psi.GoCaseClause"}
+TypeCaseClause ::= !'}' TypeSwitchCase ':' Statements? {pin=1 implements="com.notzippy.intellij.go.grammar.psi.GoCaseClause"}
 private TypeSwitchCase ::= case TypeList | default {pin(".*")=1}
 TypeList ::= Type ( ',' Type )* ','?
 TypeListNoPin ::= Type ( ',' Type )* ','? {elementType=TypeList}

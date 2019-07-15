@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.application;
+package com.notzippy.intellij.go.intellij.runconfig.application;
 
-import com.goide.GoConstants;
-import com.goide.runconfig.GoRunningState;
-import com.goide.util.GoExecutor;
-import com.goide.util.GoHistoryProcessListener;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunningState;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.util.GoHistoryProcessListener;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.executors.DefaultDebugExecutor;
 import com.intellij.execution.process.ProcessAdapter;

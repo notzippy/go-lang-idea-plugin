@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.GoLanguage;
+import com.notzippy.intellij.go.intellij.GoLanguage;
 import com.intellij.psi.PsiElement;
 import com.intellij.spellchecker.tokenizer.SpellcheckingStrategy;
 import org.jetbrains.annotations.NotNull;

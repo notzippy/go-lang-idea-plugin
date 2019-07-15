@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.formatter.settings;
+package com.notzippy.intellij.go.intellij.formatter.settings;
 
-import com.goide.GoConstants;
+import com.notzippy.intellij.go.intellij.GoConstants;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.psi.codeStyle.CodeStyleSettings;
 import com.intellij.psi.codeStyle.CodeStyleSettingsProvider;

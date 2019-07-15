@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.project.GoModuleSettings;
+import com.notzippy.intellij.go.intellij.project.GoModuleSettings;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.options.ConfigurableBase;
 import org.jetbrains.annotations.NotNull;

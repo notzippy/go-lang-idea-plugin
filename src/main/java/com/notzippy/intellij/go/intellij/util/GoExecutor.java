@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.util;
+package com.notzippy.intellij.go.intellij.util;
 
-import com.goide.GoConstants;
-import com.goide.project.GoModuleSettings;
-import com.goide.runconfig.GoConsoleFilter;
-import com.goide.runconfig.GoRunUtil;
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.project.GoModuleSettings;
+import com.notzippy.intellij.go.intellij.runconfig.GoConsoleFilter;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.ExecutionHelper;
 import com.intellij.execution.ExecutionModes;

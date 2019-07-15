@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoTypeReference;
-import com.goide.quickfix.GoRenameQuickFix;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeReference;
+import com.notzippy.intellij.go.intellij.quickfix.GoRenameQuickFix;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;

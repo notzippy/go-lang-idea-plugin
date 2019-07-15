@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.inspections.GoInspectionBase;
-import com.goide.psi.GoLabelDefinition;
-import com.goide.psi.GoLabeledStatement;
-import com.goide.psi.GoStatement;
-import com.goide.psi.GoVisitor;
-import com.goide.quickfix.GoRenameToBlankQuickFix;
+import com.notzippy.intellij.go.intellij.inspections.GoInspectionBase;
+import com.notzippy.intellij.go.grammar.psi.GoLabelDefinition;
+import com.notzippy.intellij.go.grammar.psi.GoLabeledStatement;
+import com.notzippy.intellij.go.grammar.psi.GoStatement;
+import com.notzippy.intellij.go.grammar.psi.GoVisitor;
+import com.notzippy.intellij.go.intellij.quickfix.GoRenameToBlankQuickFix;
 import com.intellij.codeInspection.*;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;

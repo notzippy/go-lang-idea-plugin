@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoMethodDeclaration;
-import com.goide.psi.GoTypeReferenceExpression;
-import com.goide.psi.impl.GoMethodDeclarationImpl;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.stubs.GoFileStub;
-import com.goide.stubs.GoMethodDeclarationStub;
-import com.goide.stubs.index.GoMethodIndex;
+import com.notzippy.intellij.go.grammar.psi.GoMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoTypeReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.impl.GoMethodDeclarationImpl;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.stubs.GoFileStub;
+import com.notzippy.intellij.go.stubs.GoMethodDeclarationStub;
+import com.notzippy.intellij.go.stubs.index.GoMethodIndex;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.stubs.IndexSink;
 import com.intellij.psi.stubs.StubElement;

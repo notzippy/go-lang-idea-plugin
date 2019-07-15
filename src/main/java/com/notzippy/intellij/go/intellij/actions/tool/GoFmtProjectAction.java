@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.actions.tool;
+package com.notzippy.intellij.go.intellij.actions.tool;
 
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.module.Module;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.GoConstants;
-import com.goide.psi.*;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.openapi.module.ModuleUtilCore;
 import com.intellij.openapi.util.*;
 import com.intellij.psi.*;
@@ -35,7 +35,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collection;
 import java.util.List;
 
-import static com.goide.psi.impl.GoPsiImplUtil.*;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil.*;
 
 public class GoReference extends GoReferenceBase<GoReferenceExpressionBase> {
   private static final Key<Object> POINTER = Key.create("POINTER");

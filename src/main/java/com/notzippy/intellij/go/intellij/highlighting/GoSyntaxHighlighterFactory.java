@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting;
+package com.notzippy.intellij.go.intellij.highlighting;
 
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.openapi.fileTypes.SyntaxHighlighterFactory;

@@ -1,10 +1,10 @@
-package com.goide.lexer;
+package com.notzippy.intellij.go.lexer;
 
 import com.intellij.lexer.FlexLexer;
 import com.intellij.psi.tree.IElementType;
-import com.goide.GoTypes;
+import com.notzippy.intellij.go.parser.GoTypes;
 import static com.intellij.psi.TokenType.BAD_CHARACTER;
-import static com.goide.GoParserDefinition.*;
+import static com.notzippy.intellij.go.intellij.GoParserDefinition.*;
 
 %%
 

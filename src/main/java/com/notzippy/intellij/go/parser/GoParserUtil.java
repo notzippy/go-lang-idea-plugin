@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.parser;
+package com.notzippy.intellij.go.parser;
 
-import com.goide.GoParserDefinition;
-import com.goide.GoTypes;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
 import com.intellij.lang.LighterASTNode;
 import com.intellij.lang.PsiBuilder;
 import com.intellij.lang.WhitespacesBinders;

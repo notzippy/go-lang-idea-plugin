@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.stubs.index.GoFunctionIndex;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.stubs.index.GoMethodIndex;
-import com.goide.stubs.types.GoMethodDeclarationStubElementType;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.stubs.index.GoFunctionIndex;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.stubs.index.GoMethodIndex;
+import com.notzippy.intellij.go.stubs.types.GoMethodDeclarationStubElementType;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemsHolder;
 import com.intellij.openapi.module.Module;
@@ -34,8 +34,8 @@ import com.intellij.psi.search.GlobalSearchScope;
 import com.intellij.util.indexing.IdFilter;
 import org.jetbrains.annotations.NotNull;
 
-import static com.goide.GoConstants.INIT;
-import static com.goide.GoConstants.MAIN;
+import static com.notzippy.intellij.go.intellij.GoConstants.INIT;
+import static com.notzippy.intellij.go.intellij.GoConstants.MAIN;
 
 public class GoDuplicateFunctionOrMethodInspection extends GoInspectionBase {
   @NotNull

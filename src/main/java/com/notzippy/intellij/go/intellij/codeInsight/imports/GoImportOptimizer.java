@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.GoTypes;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoReferenceBase;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoReferenceBase;
 import com.intellij.lang.ImportOptimizer;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.progress.ProgressManager;

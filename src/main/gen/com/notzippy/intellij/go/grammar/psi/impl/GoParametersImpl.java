@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,26 +16,26 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.stubs.GoParametersStub;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.stubs.GoParametersStub;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.psi.stubs.IStubElementType;
 
 public class GoParametersImpl extends GoStubbedElementImpl<GoParametersStub> implements GoParameters {
 
-  public GoParametersImpl(GoParametersStub stub, IStubElementType nodeType) {
-    super(stub, nodeType);
+  public GoParametersImpl(@NotNull GoParametersStub stub, @NotNull IStubElementType type) {
+    super(stub, type);
   }
 
-  public GoParametersImpl(ASTNode node) {
+  public GoParametersImpl(@NotNull ASTNode node) {
     super(node);
   }
 

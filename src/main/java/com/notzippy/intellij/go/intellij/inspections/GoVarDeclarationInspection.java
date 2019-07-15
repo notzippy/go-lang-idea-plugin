@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.*;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoTypeUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeUtil;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;
@@ -29,8 +29,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-import static com.goide.inspections.GoInspectionUtil.UNKNOWN_COUNT;
-import static com.goide.inspections.GoInspectionUtil.getExpressionResultCount;
+import static com.notzippy.intellij.go.intellij.inspections.GoInspectionUtil.UNKNOWN_COUNT;
+import static com.notzippy.intellij.go.intellij.inspections.GoInspectionUtil.getExpressionResultCount;
 
 public class GoVarDeclarationInspection extends GoInspectionBase {
   @NotNull

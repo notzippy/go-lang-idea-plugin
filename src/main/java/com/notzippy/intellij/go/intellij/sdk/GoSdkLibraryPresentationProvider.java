@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.sdk;
+package com.notzippy.intellij.go.intellij.sdk;
 
-import com.goide.GoIcons;
+import com.notzippy.intellij.go.intellij.GoIcons;
 import com.intellij.openapi.roots.libraries.DummyLibraryProperties;
 import com.intellij.openapi.roots.libraries.LibraryKind;
 import com.intellij.openapi.roots.libraries.LibraryPresentationProvider;

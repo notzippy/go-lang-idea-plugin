@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.sdk.GoSdkService;
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.codeInsight.intention.HighPriorityAction;
 import com.intellij.codeInspection.LocalQuickFixBase;
 import com.intellij.codeInspection.ProblemDescriptor;

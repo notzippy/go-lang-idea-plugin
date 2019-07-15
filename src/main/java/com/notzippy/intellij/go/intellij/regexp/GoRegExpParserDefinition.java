@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.regexp;
+package com.notzippy.intellij.go.intellij.regexp;
 
 import com.intellij.lang.PsiParser;
 import com.intellij.lexer.Lexer;

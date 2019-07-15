@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.actions.tool;
+package com.notzippy.intellij.go.intellij.actions.tool;
 
-import com.goide.GoConstants;
-import com.goide.GoFileType;
-import com.goide.sdk.GoSdkService;
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.execution.ExecutionException;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;

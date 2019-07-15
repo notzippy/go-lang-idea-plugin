@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.formatter;
+package com.notzippy.intellij.go.intellij.formatter;
 
-import com.goide.GoLanguage;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.GoLanguage;
 import com.intellij.formatting.*;
 import com.intellij.formatting.alignment.AlignmentStrategy;
 import com.intellij.lang.ASTNode;
@@ -37,8 +37,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-import static com.goide.GoParserDefinition.*;
-import static com.goide.GoTypes.*;
+import static com.notzippy.intellij.go.intellij.GoParserDefinition.*;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
 
 public class GoFormattingModelBuilder implements FormattingModelBuilder {
   @NotNull
@@ -200,8 +200,8 @@ public class GoFormattingModelBuilder implements FormattingModelBuilder {
     }
 
     private static boolean isTopLevelDeclaration(@NotNull PsiElement element) {
-      return element instanceof GoPackageClause || element instanceof GoImportList 
-             || element instanceof GoTopLevelDeclaration && element.getParent() instanceof GoFile; 
+      return element instanceof GoPackageClause || element instanceof GoImportList
+             || element instanceof GoTopLevelDeclaration && element.getParent() instanceof GoFile;
     }
 
     private static Spacing lineBreak() {

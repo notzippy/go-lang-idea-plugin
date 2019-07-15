@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.actions.tool;
+package com.notzippy.intellij.go.intellij.actions.tool;
 
-import com.goide.util.GoExecutor;
+import com.notzippy.intellij.go.intellij.util.GoExecutor;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.coverage;
+package com.notzippy.intellij.go.intellij.runconfig.testing.coverage;
 
 import com.intellij.coverage.BaseCoverageSuite;
 import com.intellij.coverage.CoverageEngine;

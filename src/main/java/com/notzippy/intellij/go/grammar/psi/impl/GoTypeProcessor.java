@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.psi.GoTypeReferenceExpression;
-import com.goide.psi.GoTypeSpec;
+import com.notzippy.intellij.go.grammar.psi.GoTypeReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
 import com.intellij.psi.PsiElement;
 import org.jetbrains.annotations.NotNull;
 

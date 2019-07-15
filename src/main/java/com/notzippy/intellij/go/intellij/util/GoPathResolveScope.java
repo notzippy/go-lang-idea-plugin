@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.util;
+package com.notzippy.intellij.go.intellij.util;
 
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;

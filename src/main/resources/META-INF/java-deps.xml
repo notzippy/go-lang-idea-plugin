@@ -16,13 +16,14 @@
 
 <idea-plugin version="2">
   <extensions defaultExtensionNs="com.intellij">
-    <moduleType id="GO_MODULE" implementationClass="com.goide.GoModuleType"/>
-    <moduleConfigurationEditorProvider implementation="com.goide.configuration.GoModuleEditorsProvider" order="first"/>
-    <editorNotificationProvider implementation="com.goide.inspections.WrongModuleTypeNotificationProvider"/>
+    <moduleType id="GO_MODULE" implementationClass="com.notzippy.intellij.go.intellij.GoModuleType"/>
+    <moduleConfigurationEditorProvider implementation="com.notzippy.intellij.go.intellij.configuration.GoModuleEditorsProvider" order="first"/>
+    <editorNotificationProvider implementation="com.notzippy.intellij.go.intellij.inspections.WrongModuleTypeNotificationProvider"/>
 
-    <projectStructureDetector implementation="com.goide.project.GoProjectStructureDetector"/>
+    <projectStructureDetector implementation="com.notzippy.intellij.go.intellij.project.GoProjectStructureDetector"/>
 
-    <projectService serviceInterface="com.goide.sdk.GoSdkService" serviceImplementation="com.goide.sdk.GoIdeaSdkService" overrides="true"/>
+    <projectService serviceInterface="com.notzippy.intellij.go.intellij.sdk.GoSdkService"
+                    serviceImplementation="com.notzippy.intellij.go.intellij.sdk.GoIdeaSdkService" overrides="true"/>
 
   </extensions>
 </idea-plugin>

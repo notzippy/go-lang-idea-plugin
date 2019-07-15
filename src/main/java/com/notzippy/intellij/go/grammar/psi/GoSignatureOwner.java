@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import org.jetbrains.annotations.Nullable;
 

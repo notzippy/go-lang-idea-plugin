@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,28 +16,28 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
 import com.intellij.lang.ASTNode;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementVisitor;
-import com.goide.psi.GoPsiTreeUtil;
-import static com.goide.GoTypes.*;
-import com.goide.stubs.GoVarDefinitionStub;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import static com.notzippy.intellij.go.parser.GoTypes.*;
+import com.notzippy.intellij.go.stubs.GoVarDefinitionStub;
+import com.notzippy.intellij.go.grammar.psi.*;
 import com.intellij.psi.PsiReference;
 import com.intellij.psi.ResolveState;
 import com.intellij.psi.stubs.IStubElementType;
 
 public class GoVarDefinitionImpl extends GoNamedElementImpl<GoVarDefinitionStub> implements GoVarDefinition {
 
-  public GoVarDefinitionImpl(GoVarDefinitionStub stub, IStubElementType nodeType) {
-    super(stub, nodeType);
+  public GoVarDefinitionImpl(@NotNull GoVarDefinitionStub stub, @NotNull IStubElementType type) {
+    super(stub, type);
   }
 
-  public GoVarDefinitionImpl(ASTNode node) {
+  public GoVarDefinitionImpl(@NotNull ASTNode node) {
     super(node);
   }
 
@@ -55,16 +56,19 @@ public class GoVarDefinitionImpl extends GoNamedElementImpl<GoVarDefinitionStub>
     return notNullChild(findChildByType(IDENTIFIER));
   }
 
+  @Override
   @Nullable
-  public GoType getGoTypeInner(ResolveState context) {
+  public GoType getGoTypeInner(@Nullable ResolveState context) {
     return GoPsiImplUtil.getGoTypeInner(this, context);
   }
 
+  @Override
   @Nullable
   public PsiReference getReference() {
     return GoPsiImplUtil.getReference(this);
   }
 
+  @Override
   @Nullable
   public GoExpression getValue() {
     return GoPsiImplUtil.getValue(this);

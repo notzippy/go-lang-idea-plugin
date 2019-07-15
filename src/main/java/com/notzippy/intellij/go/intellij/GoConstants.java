@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
 import com.intellij.notification.NotificationGroup;
 import com.intellij.openapi.wm.ToolWindowId;
@@ -32,7 +32,7 @@ public class GoConstants {
   public static final String GO_VENDORING_EXPERIMENT = "GO15VENDOREXPERIMENT";
   public static final String GO_LIBRARIES_SERVICE_NAME = "GoLibraries";
   public static final String GO_LIBRARIES_CONFIG_FILE = "goLibraries.xml";
-  public static final String GO_MODULE_SESTTINGS_SERVICE_NAME = "Go";
+  public static final String GO_MODULE_SESTTINGS_SERVICE_NAME = "go";
 
   private static final String IDENTIFIER_REGEX = "[\\p{javaLetter}_][\\p{javaLetterOrDigit}_]*";
   public static final String TEST_NAME_REGEX = IDENTIFIER_REGEX + "(/\\S*)?";

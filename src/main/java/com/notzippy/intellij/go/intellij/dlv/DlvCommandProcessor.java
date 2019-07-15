@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
-import com.goide.dlv.protocol.DlvRequest;
-import com.goide.dlv.protocol.DlvResponse;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvRequest;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvResponse;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
 import com.intellij.openapi.util.text.StringUtil;
@@ -59,7 +59,7 @@ public abstract class DlvCommandProcessor extends CommandProcessor<JsonReaderEx,
       callback.onSuccess(response, this);
     }
     else {
-      callback.onError(Promise.createError(createMessage(response)));
+      callback.onError(createMessage(response));
     }
   }
 
@@ -97,7 +97,7 @@ public abstract class DlvCommandProcessor extends CommandProcessor<JsonReaderEx,
         return arguments[0];
       }
     }
-    CommandProcessorKt.getLOG().error("Unknown response " + method + ", please register an appropriate request into com.goide.dlv.protocol.DlvRequest");
+    CommandProcessorKt.getLOG().error("Unknown response " + method + ", please register an appropriate request into com.notzippy.intellij.go.intellij.dlv.protocol.DlvRequest");
     return Object.class;
   }
 }

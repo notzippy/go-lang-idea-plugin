@@ -1,4 +1,5 @@
 /*
+ * Copyright 2019-2020 Not zippy
  * Copyright 2013-2016 Sergey Ignatov, Alexander Zolotov, Florin Patan
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,7 @@
  */
 
 // This is a generated file. Not intended for manual editing.
-package com.goide.psi;
+package com.notzippy.intellij.go.grammar.psi;
 
 import java.util.List;
 import org.jetbrains.annotations.*;
@@ -36,8 +37,8 @@ public interface GoVarDeclaration extends GoTopLevelDeclaration {
   PsiElement getVar();
 
   @NotNull
-  GoVarSpec addSpec(String name, String type, String value, GoVarSpec specAnchor);
+  GoVarSpec addSpec(@NotNull String name, @Nullable String type, @Nullable String value, @Nullable GoVarSpec specAnchor);
 
-  void deleteSpec(GoVarSpec specToDelete);
+  void deleteSpec(@NotNull GoVarSpec specToDelete);
 
 }

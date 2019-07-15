@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.coverage;
+package com.notzippy.intellij.go.intellij.runconfig.testing.coverage;
 
-import com.goide.GoConstants;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.coverage.BaseCoverageSuite;
 import com.intellij.coverage.CoverageEngine;
 import com.intellij.coverage.CoverageRunner;

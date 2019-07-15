@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoPointerType;
-import com.goide.psi.GoReceiver;
-import com.goide.psi.GoReferenceExpression;
-import com.goide.psi.GoUnaryExpr;
-import com.goide.psi.GoVisitor;
+import com.notzippy.intellij.go.grammar.psi.GoPointerType;
+import com.notzippy.intellij.go.grammar.psi.GoReceiver;
+import com.notzippy.intellij.go.grammar.psi.GoReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.GoUnaryExpr;
+import com.notzippy.intellij.go.grammar.psi.GoVisitor;
 import com.intellij.codeInsight.highlighting.ReadWriteAccessDetector;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemsHolder;

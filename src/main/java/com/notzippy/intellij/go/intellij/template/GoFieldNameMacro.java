@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.template;
+package com.notzippy.intellij.go.intellij.template;
 
-import com.goide.psi.GoFieldDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoFieldDeclaration;
 import com.intellij.codeInsight.lookup.LookupElement;
 import com.intellij.codeInsight.lookup.LookupElementBuilder;
 import com.intellij.codeInsight.template.*;

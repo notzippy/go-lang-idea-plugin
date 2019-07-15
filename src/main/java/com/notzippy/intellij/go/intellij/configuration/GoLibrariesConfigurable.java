@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.project.GoApplicationLibrariesService;
-import com.goide.project.GoLibrariesService;
+import com.notzippy.intellij.go.intellij.project.GoApplicationLibrariesService;
+import com.notzippy.intellij.go.intellij.project.GoLibrariesService;
 import com.intellij.openapi.fileChooser.FileChooserDialog;
 import com.intellij.openapi.fileChooser.FileChooserFactory;
 import com.intellij.openapi.options.Configurable;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
 import com.intellij.openapi.util.SimpleModificationTracker;
 import com.intellij.util.ArrayUtil;

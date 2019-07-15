@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl.imports;
+package com.notzippy.intellij.go.grammar.psi.impl.imports;
 
-import com.goide.GoLanguage;
-import com.goide.codeInsight.imports.GoImportPackageQuickFix;
-import com.goide.psi.GoCompositeElement;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.intellij.codeInsight.imports.GoImportPackageQuickFix;
+import com.notzippy.intellij.go.grammar.psi.GoCompositeElement;
 import com.intellij.codeInsight.daemon.ReferenceImporter;
 import com.intellij.codeInsight.daemon.impl.CollectHighlightsUtil;
 import com.intellij.codeInsight.daemon.impl.DaemonListeners;

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.sdk;
+package com.notzippy.intellij.go.intellij.sdk;
 
-import com.goide.GoConstants;
-import com.goide.GoEnvironmentUtil;
-import com.goide.appengine.YamlFilesModificationTracker;
-import com.goide.project.GoApplicationLibrariesService;
-import com.goide.project.GoLibrariesService;
-import com.goide.psi.GoFile;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.goide.GoEnvironmentUtil;
+import com.notzippy.intellij.go.intellij.appengine.YamlFilesModificationTracker;
+import com.notzippy.intellij.go.intellij.project.GoApplicationLibrariesService;
+import com.notzippy.intellij.go.intellij.project.GoLibrariesService;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.module.Module;
@@ -56,6 +56,7 @@ import java.util.regex.Pattern;
 import static com.intellij.util.containers.ContainerUtil.newLinkedHashSet;
 
 public class GoSdkUtil {
+  private static final Pattern GO_SDK_PATTERN = Pattern.compile("([0-9]+)\\.+([0-9]+).*");
   private static final Pattern GO_VERSION_PATTERN = Pattern.compile("[tT]heVersion\\s*=\\s*`go([\\d.]+\\w+(\\d+)?)`");
   private static final Pattern GAE_VERSION_PATTERN = Pattern.compile("[tT]heVersion\\s*=\\s*`go([\\d.]+)( \\(appengine-[\\d.]+\\))?`");
   private static final Pattern GO_DEVEL_VERSION_PATTERN = Pattern.compile("[tT]heVersion\\s*=\\s*`(devel.*)`");
@@ -197,19 +198,18 @@ public class GoSdkUtil {
         GoSdkService sdkService = GoSdkService.getInstance(project1);
         if (sdkService.isAppEngineSdk(module)) {
           ContainerUtil.addAllNotNull(result, ContainerUtil.mapNotNull(YamlFilesModificationTracker.getYamlFiles(project1, module),
-                                                                       VirtualFile::getParent));
+                  VirtualFile::getParent));
         }
         result.addAll(getInnerGoPathSources(project1, module));
         return CachedValueProvider.Result
-          .create(result, getSdkAndLibrariesCacheDependencies(project1, module, YamlFilesModificationTracker.getInstance(project1)));
+                .create(result, getSdkAndLibrariesCacheDependencies(project1, module, YamlFilesModificationTracker.getInstance(project1)));
       });
     }
     return CachedValuesManager.getManager(project).getCachedValue(project,
-                                                                  (CachedValueProvider<Collection<VirtualFile>>)() -> CachedValueProvider.Result
-                                                                    .create(getInnerGoPathSources(project, null),
-                                                                            getSdkAndLibrariesCacheDependencies(project, null, YamlFilesModificationTracker.getInstance(project))));
+            (CachedValueProvider<Collection<VirtualFile>>)() -> CachedValueProvider.Result
+                    .create(getInnerGoPathSources(project, null),
+                            getSdkAndLibrariesCacheDependencies(project, null, YamlFilesModificationTracker.getInstance(project))));
   }
-
   @NotNull
   private static List<VirtualFile> getInnerGoPathSources(@NotNull Project project, @Nullable Module module) {
     return ContainerUtil.mapNotNull(getGoPathRoots(project, module), new RetrieveSubDirectoryOrSelfFunction("src"));
@@ -255,7 +255,17 @@ public class GoSdkUtil {
     if (version.startsWith("devel")) {
       return "src";
     }
-    if (version.length() > 2 && StringUtil.parseDouble(version.substring(0, 3), 1.4) < 1.4) {
+    // Capture up until the next index
+    Matcher matcher = GO_SDK_PATTERN.matcher(version);
+    if (matcher.find()) {
+      double major  = StringUtil.parseDouble(matcher.group(1), 1);
+      double minor = StringUtil.parseDouble(matcher.group(2), 4);
+      if ( major == 1 && minor < 4) {
+        return "src/pkg";
+      } else {
+        return "src";
+      }
+    }else if (version.length() > 2 && StringUtil.parseDouble(version.substring(0, 3), 1.4) < 1.4) {
       return "src/pkg";
     }
     return "src";

@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.GoEnvironmentUtil;
-import com.goide.dlv.DlvDebugProcess;
-import com.goide.dlv.DlvRemoteVmConnection;
-import com.goide.runconfig.application.GoApplicationConfiguration;
-import com.goide.runconfig.application.GoApplicationRunningState;
-import com.goide.util.GoHistoryProcessListener;
+import com.notzippy.intellij.go.goide.GoEnvironmentUtil;
+import com.notzippy.intellij.go.intellij.dlv.DlvDebugProcess;
+import com.notzippy.intellij.go.intellij.dlv.DlvRemoteVmConnection;
+import com.notzippy.intellij.go.intellij.runconfig.application.GoApplicationConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.application.GoApplicationRunningState;
+import com.notzippy.intellij.go.intellij.util.GoHistoryProcessListener;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.ExecutionResult;
 import com.intellij.execution.RunProfileStarter;
@@ -36,7 +36,6 @@ import com.intellij.execution.runners.AsyncGenericProgramRunner;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.runners.RunContentBuilder;
 import com.intellij.execution.ui.RunContentDescriptor;
-import com.intellij.internal.statistic.UsageTrigger;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.util.io.FileUtil;
 import com.intellij.openapi.util.text.StringUtil;
@@ -190,7 +189,7 @@ public class GoBuildingRunner extends AsyncGenericProgramRunner {
           throw new ExecutionException("Cannot run debugger");
         }
 
-        UsageTrigger.trigger("go.dlv.debugger");
+
       
         return XDebuggerManager.getInstance(env.getProject()).startSession(env, new XDebugProcessStarter() {
           @NotNull

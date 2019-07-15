@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.generate;
+package com.notzippy.intellij.go.intellij.generate;
 
-import com.goide.runconfig.testing.GoTestFramework;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFramework;
 import com.intellij.openapi.actionSystem.ActionGroup;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.project;
+package com.notzippy.intellij.go.intellij.project;
 
-import com.goide.GoConstants;
-import com.goide.configuration.GoConfigurableProvider;
-import com.goide.configuration.GoModuleSettingsConfigurable;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.configuration.GoConfigurableProvider;
+import com.notzippy.intellij.go.intellij.configuration.GoModuleSettingsConfigurable;
 import com.intellij.codeInsight.daemon.DaemonCodeAnalyzer;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;

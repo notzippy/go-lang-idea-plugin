@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.GoConstants;
+import com.notzippy.intellij.go.intellij.GoConstants;
 import com.intellij.openapi.components.*;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.Nullable;
 
 @State(
   name = GoConstants.GO,
-  storages = @Storage(file = StoragePathMacros.APP_CONFIG + "/editor.codeinsight.xml")
+  storages = @Storage(file = StoragePathMacros.WORKSPACE_FILE + "/editor.codeinsight.xml")
 )
 public class GoCodeInsightSettings implements PersistentStateComponent<GoCodeInsightSettings> {
   private boolean myShowImportPopup = true;

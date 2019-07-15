@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.formatter.settings;
+package com.notzippy.intellij.go.intellij.formatter.settings;
 
-import com.goide.GoConstants;
-import com.goide.GoLanguage;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoLanguage;
 import com.intellij.application.options.CodeStyleAbstractConfigurable;
 import com.intellij.application.options.CodeStyleAbstractPanel;
 import com.intellij.application.options.TabbedLanguageCodeStylePanel;

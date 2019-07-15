@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.highlighting;
+package com.notzippy.intellij.go.intellij.highlighting;
 
-import com.goide.GoFileType;
+import com.notzippy.intellij.go.intellij.GoFileType;
 import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.vfs.VirtualFile;
 

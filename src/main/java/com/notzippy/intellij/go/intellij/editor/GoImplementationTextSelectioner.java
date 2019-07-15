@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.psi.GoTopLevelDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoTopLevelDeclaration;
 import com.intellij.codeInsight.hint.ImplementationTextSelectioner;
 import com.intellij.openapi.util.TextRange;
 import com.intellij.psi.PsiElement;

@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
-import com.goide.editor.GoParameterInfoHandler;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoCType;
-import com.goide.psi.impl.GoLightType;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.stubs.index.GoAllPrivateNamesIndex;
-import com.goide.stubs.index.GoAllPublicNamesIndex;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.editor.GoParameterInfoHandler;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoCType;
+import com.notzippy.intellij.go.grammar.psi.impl.GoLightType;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.stubs.index.GoAllPrivateNamesIndex;
+import com.notzippy.intellij.go.stubs.index.GoAllPublicNamesIndex;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.documentation.DocumentationManagerProtocol;
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.documentation.AbstractDocumentationProvider;

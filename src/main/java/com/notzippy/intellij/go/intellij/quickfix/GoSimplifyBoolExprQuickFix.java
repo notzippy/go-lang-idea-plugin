@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.goide.quickfix;
+package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.goide.inspections.GoBoolExpressionsInspection;
-import com.goide.psi.GoAndExpr;
-import com.goide.psi.GoBinaryExpr;
-import com.goide.psi.GoExpression;
-import com.goide.psi.GoReferenceExpression;
-import com.goide.psi.impl.GoElementFactory;
-import com.goide.psi.impl.GoExpressionUtil;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.intellij.inspections.GoBoolExpressionsInspection;
+import com.notzippy.intellij.go.grammar.psi.GoAndExpr;
+import com.notzippy.intellij.go.grammar.psi.GoBinaryExpr;
+import com.notzippy.intellij.go.grammar.psi.GoExpression;
+import com.notzippy.intellij.go.grammar.psi.GoReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.grammar.psi.impl.GoExpressionUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.codeInspection.LocalQuickFixOnPsiElement;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.text.StringUtil;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv.protocol;
+package com.notzippy.intellij.go.intellij.dlv.protocol;
 
 import com.google.gson.annotations.SerializedName;
 import com.intellij.openapi.diagnostic.Logger;

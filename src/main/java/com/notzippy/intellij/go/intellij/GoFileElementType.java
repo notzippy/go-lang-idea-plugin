@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide;
+package com.notzippy.intellij.go.intellij;
 
-import com.goide.psi.GoFile;
-import com.goide.stubs.GoFileStub;
-import com.goide.stubs.index.GoPackagesIndex;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.stubs.GoFileStub;
+import com.notzippy.intellij.go.stubs.index.GoPackagesIndex;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.StubBuilder;

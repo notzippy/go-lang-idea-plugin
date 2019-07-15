@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl.imports;
+package com.notzippy.intellij.go.grammar.psi.impl.imports;
 
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.GoImportString;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.GoImportString;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleUtilCore;
 import com.intellij.openapi.project.Project;

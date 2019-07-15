@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
-import com.goide.GoIcons;
-import com.goide.dlv.protocol.DlvApi;
-import com.goide.dlv.protocol.DlvRequest;
-import com.goide.psi.*;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvApi;
+import com.notzippy.intellij.go.intellij.dlv.protocol.DlvRequest;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.execution.configurations.ModuleBasedConfiguration;
 import com.intellij.execution.configurations.RunProfile;
 import com.intellij.icons.AllIcons;

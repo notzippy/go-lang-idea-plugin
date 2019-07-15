@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.GoConstants;
-import com.goide.GoTypes;
-import com.goide.psi.GoFunctionDeclaration;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
 import com.intellij.execution.lineMarker.ExecutorAction;
 import com.intellij.execution.lineMarker.RunLineMarkerContributor;
 import com.intellij.icons.AllIcons;

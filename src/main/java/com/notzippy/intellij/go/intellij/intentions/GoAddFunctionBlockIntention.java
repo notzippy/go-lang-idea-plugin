@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.intentions;
+package com.notzippy.intellij.go.intellij.intentions;
 
-import com.goide.editor.smart.GoSmartEnterProcessor;
-import com.goide.psi.GoBlock;
-import com.goide.psi.GoFunctionOrMethodDeclaration;
-import com.goide.psi.impl.GoElementFactory;
+import com.notzippy.intellij.go.intellij.editor.smart.GoSmartEnterProcessor;
+import com.notzippy.intellij.go.grammar.psi.GoBlock;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionOrMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.codeInsight.intention.BaseElementAtCaretIntentionAction;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;

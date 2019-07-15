@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.inspections.unresolved;
+package com.notzippy.intellij.go.intellij.inspections.unresolved;
 
-import com.goide.inspections.GoInspectionBase;
-import com.goide.psi.*;
-import com.goide.psi.impl.GoVarProcessor;
-import com.goide.quickfix.GoDeleteVarDefinitionQuickFix;
-import com.goide.quickfix.GoRenameToBlankQuickFix;
+import com.notzippy.intellij.go.intellij.inspections.GoInspectionBase;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.GoVarProcessor;
+import com.notzippy.intellij.go.intellij.quickfix.GoDeleteVarDefinitionQuickFix;
+import com.notzippy.intellij.go.intellij.quickfix.GoRenameToBlankQuickFix;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemHighlightType;
 import com.intellij.codeInspection.ProblemsHolder;

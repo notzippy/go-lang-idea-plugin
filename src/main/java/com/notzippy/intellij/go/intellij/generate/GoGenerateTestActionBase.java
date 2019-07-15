@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.generate;
+package com.notzippy.intellij.go.intellij.generate;
 
-import com.goide.runconfig.testing.GoTestFramework;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFramework;
 import com.intellij.codeInsight.CodeInsightActionHandler;
 import com.intellij.codeInsight.actions.CodeInsightAction;
 import com.intellij.openapi.editor.Editor;

@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.goide.template;
+package com.notzippy.intellij.go.intellij.template;
 
-import com.goide.GoLanguage;
-import com.goide.GoTypes;
-import com.goide.highlighting.GoSyntaxHighlighter;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.intellij.GoLanguage;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.intellij.highlighting.GoSyntaxHighlighter;
 import com.intellij.codeInsight.template.TemplateContextType;
 import com.intellij.openapi.fileTypes.SyntaxHighlighter;
 import com.intellij.psi.*;

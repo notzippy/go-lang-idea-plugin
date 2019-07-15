@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing.frameworks.gobench;
+package com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gobench;
 
-import com.goide.runconfig.testing.GoTestRunConfigurationProducerBase;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestRunConfigurationProducerBase;
 import org.jetbrains.annotations.NotNull;
 
 public class GobenchRunConfigurationProducer extends GoTestRunConfigurationProducerBase implements Cloneable {

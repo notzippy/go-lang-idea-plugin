@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
 import com.intellij.psi.scope.BaseScopeProcessor;
 

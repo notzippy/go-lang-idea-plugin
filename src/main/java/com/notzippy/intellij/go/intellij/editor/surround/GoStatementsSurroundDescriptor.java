@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.editor.surround;
+package com.notzippy.intellij.go.intellij.editor.surround;
 
-import com.goide.psi.GoFile;
-import com.goide.psi.GoPsiTreeUtil;
-import com.goide.psi.GoStatement;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoPsiTreeUtil;
+import com.notzippy.intellij.go.grammar.psi.GoStatement;
 import com.intellij.lang.surroundWith.SurroundDescriptor;
 import com.intellij.lang.surroundWith.Surrounder;
 import com.intellij.psi.PsiElement;

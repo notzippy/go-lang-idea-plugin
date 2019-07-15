@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.dlv.breakpoint;
+package com.notzippy.intellij.go.intellij.dlv.breakpoint;
 
-import com.goide.GoFileType;
-import com.goide.GoParserDefinition;
-import com.goide.dlv.DlvDebugProcess;
+import com.notzippy.intellij.go.intellij.GoFileType;
+import com.notzippy.intellij.go.intellij.GoParserDefinition;
+import com.notzippy.intellij.go.intellij.dlv.DlvDebugProcess;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.project.Project;

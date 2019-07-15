@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.inspections;
+package com.notzippy.intellij.go.intellij.inspections;
 
-import com.goide.psi.GoFieldDeclaration;
-import com.goide.psi.GoStructType;
-import com.goide.psi.GoTag;
-import com.goide.psi.GoVisitor;
-import com.goide.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.GoFieldDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoStructType;
+import com.notzippy.intellij.go.grammar.psi.GoTag;
+import com.notzippy.intellij.go.grammar.psi.GoVisitor;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
 import com.intellij.codeInspection.LocalInspectionToolSession;
 import com.intellij.codeInspection.ProblemsHolder;
 import org.jetbrains.annotations.NotNull;

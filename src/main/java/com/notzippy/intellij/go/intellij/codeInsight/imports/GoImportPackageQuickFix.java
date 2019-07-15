@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight.imports;
+package com.notzippy.intellij.go.intellij.codeInsight.imports;
 
-import com.goide.GoIcons;
-import com.goide.completion.GoCompletionUtil;
-import com.goide.project.GoVendoringUtil;
-import com.goide.psi.GoFile;
-import com.goide.psi.GoReferenceExpression;
-import com.goide.psi.GoTypeReferenceExpression;
-import com.goide.psi.impl.GoPsiImplUtil;
-import com.goide.psi.impl.GoReference;
-import com.goide.psi.impl.GoTypeReference;
-import com.goide.runconfig.testing.GoTestFinder;
-import com.goide.stubs.index.GoPackagesIndex;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoIcons;
+import com.notzippy.intellij.go.intellij.completion.GoCompletionUtil;
+import com.notzippy.intellij.go.intellij.project.GoVendoringUtil;
+import com.notzippy.intellij.go.grammar.psi.GoFile;
+import com.notzippy.intellij.go.grammar.psi.GoReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.GoTypeReferenceExpression;
+import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
+import com.notzippy.intellij.go.grammar.psi.impl.GoReference;
+import com.notzippy.intellij.go.grammar.psi.impl.GoTypeReference;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.stubs.index.GoPackagesIndex;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.FileModificationService;
 import com.intellij.codeInsight.daemon.impl.DaemonListeners;
 import com.intellij.codeInsight.daemon.impl.ShowAutoImportPass;

@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.GoConstants;
-import com.goide.codeInsight.imports.GoAutoImportConfigurable;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurableProvider;
@@ -42,10 +41,9 @@ public class GoConfigurableProvider extends ConfigurableProvider {
     Configurable projectSettingsConfigurable = new GoProjectSettingsConfigurable(myProject);
     Configurable librariesConfigurable = new GoLibrariesConfigurableProvider(myProject).createConfigurable();
     Configurable sdkConfigurable = GoSdkService.getInstance(myProject).createSdkConfigurable();
-    Configurable autoImportConfigurable = new GoAutoImportConfigurable(myProject, false);
     return sdkConfigurable != null
-           ? new GoCompositeConfigurable(sdkConfigurable, projectSettingsConfigurable, librariesConfigurable, autoImportConfigurable)
-           : new GoCompositeConfigurable(projectSettingsConfigurable, librariesConfigurable, autoImportConfigurable);
+           ? new GoCompositeConfigurable(sdkConfigurable, projectSettingsConfigurable, librariesConfigurable)
+           : new GoCompositeConfigurable(projectSettingsConfigurable, librariesConfigurable);
   }
 
   private static class GoCompositeConfigurable extends SearchableConfigurable.Parent.Abstract {

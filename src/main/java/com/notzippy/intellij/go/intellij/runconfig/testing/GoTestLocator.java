@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing;
+package com.notzippy.intellij.go.intellij.runconfig.testing;
 
-import com.goide.psi.GoMethodDeclaration;
-import com.goide.psi.GoTypeSpec;
-import com.goide.stubs.index.GoFunctionIndex;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.stubs.index.GoTypesIndex;
+import com.notzippy.intellij.go.grammar.psi.GoMethodDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoTypeSpec;
+import com.notzippy.intellij.go.stubs.index.GoFunctionIndex;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.stubs.index.GoTypesIndex;
 import com.intellij.execution.Location;
 import com.intellij.execution.PsiLocation;
 import com.intellij.execution.testframework.sm.runner.SMTestLocator;

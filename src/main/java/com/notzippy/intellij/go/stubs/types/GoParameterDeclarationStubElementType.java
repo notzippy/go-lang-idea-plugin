@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.stubs.types;
+package com.notzippy.intellij.go.stubs.types;
 
-import com.goide.psi.GoParameterDeclaration;
-import com.goide.psi.impl.GoParameterDeclarationImpl;
-import com.goide.stubs.GoParameterDeclarationStub;
+import com.notzippy.intellij.go.grammar.psi.GoParameterDeclaration;
+import com.notzippy.intellij.go.grammar.psi.impl.GoParameterDeclarationImpl;
+import com.notzippy.intellij.go.stubs.GoParameterDeclarationStub;
 import com.intellij.psi.stubs.StubElement;
 import com.intellij.psi.stubs.StubInputStream;
 import com.intellij.psi.stubs.StubOutputStream;

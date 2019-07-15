@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.editor;
+package com.notzippy.intellij.go.intellij.editor;
 
-import com.goide.GoTypes;
-import com.goide.psi.*;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.parser.GoTypes;
 import com.intellij.codeInsight.CodeInsightBundle;
 import com.intellij.codeInsight.lookup.LookupElement;
 import com.intellij.lang.parameterInfo.*;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.tree;
+package com.notzippy.intellij.go.intellij.tree;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.util.treeView.smartTree.ActionPresentation;

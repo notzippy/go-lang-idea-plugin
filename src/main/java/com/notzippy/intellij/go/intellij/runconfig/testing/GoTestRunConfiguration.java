@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing;
+package com.notzippy.intellij.go.intellij.runconfig.testing;
 
-import com.goide.runconfig.GoModuleBasedConfiguration;
-import com.goide.runconfig.GoRunConfigurationBase;
-import com.goide.runconfig.testing.frameworks.gotest.GotestFramework;
-import com.goide.runconfig.testing.ui.GoTestRunConfigurationEditorForm;
-import com.goide.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.runconfig.GoModuleBasedConfiguration;
+import com.notzippy.intellij.go.intellij.runconfig.GoRunConfigurationBase;
+import com.notzippy.intellij.go.intellij.runconfig.testing.frameworks.gotest.GotestFramework;
+import com.notzippy.intellij.go.intellij.runconfig.testing.ui.GoTestRunConfigurationEditorForm;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
 import com.intellij.execution.configurations.*;
 import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.testframework.TestConsoleProperties;

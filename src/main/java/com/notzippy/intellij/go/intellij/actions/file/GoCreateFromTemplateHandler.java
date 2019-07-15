@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.actions.file;
+package com.notzippy.intellij.go.intellij.actions.file;
 
-import com.goide.GoConstants;
-import com.goide.GoFileType;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.GoFileType;
 import com.intellij.ide.fileTemplates.DefaultCreateFromTemplateHandler;
 import com.intellij.ide.fileTemplates.FileTemplate;
 

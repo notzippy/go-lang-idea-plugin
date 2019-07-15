@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.goide.psi.impl;
+package com.notzippy.intellij.go.grammar.psi.impl;
 
-import com.goide.GoConstants;
-import com.goide.GoTypes;
-import com.goide.psi.*;
-import com.goide.psi.impl.imports.GoImportReferenceSet;
-import com.goide.runconfig.testing.GoTestFinder;
-import com.goide.sdk.GoPackageUtil;
-import com.goide.sdk.GoSdkUtil;
-import com.goide.stubs.*;
-import com.goide.stubs.index.GoIdFilter;
-import com.goide.stubs.index.GoMethodIndex;
-import com.goide.util.GoStringLiteralEscaper;
-import com.goide.util.GoUtil;
+import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.parser.GoTypes;
+import com.notzippy.intellij.go.grammar.psi.*;
+import com.notzippy.intellij.go.grammar.psi.impl.imports.GoImportReferenceSet;
+import com.notzippy.intellij.go.intellij.runconfig.testing.GoTestFinder;
+import com.notzippy.intellij.go.intellij.sdk.GoPackageUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.stubs.*;
+import com.notzippy.intellij.go.stubs.index.GoIdFilter;
+import com.notzippy.intellij.go.stubs.index.GoMethodIndex;
+import com.notzippy.intellij.go.parser.GoStringLiteralEscaper;
+import com.notzippy.intellij.go.intellij.util.GoUtil;
 import com.intellij.codeInsight.highlighting.ReadWriteAccessDetector;
 import com.intellij.diagnostic.AttachmentFactory;
 import com.intellij.lang.ASTNode;
@@ -62,7 +62,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import static com.goide.psi.impl.GoLightType.*;
+import static com.notzippy.intellij.go.grammar.psi.impl.GoLightType.*;
 import static com.intellij.codeInsight.highlighting.ReadWriteAccessDetector.Access.*;
 import static com.intellij.openapi.util.Conditions.equalTo;
 

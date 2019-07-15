@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.configuration;
+package com.notzippy.intellij.go.intellij.configuration;
 
-import com.goide.project.GoBuildTargetSettings;
-import com.goide.project.GoModuleSettings;
+import com.notzippy.intellij.go.intellij.project.GoBuildTargetSettings;
+import com.notzippy.intellij.go.intellij.project.GoModuleSettings;
 import com.intellij.openapi.Disposable;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.options.ConfigurableUi;

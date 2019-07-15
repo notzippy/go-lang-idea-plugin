@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig.testing;
+package com.notzippy.intellij.go.intellij.runconfig.testing;
 
-import com.goide.runconfig.GoConfigurationFactoryBase;
-import com.goide.runconfig.before.GoBeforeRunTaskProvider;
-import com.goide.runconfig.before.GoCommandBeforeRunTask;
+import com.notzippy.intellij.go.intellij.runconfig.GoConfigurationFactoryBase;
+import com.notzippy.intellij.go.intellij.runconfig.before.GoBeforeRunTaskProvider;
+import com.notzippy.intellij.go.intellij.runconfig.before.GoCommandBeforeRunTask;
 import com.intellij.execution.BeforeRunTask;
 import com.intellij.execution.configurations.ConfigurationTypeBase;
 import com.intellij.openapi.util.Key;

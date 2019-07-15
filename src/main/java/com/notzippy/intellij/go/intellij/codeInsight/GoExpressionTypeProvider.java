@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.codeInsight;
+package com.notzippy.intellij.go.intellij.codeInsight;
 
-import com.goide.psi.GoTopLevelDeclaration;
-import com.goide.psi.GoType;
-import com.goide.psi.GoTypeOwner;
+import com.notzippy.intellij.go.grammar.psi.GoTopLevelDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoType;
+import com.notzippy.intellij.go.grammar.psi.GoTypeOwner;
 import com.intellij.lang.ExpressionTypeProvider;
 import com.intellij.openapi.util.Conditions;
 import com.intellij.openapi.util.text.StringUtil;

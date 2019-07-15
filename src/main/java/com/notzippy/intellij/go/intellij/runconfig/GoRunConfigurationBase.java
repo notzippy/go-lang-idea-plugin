@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package com.goide.runconfig;
+package com.notzippy.intellij.go.intellij.runconfig;
 
-import com.goide.sdk.GoSdkService;
-import com.goide.sdk.GoSdkUtil;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkUtil;
 import com.intellij.execution.ExecutionBundle;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.Executor;
@@ -44,7 +44,7 @@ import java.util.Collection;
 import java.util.Map;
 
 public abstract class GoRunConfigurationBase<RunningState extends GoRunningState>
-  extends ModuleBasedConfiguration<GoModuleBasedConfiguration> implements RunConfigurationWithSuppressedDefaultRunAction,
+  extends ModuleBasedConfiguration<GoModuleBasedConfiguration, Element> implements RunConfigurationWithSuppressedDefaultRunAction,
                                                                           RunConfigurationWithSuppressedDefaultDebugAction {
 
   private static final String WORKING_DIRECTORY_NAME = "working_directory";

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.goide.dlv;
+package com.notzippy.intellij.go.intellij.dlv;
 
 import com.google.gson.JsonParseException;
 import com.google.gson.stream.JsonReader;

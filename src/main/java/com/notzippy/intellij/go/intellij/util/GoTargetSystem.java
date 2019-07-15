@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.goide.util;
+package com.notzippy.intellij.go.intellij.util;
 
-import com.goide.project.GoBuildTargetSettings;
-import com.goide.project.GoModuleSettings;
-import com.goide.sdk.GoSdkService;
+import com.notzippy.intellij.go.intellij.project.GoBuildTargetSettings;
+import com.notzippy.intellij.go.intellij.project.GoModuleSettings;
+import com.notzippy.intellij.go.intellij.sdk.GoSdkService;
 import com.intellij.openapi.module.Module;
 import com.intellij.psi.util.CachedValueProvider;
 import com.intellij.psi.util.CachedValuesManager;
