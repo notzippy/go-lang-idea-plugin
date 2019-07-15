@@ -329,6 +329,9 @@
     <localInspection language="go" displayName="Multiple packages in directory declaration" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
                      implementationClass="com.goide.inspections.GoMultiplePackagesInspection"/>
+    <localInspection language="go" displayName="String cannot be nil" groupPath="Go"
+                     groupName="General" enabledByDefault="true" level="ERROR"
+                     implementationClass="com.goide.inspections.GoStringCannotBeNilInspection"/>
     <localInspection language="go" displayName="Usage of cgo in tests is not supported" groupPath="Go"
                      groupName="General" enabledByDefault="true" level="ERROR"
                      implementationClass="com.goide.inspections.GoCgoInTestInspection"/>
