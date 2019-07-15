@@ -33,6 +33,7 @@ import com.intellij.psi.ResolveResult;
 import com.intellij.psi.formatter.FormatterUtil;
 import com.intellij.psi.impl.source.resolve.reference.impl.providers.FileReference;
 import com.intellij.psi.util.PsiTreeUtil;
+import com.intellij.util.ObjectUtils;
 import com.intellij.util.containers.ContainerUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -74,7 +75,12 @@ public class GoUnresolvedReferenceInspection extends GoInspectionBase {
         }
         else if (reference.resolve() == null) {
           LocalQuickFix[] fixes = LocalQuickFix.EMPTY_ARRAY;
-          if (isProhibited(o, qualifier)) {
+          GoType type = qualifier != null ? qualifier.getGoType(null) : null;
+          GoStructType structType = type != null ? ObjectUtils.tryCast(type.getUnderlyingType(), GoStructType.class) : null;
+          if (!"_".equals(reference.getCanonicalText()) && structType != null) {
+            fixes = new LocalQuickFix[]{new GoAddStructFieldFix(o)};
+          }
+          else if (isProhibited(o, qualifier)) {
             fixes = createImportPackageFixes(o, reference, holder.isOnTheFly());
           }
           else if (holder.isOnTheFly()) {

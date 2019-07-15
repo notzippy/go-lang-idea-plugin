@@ -74,7 +74,7 @@ public class GoElementFactory {
   public static GoImportDeclaration createEmptyImportDeclaration(@NotNull Project project) {
     return PsiTreeUtil.findChildOfType(createFileFromText(project, "package main\nimport (\n\n)"), GoImportDeclaration.class);
   }
-                                                            
+
   @NotNull
   public static GoImportDeclaration createImportDeclaration(@NotNull Project project, @NotNull String importString,
                                                             @Nullable String alias, boolean withParens) {
