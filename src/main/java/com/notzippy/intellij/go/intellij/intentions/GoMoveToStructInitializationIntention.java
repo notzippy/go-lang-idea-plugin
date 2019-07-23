@@ -53,12 +53,13 @@ public class GoMoveToStructInitializationIntention extends BaseElementAtCaretInt
 
   @Override
   public boolean isAvailable(@NotNull Project project, Editor editor, @NotNull PsiElement element) {
-    return getData(element) != null;
+    boolean available = getData(element) != null;
+    return available;
   }
 
   @Nullable
   private static Data getData(@NotNull PsiElement element) {
-    if (!element.isValid() || !element.isWritable()) return null;
+    if (!element.isValid()) return null; //  removed  || !element.isWritable())
     GoAssignmentStatement assignment = getValidAssignmentParent(element);
     GoReferenceExpression selectedFieldReference = assignment != null ? getFieldReferenceExpression(element, assignment) : null;
     GoCompositeLit compositeLit = selectedFieldReference != null ? getStructLiteralByReference(selectedFieldReference, assignment) : null;
@@ -71,6 +72,9 @@ public class GoMoveToStructInitializationIntention extends BaseElementAtCaretInt
   @Nullable
   private static GoAssignmentStatement getValidAssignmentParent(@Nullable PsiElement element) {
     GoAssignmentStatement assignment = PsiTreeUtil.getNonStrictParentOfType(element, GoAssignmentStatement.class);
+    if (assignment == null) {
+      assignment = PsiTreeUtil.getNonStrictParentOfType(element.getPrevSibling(), GoAssignmentStatement.class);
+    }
     return assignment != null && assignment.isValid() && getLeftHandElements(assignment).size() == assignment.getExpressionList().size()
            ? assignment : null;
   }

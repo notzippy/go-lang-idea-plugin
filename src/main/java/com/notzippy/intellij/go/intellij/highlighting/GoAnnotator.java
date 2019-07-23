@@ -18,6 +18,7 @@ package com.notzippy.intellij.go.intellij.highlighting;
 
 import com.notzippy.intellij.go.grammar.psi.*;
 import com.notzippy.intellij.go.intellij.GoConstants;
+import com.notzippy.intellij.go.intellij.quickfix.GoEmptySignatureQuickFix;
 import com.notzippy.intellij.go.parser.GoTypes;
 import com.notzippy.intellij.go.grammar.psi.impl.GoCType;
 import com.notzippy.intellij.go.grammar.psi.impl.GoPsiImplUtil;
@@ -185,11 +186,13 @@ public class GoAnnotator implements Annotator {
               if (result != null && !result.isVoid()) {
                 Annotation annotation = holder.createErrorAnnotation(result, declaration.getName() +
                                                                              " function must have no arguments and no return values");
+                annotation.registerFix(new GoEmptySignatureQuickFix(declaration));
               }
               GoParameters parameters = signature.getParameters();
               if (!parameters.getParameterDeclarationList().isEmpty()) {
                 Annotation annotation = holder.createErrorAnnotation(parameters, declaration.getName() +
                                                                                  " function must have no arguments and no return values");
+                annotation.registerFix(new GoEmptySignatureQuickFix(declaration));
               }
             }
           }

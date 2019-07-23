@@ -16,15 +16,15 @@
 
 package com.notzippy.intellij.go.intellij.quickfix;
 
-import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
-import com.notzippy.intellij.go.grammar.psi.GoSignature;
-import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import com.intellij.codeInspection.LocalQuickFixAndIntentionActionOnPsiElement;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.util.ObjectUtils;
+import com.notzippy.intellij.go.grammar.psi.GoFunctionDeclaration;
+import com.notzippy.intellij.go.grammar.psi.GoSignature;
+import com.notzippy.intellij.go.grammar.psi.impl.GoElementFactory;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
