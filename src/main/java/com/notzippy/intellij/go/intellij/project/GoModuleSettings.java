@@ -37,7 +37,8 @@ import com.intellij.util.xmlb.annotations.OptionTag;
 import com.intellij.util.xmlb.annotations.Property;
 import org.jetbrains.annotations.NotNull;
 
-@State(name = GoConstants.GO_MODULE_SESTTINGS_SERVICE_NAME, storages = @Storage(file = StoragePathMacros.MODULE_FILE))
+@State(name = GoConstants.GO_MODULE_SESTTINGS_SERVICE_NAME, storages =
+    @Storage(file = StoragePathMacros.MODULE_FILE))
 public class GoModuleSettings implements PersistentStateComponent<GoModuleSettings.GoModuleSettingsState> {
   public static final Topic<BuildTargetListener> TOPIC = Topic.create("build target changed", BuildTargetListener.class);
 

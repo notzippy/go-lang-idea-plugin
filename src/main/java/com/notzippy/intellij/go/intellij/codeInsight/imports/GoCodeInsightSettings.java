@@ -23,7 +23,7 @@ import org.jetbrains.annotations.Nullable;
 
 @State(
   name = GoConstants.GO,
-  storages = @Storage(file = StoragePathMacros.WORKSPACE_FILE + "/editor.codeinsight.xml")
+  storages = @Storage(value = "editor.codeinsight.xml")
 )
 public class GoCodeInsightSettings implements PersistentStateComponent<GoCodeInsightSettings> {
   private boolean myShowImportPopup = true;

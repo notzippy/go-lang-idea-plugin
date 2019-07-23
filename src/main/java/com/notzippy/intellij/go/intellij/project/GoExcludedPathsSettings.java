@@ -27,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 @State(
         name = "GoExcludedPaths",
-        storages = @Storage(file = StoragePathMacros.CACHE_FILE + "/editor.excluded.xml")
+        storages = @Storage(value = "editor.excluded.xml")
 )
 public class GoExcludedPathsSettings extends SimpleModificationTracker implements PersistentStateComponent<GoExcludedPathsSettings> {
     private String[] myExcludedPackages = ArrayUtil.EMPTY_STRING_ARRAY;
